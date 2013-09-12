@@ -21,7 +21,16 @@
 
 \p In variant classification, we use phenotype and genotype
 observations to decide which mutations should be reported as
-pathogenic. Example scenarios are:
+pathogenic. The available data is a matrix of $n$ individuals x $L$
+genomic locations of SNP or indel variants, together with a column of
+$n$ phenotype scores, and a pedigree (multiple disconnected pedigrees)
+specifying relationships between the $n$ individuals. Entire rows of
+the matrix will typically be missing, corresponding to unsequenced
+individuals (relatives of a sequenced individual), and phenotype
+labels may be missing for some individuals (e.g. if they have not
+reached age-of-onset).
+
+\p The main scenario is:
 
 \paragraph{Scenario 1: A VUS associated with disease incidence in relatives:}
 We have performed exon sequencing of the relevant disease genes for an
@@ -33,15 +42,9 @@ other individuals, with what sorts of patterns of family disease
 incidence, are sufficient to conclude that the variant should be
 reported as likely deleterious?
 
-\paragraph{Scenario 2: Follow-up sequencing of an affected relative:}
-We have performed exon sequencing of the relevant disease genes for an
-individual and discovered a VUS. The individual has two living
-relatives with diagnoses of the disease. We sequence the relatives and
-discover the same VUS in one of them. Is this sufficient evidence to
-report the variant as likely deleterious? (Note that sequencing a
-single affected individual is equivalent to sequencing individual A
-who has affected relative B, with the coefficient of relatedness
-between A and B equal to 1.)
+\p We may also sequence some affected individuals. This is equivalent to
+a sequenced individual having an affected relative with relatedness
+coefficient equal to 1 (identical twin).
 
 \p Consider a VUS at locus $l$ which has been observed in several
 individuals. A variant classification algorithm should have the
