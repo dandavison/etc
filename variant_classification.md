@@ -17,7 +17,7 @@ Informally:
 Summary
 =======
 
-The following proposal is based on what Myriad does (Myriad 2013a,
+The following notes are based on what Myriad does (Myriad 2013a,
 2013b; Easton et al. 2007; Thompson et al. 2003).
 
 - We compute a Variant Causality Score (VCS) for each VUS.
@@ -27,7 +27,6 @@ The following proposal is based on what Myriad does (Myriad 2013a,
   against that under a non-causal model.
 - The analysis falls into two independent parts corresponding to
   requirements (1) and (2) above.
-
 
 Details
 =======
@@ -72,10 +71,24 @@ relatives; `LR_seg` summarizes information on cosegregation of the VUS
 with disease phenotype status -- it requires that we have sequenced
 additional relatives.
 
+The analysis depends on the study design (ascertainment of sequenced
+relatives). We first consider a design in which affected relatives are
+the only relatives to be sequenced (Peterson et al. 1998).
 
 Family history analysis
 =======================
 
+This section corresponds to Myriad's "History Weighting Algorithm"
+(Myriad 2013a, Easton et al. 2007).
+
+#### Denominator
+
+```
+Pr(G_p, Y_p, Y_rel | Asc, noncausal)
+= Pr(G_p, Y_p, Y_rel=aff | Y_rel=aff, noncausal)
+= Pr(G_p, Y_p | noncausal)  # Y_rel is uninformative due to ascertainment
+= Pr(G_p | noncausal) Pr(Y_p | noncausal)  # VUS genotypes do not predict phenotype
+```
 
 
 Segregation analysis
@@ -86,22 +99,18 @@ The following is based on Peterson et al. (1998).
 TODO: Would we need to make use of anything in Myriad's paper
 (D. Thompson et al. 2003)?
 
-The analysis depends on the study design (ascertainment of sequenced
-relatives). We first consider a design in which affected relatives are
-the only relatives to be sequenced (Peterson et al. 1998). The patient
-genotype is `Aa` (het for a dominant VUS allele `A`). The pedigree is
-known, and is implicit in the notation below. We consider the
-numerator and denominator of the LR separately:
+The pedigree is known, and is implicit in the notation below. We
+consider the numerator and denominator of the LR separately:
 
-### Denominator: Segregation likelihood assuming VUS is non-causal
+#### Denominator: Segregation likelihood assuming VUS is non-causal
 
 If the VUS is noncausal, phenotype does not predict genotype and the
 likelihood is simply the probability of the vector of relative
 genotypes conditional on the patient being positive for the VUS:
 
 ```
-Pr(G_rel | G_p, Y_p, Y_rel, Asc, noncausal) = Pr(G_rel | G_p=Aa, Y_p, Y_rel=aff, noncausal)
-                                            = Pr(G_rel | G_p=Aa)
+Pr(G_rel | G_p, Y_p, Y_rel, Asc, noncausal) = Pr(G_rel | G_p, Y_p, Y_rel=aff, noncausal)
+                                            = Pr(G_rel | G_p)
 ```
 
 If there is only a single relative, this can be worked out on
@@ -136,17 +145,17 @@ Pr(G_rel | G_p) = sum_S Pr(S|G_p) Pr(G_rel | S)
 
 `S` could be unknown ancestral genotypes, or equivalently one can
 consider the alleles in the founder genotypes to be drawn at random
-from the population allele frequencies, and then average over the
-'meiosis indicator' variables specifying which parent transmitted each
-allele at meiosis (see e.g. E. A. Thompson 2007)
+from the population allele frequencies, and then average over 'meiosis
+indicator' variables specifying which parent transmitted each allele
+at meiosis (see e.g. E. A. Thompson 2007)
 
 
-### Numerator: Segregation likelihood assuming VUS is causal
+#### Numerator: Segregation likelihood assuming VUS is causal
 
 ```
   Pr(G_rel | G_p, Y_p, Y_rel, Asc, causal)
 
-= Pr(G_rel | G_p, Y_rel=aff, causal)  # given G_p, Y_p is uninformative
+= Pr(G_rel | G_p, Y_rel=aff, causal)  # given G_p, Y_p is uninformative about G_rel
 
 =             Pr(G_rel | G_p) Pr(Y_rel=aff|G_rel, causal)
   ----------------------------------------------------
