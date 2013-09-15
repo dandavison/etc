@@ -79,7 +79,7 @@ This is factorized into a family disease history component
 ```
 Pr(G_p, Y_p, Y_rel | Asc, causal)        Pr(G_rel | G_p, Y_p, Y_rel, Asc, causal)
 ------------------------------------- x -------------------------------------------  =
-Pr(G_p, Y_p, Y_rel | Asc, noncausal)     Pr(G_rel | G_p, Y_p, Y_rel, Asc, noncausal)  
+Pr(G_p, Y_p, Y_rel | Asc, noncausal)     Pr(G_rel | G_p, Y_p, Y_rel, Asc, noncausal)
 ```
 
 ```
@@ -165,10 +165,9 @@ known deleterious mutation.
 
 ### Segregation likelihood ratio `LR_seg`
 
-The following is based on Peterson et al. (1998).
-
-TODO: Extend these notes to explain Myriad's pedigree segregation
-analysis paper (D. Thompson et al. 2003).
+The following is based on Peterson et al. (1998). See below for
+partial description of Myriad's pedigree segregation method
+(D. Thompson et al. 2003).
 
 The analysis depends on the study design (ascertainment of sequenced
 relatives). We first consider a design in which affected relatives are
@@ -249,6 +248,31 @@ penetrances, the phenotype probabilities are:
 ```
 Pr(Y_rel=aff|G_rel, causal) = P_aa ^ #{aa relatives}  x  P_Aa ^ #{Aa relatives}
 ```
+
+
+### Myriad's segregation likelihood ratio method (Thompson et al. 2003)
+
+Thompson et al. (2003) claim that their method has several advantages
+over Peterson et al. (1998). They take a traditional linkage analysis
+formulation, considering the recombination fraction between the VUS
+locus and the disease locus. The define the LR as a comparison of a
+full-linkage model versus a no-linkage model:
+
+```
+         Pr(G_rel | G_p, Y, linked)
+LR_seg = ----------------------------
+         Pr(G_rel | G_p, Y, unlinked)
+
+         Pr(Y, G_rel, G_p | linked)     Pr(Y, G_p | unlinked)
+	   = ---------------------------- x ---------------------
+		 Pr(Y, G_rel, G_p | unlinked)   Pr(Y, G_p | linked)
+```
+
+These likelihoods could be calculated using the latent variable
+approaches outlined above (e.g. E. A. Thompson 2007). Myriad
+(D. Thompson et al. 2003) say that they calculate these likelihoods
+using software called LINKAGE. They don't describe how they deal with
+ascertainment of sequenced relatives.
 
 
 ### References
