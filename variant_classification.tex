@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm,head=2cm,foot=1cm]{geometry}
+\title{Variant Classification}
+
+\newcommand{\p}{~\\}
+\newcommand{\Sm}{S_{m\bold{\cdot}}}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \begin{tabular}{c|l}
+    $Y_i$     & Phenotype of individual $i$ ($0=$ unaffected, $1=$ affected)\\
+    $G_{il}$   & Genotype at individual $i$ locus $l$\\
+    $\phi_l$  & Phenotypic effect of non-reference allele at locus $l$\\
+  \end{tabular}
+\end{center}
+
+\section{Introduction}
+
+\p In variant classification, we use phenotype and genotype
+observations to decide which mutations should be reported as
+pathogenic. The available data is a matrix of $n$ individuals x $L$
+genomic locations of SNP or indel variants, together with a column of
+$n$ phenotype scores, and a pedigree (multiple disconnected pedigrees)
+specifying relationships between the $n$ individuals. Entire rows of
+the matrix will typically be missing, corresponding to unsequenced
+individuals (relatives of a sequenced individual), and phenotype
+labels may be missing for some individuals (e.g. if they have not
+reached age-of-onset).
+
+
+\section{Model and variant classification algorithm}
+
+\subsection{Test for linkage between marker and trait locus}
+
+\p Let $\theta$ be the recombination fraction between the VUS locus
+and the trait locus. We compute a likelihood ratio comparing the
+hypothesis of $\theta=0$ (VUS locus is causative) versus $\theta=0.5$
+(VUS locus is not linked to trait locus).
+
+\subsection{Test for per-locus effect indicators}
+
+\p Let $\phi_l$ represent the phenotypic effect of the non-reference
+genotypes at locus $l$. We can initially consider an extremely simple
+disease model: a locus $l$ has either $\phi_l=0$ (non-causative) or
+$\phi_l=1$ (causative); any individual with 1 or more non-reference
+alleles in any causative locus will certainly have the disease
+phenotype from birth. (dominant, early onset, fully
+penetrant). Otherwise the individual will certainly not display the
+disease phenotype. (The sequenced genes explain all disease
+incidence.)
+
+\p The variant classification problem is inference for the effect
+indicators $\phi_l$. The pedigree in each family is known. We
+introduce latent ``meiosis indicator'' variables: $S_{ml}=0$ if
+meiosis $m$ transmitted the maternal allele at locus $l$; $S_{ml}=1$
+if the paternal allele was transmitted. $\Sm$ denotes the sequence of
+meiosis indicator values for all loci at meiosis $m$.
+
+\p The likelihood is
+
+\begin{align*}
+\Pr(Y, G|\phi)
+=& \sum_S \Pr(S) \Pr(Y,G|S,\phi)\\
+=& \sum_S \Pr(S) \Pr(G|S) \Pr(Y|G,\phi)\\
+=& \sum_S \Big(\prod_m\Sm \Big) \Pr(G|S) \Pr(Y|G,\phi)\\
+\end{align*}
+
+\p In words: we compute the likelihood by averaging over all possible
+histories of recombination breakpoints in the pedigrees, weighted by
+their prior probabilities (these can be computed easily from the
+recombination map). Given a particular history $S$ of meiosis
+indicators, the contribution to the likelihood is the product of the
+prior probability $\Pr(S)$ of that meiotic history, the probability
+$\Pr(G|S)$ of the observed genotypes given the meiotic indicators, and
+the probability $\Pr(Y|G,\phi)$ of the phenotype data given the
+genotypes.
+
+
+\end{document}
