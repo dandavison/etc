@@ -187,33 +187,7 @@ Pr(G_rel | G_p, Y_p, Y_rel, Asc, noncausal) = Pr(G_rel | G_p, Y_p, Y_rel=aff, no
 ```
 
 If there is only a single relative, this can be worked out on
-paper. E.g. for a single `Aa` sib, the probability is evaluated by
-noting that there are two ways of sampling an `A` allele: as an
-identical-by-descent (IBD) allele inherited from the sib; or as an
-allele drawn at random from the population frequency `p`. (And the
-same for `a` with population frequency `q=1-p`)
-
-```
-Pr(G_rel=Aa | G_p=Aa) = 2  x  (1/2 x 1/2 + 1/2 x p)  x  (1/2 x 1/2 + 1/2 * (1-p))
-                      = (3/4 + pq)/2
-```
-
-<!-- = 2  x  (1/4 + p/2)  x  (3/4 - p/2) -->
-<!-- = 2  x [  3/16 + 3p/8 - p/8 - pp/4 ] -->
-<!-- = 3/8 + p/2 - pp/2 -->
-<!-- = 1/2 (3/4 + p(1-p)) -->
-
-
-  1/4 * 2pq  +  1/2 * (3/4 + pq)/2  +  1/4 * 1
-= 2pq/4       +  (3/4 + pq)/4        + 1/4
-= (3pq + 3/4 + 1)/4 = 3pq/4
-
-
-
-(TODO: Hm, it should be `(1+pq)/2` according to Peterson et al. 1998)
-
-
-If multiple relatives are sequenced then it is a bit more
+paper. But if multiple relatives are sequenced then it is a bit more
 complicated. Their genotypes can not be treated as independent due to
 the shared pedigree; instead we calculate the likelihood by averaging
 over the prior probability distribution of a latent variable `S` which
