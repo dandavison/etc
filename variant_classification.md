@@ -20,15 +20,37 @@ The following proposal is based on what Myriad has described (Myriad
 Peterson et al. (1998), which uses sequencing of affected relatives to
 classify VUSs.
 
-- We compute a Variant Causality Score (VCS) for each VUS.
+- We compute a Variant Causality Score (VCS) for each VUS (we
+  recalculate this with some frequency to pick up new data)
 - The VCS quantifies the evidence that the VUS is causal.
 - This score is a likelihood ratio (LR) comparing the likelihood of
   the observed phenotype and genotype data under a model of a causal VUS
   against that under a non-causal model.
-- The analysis falls into two independent parts corresponding to
+- The analysis decomposes into independent parts corresponding to
   requirements (1) and (2) above.
+- One way to use the VCS for a VUS would be to compare it to the
+  distribution of VCSs for known deleterious variants.
 
-### Details
+<!-- Myriad -->
+### -------
+
+Myriad [1,2,3] treat the following as independent sources of
+information for VUS classification (roughly in order of importance)
+
+1. "History weighting algorithm": If a VUS is deleterious then family
+   history of individuals with that VUS will resemble family history
+   of individuals with known deleterious variants.
+
+2. "in trans" / "co-occurence": Occurence of VUS *in trans* with known
+   deleterious variant in the same gene, or with a known deleterious
+   variant in a different gene, suggests VUS is benign.
+
+3. "Segregation": Cosegregation of VUS with disease status in pedigrees
+
+4. Sequence/transcript-based effect prediction and phylogenetic
+   conservation
+
+### Details of family history and pedigree segregation analysis
 
 We consider data from a single family initially (the LR for data from
 all families is simply a product of family LRs).
@@ -76,7 +98,7 @@ additional relatives.
 This section corresponds to Myriad's "History Weighting Algorithm"
 (Myriad 2013a, Easton et al. 2007).
 
-#### Numerator
+##### Numerator
 
 ```
   Pr(G_p, Y_p, Y_rel | Asc, causal)
@@ -84,7 +106,7 @@ This section corresponds to Myriad's "History Weighting Algorithm"
 = Pr(G_p) Pr(Y_p, Y_rel | G_p, causal)  # Patient genotype unaffected by causal/noncausal
 ```
 
-#### Denominator
+##### Denominator
 
 ```
   Pr(G_p, Y_p, Y_rel | Asc, noncausal)
@@ -93,7 +115,7 @@ This section corresponds to Myriad's "History Weighting Algorithm"
 = Pr(G_p) Pr(Y_p, Y_rel | noncausal)   # Patient genotype unaffected by causal/noncausal
 ```
 
-#### Likelihood Ratio
+##### Likelihood Ratio
 
 The likelihood ratio is
 
@@ -135,10 +157,10 @@ model to a data set comprising multiple tested individuals and various
 summaries of the disease history of themselves and their family
 (Easton et al. 2007). The individuals are either positive for a known
 deleterious mutation, or lack any VUS. Fitting the model provides the
-required function, i.e. a function predicting the probability that the
-patient has a deleterious mutation, given their family disease
-history. They estimate `Pr(del)` as the overall proportion of
-individuals with a known deleterious mutation.
+required function predicting the probability that the patient has a
+deleterious mutation, given their family disease history. They
+estimate `Pr(del)` as the overall proportion of individuals with a
+known deleterious mutation.
 
 
 ### Segregation analysis
@@ -154,7 +176,7 @@ the only relatives to be sequenced (Peterson et al. 1998). The
 pedigree is known, and is implicit in the notation below. We consider
 the numerator and denominator of the LR separately:
 
-#### Denominator: Segregation likelihood assuming VUS is non-causal
+##### Denominator: Segregation likelihood assuming VUS is non-causal
 
 If the VUS is noncausal, phenotype does not predict genotype and the
 likelihood is simply the probability of the vector of relative
@@ -202,7 +224,7 @@ indicator' variables specifying which parent transmitted each allele
 at meiosis (see e.g. E. A. Thompson 2007)
 
 
-#### Numerator: Segregation likelihood assuming VUS is causal
+##### Numerator: Segregation likelihood assuming VUS is causal
 
 ```
   Pr(G_rel | G_p, Y_p, Y_rel, Asc, causal)
@@ -214,7 +236,7 @@ at meiosis (see e.g. E. A. Thompson 2007)
   sum_{G_rel} Pr(G_rel | G_p) Pr(Y_rel=aff|G_rel, causal)
 ```
 
-where the sum is over all possible relative genotypes.
+where the sum is over all possible relative genotype vectors.
 
 <!-- = Pr(G_rel, Y_rel=aff | G_p, causal) / Pr(Y_rel=aff | G_p, causal) -->
 
@@ -232,24 +254,6 @@ Pr(Y_rel=aff|G_rel, causal) = P_aa ^ #{aa relatives}  x  P_Aa ^ #{Aa relatives}
 
 
 
-
-<!-- Myriad -->
-### XXXXXX
-
-Myriad [1,2,3] treat the following as independent sources of
-information for VUS classification (roughly in order of importance)
-
-1. "History weighting algorithm": If a VUS is deleterious then family
-   history of individuals with that VUS will resemble family history
-   of individuals with known deleterious variants.
-
-2. "in trans": Occurence of VUS *in trans* with known deleterious
-   variant suggests VUS is benign.
-
-3. "Segregation": Cosegregation of VUS with disease status in pedigrees
-
-4. Sequence/transcript-based effect prediction and phylogenetic
-   conservation
 
 ### References
 
@@ -276,113 +280,3 @@ information for VUS classification (roughly in order of importance)
    Am. J. Hum. Genet. 62:1516 *[Very useful; clear mathematical presentation.]*
 7. E. A. Thompson (2007) **Linkage Analysis** ch.33 Handbook of
    Statistical Genetics 3rd Ed.
-
-### Questions
-
--   Should we collect data on numbers of non-affected relatives in
-    addition to affected?
-
-### TODO
-
-- Power analysis
-- Validation on existing data?
-
-
-sensitivity: Compute causality score for each known deleterious variant.
-specificity: Compute causality score for probands with neither VUS nor known del.
-
-evidence:
-
-- Their variant's causality score compared to those of known deleterious variants
-
-
-
-The main scenario is:
-
-#### Scenario 1: A VUS associated with disease incidence in relatives:
-
-We have performed exon sequencing of the relevant disease genes for an
-individual and discovered a Variant of Uncertain Significance (VUS).
-Initially we lack any further evidence regarding whether or not the
-variant is causative. Subsequently, we discover the same VUS in other
-individuals, some of which have affected relatives. How many other
-individuals, with what sorts of patterns of family disease incidence,
-are sufficient to conclude that the variant should be reported as likely
-deleterious?
-
-We may also sequence some affected individuals. This is equivalent to a
-sequenced individual having an affected relative with relatedness
-coefficient equal to 1 (identical twin).
-
-Consider a VUS at locus $l$ which has been observed in several
-individuals. A variant classification algorithm should have the
-following properties:
-
-1.  The strength of evidence for pathogenicity of $l$ increases with the
-    number of families in which there are affected individuals related
-    to an individual with the VUS
-
-2.  The evidence for pathogenicity of $l$ is stronger if the affected
-    individuals are more closely related to the sequenced individual
-    with the VUS.
-
-Model and variant classification algorithm
-==========================================
-
-The available data is a matrix of $n$ individuals x $L$ genomic
-locations of SNP or indel variants, together with a column of $n$
-phenotype scores, and a pedigree (multiple disconnected pedigrees)
-specifying relationships between the $n$ individuals. Entire rows of
-the matrix will typically be missing, corresponding to unsequenced
-individuals (relatives of a sequenced individual), and phenotype
-labels may be missing for some individuals (e.g. if they have not
-reached age-of-onset).
-
-
-Test for linkage between marker and trait locus
------------------------------------------------
-
-Let $\theta$ be the recombination fraction between the VUS locus and the
-trait locus. We compute a likelihood ratio comparing the hypothesis of
-$\theta=0$ (VUS locus is causative) versus $\theta=0.5$ (VUS locus is
-not linked to trait locus).
-
-Test for per-locus effect indicators
-------------------------------------
-
-Let $\phi_l$ represent the phenotypic effect of the non-reference
-genotypes at locus $l$. We can initially consider an extremely simple
-disease model: a locus $l$ has either $\phi_l=0$ (non-causative) or
-$\phi_l=1$ (causative); any individual with 1 or more non-reference
-alleles in any causative locus will certainly have the disease phenotype
-from birth. (dominant, early onset, fully penetrant). Otherwise the
-individual will certainly not display the disease phenotype. (The
-sequenced genes explain all disease incidence.)
-
- \
-The variant classification problem is inference for the effect
-indicators $\phi_l$. The pedigree in each family is known. We introduce
-latent “meiosis indicator” variables: $S_{ml}=0$ if meiosis $m$
-transmitted the maternal allele at locus $l$; $S_{ml}=1$ if the paternal
-allele was transmitted. $S_{m\bold{\cdot}}$ denotes the sequence of
-meiosis indicator values for all loci at meiosis $m$.
-
- \
-The likelihood is
-
-$$\begin{aligned}
-\Pr(Y, G|\phi)
-=& \sum_S \Pr(S) \Pr(Y,G|S,\phi)\\
-=& \sum_S \Pr(S) \Pr(G|S) \Pr(Y|G,\phi)\\
-=& \sum_S \Big(\prod_mS_{m\bold{\cdot}}\Big) \Pr(G|S) \Pr(Y|G,\phi)\\\end{aligned}$$
-
- \
-In words: we compute the likelihood by averaging over all possible
-histories of recombination breakpoints in the pedigrees, weighted by
-their prior probabilities (these can be computed easily from the
-recombination map). Given a particular history $S$ of meiosis
-indicators, the contribution to the likelihood is the product of the
-prior probability $\Pr(S)$ of that meiotic history, the probability
-$\Pr(G|S)$ of the observed genotypes given the meiotic indicators, and
-the probability $\Pr(Y|G,\phi)$ of the phenotype data given the
-genotypes.
