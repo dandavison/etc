@@ -203,6 +203,13 @@ Pr(G_rel=Aa | G_p=Aa) = 2  x  (1/2 x 1/2 + 1/2 x p)  x  (1/2 x 1/2 + 1/2 * (1-p)
 <!-- = 3/8 + p/2 - pp/2 -->
 <!-- = 1/2 (3/4 + p(1-p)) -->
 
+
+  1/4 * 2pq  +  1/2 * (3/4 + pq)/2  +  1/4 * 1
+= 2pq/4       +  (3/4 + pq)/4        + 1/4
+= (3pq + 3/4 + 1)/4 = 3pq/4
+
+
+
 (TODO: Hm, it should be `(1+pq)/2` according to Peterson et al. 1998)
 
 
