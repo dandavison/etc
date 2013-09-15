@@ -84,10 +84,6 @@ This section corresponds to Myriad's "History Weighting Algorithm"
 = Pr(G_p) Pr(Y_p, Y_rel | G_p, causal)  # Patient genotype unaffected by causal/noncausal
 ```
 
-`Pr(G_p)` is a constant multiplicative factor in the likelihood and so
-can be ignored.
-
-
 #### Denominator
 
 ```
@@ -107,31 +103,42 @@ LR_famhist =  ----------------------------
               Pr(Y_p, Y_rel | noncausal)
 ```
 
-Myriad estimate `Pr(Y_p, Y_rel | G_p, causal)` by fitting a logistic
-regression model to a data set comprising multiple tested individuals
-and various summaries of the disease history of themselves and their
-family (Easton et al. 2007). The individuals are either positive for a
-known deleterious mutation, or lack any VUS. Fitting the model
-provides a function predicting the probability that an individual has
-a deleterious mutation, given their family disease history:
-`Pr(causal|Y_p, Y_rel)`.
+Using Bayes rule this is
 
-They also estimate `Pr(causal)` as the overall proportion of
+```
+              Pr(Y_p, Y_rel, causal, G_p) / Pr(causal, G_p)
+LR_famhist =  ---------------------------------------------
+              Pr(Y_p, Y_rel, noncausal)   / Pr(noncausal)
+
+              Pr(causal, G_p | Y_p, Y_rel) / Pr(causal, G_p)
+           =  ----------------------------------------------
+              Pr(noncausal | Y_p, Y_rel)   / Pr(noncausal)
+```
+
+TODO: Is what Myriad do in the rest of this section reasonable?
+
+For the family of a positive patient (`G_p=Aa`), Myriad estimate this as
+
+```
+              Pr(del | Y_p, Y_rel)       / Pr(del)
+LR_famhist =  -----------------------------------------
+              [1 - Pr(del | Y_p, Y_rel)] / [1 - Pr(del)]
+```
+
+where `del` is the event "the patient has a deleterious mutation".
+
+For the family of a negative patient, the numerator and the
+denominator are the same, so these families are uninformative.
+
+Myriad estimate `Pr(del|Y_p, Y_rel)` by fitting a logistic regression
+model to a data set comprising multiple tested individuals and various
+summaries of the disease history of themselves and their family
+(Easton et al. 2007). The individuals are either positive for a known
+deleterious mutation, or lack any VUS. Fitting the model provides the
+required function, i.e. a function predicting the probability that the
+patient has a deleterious mutation, given their family disease
+history. They estimate `Pr(del)` as the overall proportion of
 individuals with a known deleterious mutation.
-
-Then, using Bayes rule:
-
-```
-              Pr(causal|Y_p, Y_rel)       [1 - Pr(causal)]
-LR_famhist =  --------------------------------------------
-              [1 - Pr(causal|Y_p, Y_rel)] Pr(causal)
-```
-
-
-
-
-TODO: What happened to `G_p`?
-
 
 
 ### Segregation analysis
