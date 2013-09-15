@@ -4,27 +4,33 @@ Variant reclassification
 In variant classification, we use phenotype and genotype observations
 to classify mutations as benign, pathogenic, or uncertain.
 
-Requirements
-============
+Requirements for reclassification procedure
+===========================================
 
 Informally:
 
-- Stronger family disease history in close relatives of VUS positives
+1. Stronger family disease history in close relatives of VUS positives
   is evidence of a causal VUS.
-- Co-segregation of disease status and VUS in pedigrees is evidence of
+2. Co-segregation of disease status and VUS in pedigrees is evidence of
   a causal VUS.
 
 Summary
 =======
 
-The following proposal is based on what Myriad does
-(Myriad 2013a, 2013b; Easton et al. 2007; Thompson et al. 2003).
+The following proposal is based on what Myriad does (Myriad 2013a,
+2013b; Easton et al. 2007; Thompson et al. 2003).
 
-We compute a Variant Causality Score (VCS) for each VUS. The VCS
-quantifies the evidence that the VUS is causal. This score is a
-likelihood ratio (LR) comparing the likelihood of the observed
-phenotype and genotype data under a model of a causal VUS against that
-under a non-causal model.
+- We compute a Variant Causality Score (VCS) for each VUS.
+- The VCS quantifies the evidence that the VUS is causal.
+- This score is a likelihood ratio (LR) comparing the likelihood of
+  the observed phenotype and genotype data under a model of a causal VUS
+  against that under a non-causal model.
+- The analysis falls into two independent parts corresponding to
+  requirements (1) and (2) above.
+
+
+Details
+=======
 
 We consider data from a single family initially (the LR for data from
 all families is simply a product of family LRs).
@@ -34,10 +40,8 @@ all families is simply a product of family LRs).
 |------------|------------------------------------------------------------------------|
 | G_p        | VUS genotype of patient                                                |
 | G_rel      | VUS genotypes of relatives                                             |
-| G_{rel, i} | VUS genotype of relative i                                             |
 | Y_p        | Disease phenotype of patient                                           |
 | Y_rel      | Disease phenotypes of relatives                                        |
-| Y_{rel,i}  | Disease phenotype of relative i                                        |
 | Asc        | Ascertainment conditions (e.g. only affected relatives were sequenced) |
 
 
@@ -79,15 +83,17 @@ Segregation analysis
 
 The following is based on Peterson et al. (1998).
 
-TODO: Do we need to make use of anything in Myriad's paper (D. Thompson et al. 2003)?
+TODO: Would we need to make use of anything in Myriad's paper
+(D. Thompson et al. 2003)?
 
 The analysis depends on the study design (ascertainment of sequenced
 relatives). We first consider a design in which affected relatives are
 the only relatives to be sequenced (Peterson et al. 1998). The patient
 genotype is `Aa` (het for a dominant VUS allele `A`). The pedigree is
-known, and is implicit in the notation below.
+known, and is implicit in the notation below. We consider the
+numerator and denominator of the LR separately:
 
-### Segregation likelihood assuming VUS is non-causal
+### Denominator: Segregation likelihood assuming VUS is non-causal
 
 If the VUS is noncausal, phenotype does not predict genotype and the
 likelihood is simply the probability of the vector of relative
@@ -135,7 +141,7 @@ from the population allele frequencies, and then average over the
 allele at meiosis (see e.g. E. A. Thompson 2007)
 
 
-### Segregation likelihood assuming VUS is causal
+### Numerator: Segregation likelihood assuming VUS is causal
 
 ```
   Pr(G_rel | G_p, Y_p, Y_rel, Asc, causal)
@@ -156,7 +162,8 @@ P_aa = Pr(affected|aa genotype)   # similar to population prevalence
 P_Aa = Pr(affected|Aa genotype)   # based on penetrance for known deleterious alleles
 ```
 
-So that
+`Pr(G_rel | G_p)` is as in the denominator section above. Given the
+penetrances, the phenotype probabilities are:
 
 ```
 Pr(Y_rel=aff|G_rel, causal) = P_aa ^ #{aa relatives}  x  P_Aa ^ #{Aa relatives}
