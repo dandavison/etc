@@ -4,8 +4,7 @@ Variant reclassification
 In variant classification, we use phenotype and genotype observations
 to classify mutations as benign, pathogenic, or uncertain.
 
-Requirements for reclassification procedure
-===========================================
+### Requirements for reclassification procedure
 
 Informally:
 
@@ -14,13 +13,12 @@ Informally:
 2. Co-segregation of disease status and VUS in pedigrees is evidence of
   a causal VUS.
 
-Summary
-=======
+### Summary
 
 The following proposal is based on what Myriad has described (Myriad
 2013a, 2013b; Easton et al. 2007; Thompson et al. 2003), and on
-Peterson et al.'s (1998) analysis using sequencing of affected
-relatives to classify VUSs.
+Peterson et al. (1998), which uses sequencing of affected relatives to
+classify VUSs.
 
 - We compute a Variant Causality Score (VCS) for each VUS.
 - The VCS quantifies the evidence that the VUS is causal.
@@ -30,8 +28,7 @@ relatives to classify VUSs.
 - The analysis falls into two independent parts corresponding to
   requirements (1) and (2) above.
 
-Details
-=======
+### Details
 
 We consider data from a single family initially (the LR for data from
 all families is simply a product of family LRs).
@@ -74,8 +71,7 @@ with disease phenotype status -- it requires that we have sequenced
 additional relatives.
 
 
-Family history analysis
-=======================
+### Family history analysis
 
 This section corresponds to Myriad's "History Weighting Algorithm"
 (Myriad 2013a, Easton et al. 2007).
@@ -138,8 +134,7 @@ TODO: What happened to `G_p`?
 
 
 
-Segregation analysis
-====================
+### Segregation analysis
 
 The following is based on Peterson et al. (1998).
 
@@ -232,8 +227,7 @@ Pr(Y_rel=aff|G_rel, causal) = P_aa ^ #{aa relatives}  x  P_Aa ^ #{Aa relatives}
 
 
 <!-- Myriad -->
-XXXXXX
-======
+### XXXXXX
 
 Myriad [1,2,3] treat the following as independent sources of
 information for VUS classification (roughly in order of importance)
@@ -250,8 +244,7 @@ information for VUS classification (roughly in order of importance)
 4. Sequence/transcript-based effect prediction and phylogenetic
    conservation
 
-References
-==========
+### References
 
 1. Myriad (2013a) **A clinical history weighting algorithm accurately
    classifies BRCA1 and BRCA2 variants.** ESHG Product Literature
@@ -277,14 +270,12 @@ References
 7. E. A. Thompson (2007) **Linkage Analysis** ch.33 Handbook of
    Statistical Genetics 3rd Ed.
 
-Questions
-=========
+### Questions
 
 -   Should we collect data on numbers of non-affected relatives in
     addition to affected?
 
-TODO
-====
+### TODO
 
 - Power analysis
 - Validation on existing data?
