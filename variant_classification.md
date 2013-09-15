@@ -187,11 +187,11 @@ Pr(G_rel | G_p, Y_p, Y_rel, Asc, noncausal) = Pr(G_rel | G_p, Y_p, Y_rel=aff, no
 ```
 
 If there is only a single relative, this can be worked out on
-paper. But if multiple relatives are sequenced then it is a bit more
-complicated. Their genotypes can not be treated as independent due to
-the shared pedigree; instead we calculate the likelihood by averaging
-over the prior probability distribution of a latent variable `S` which
-describes unknown aspects of the pedigree.
+paper. But if multiple relatives are sequenced their genotypes can not
+be treated as independent, due to the shared pedigree; instead we
+calculate the likelihood by averaging over the prior probability
+distribution of a latent variable `S` which describes unknown aspects
+of the pedigree.
 
 ```
 Pr(G_rel | G_p) = sum_S Pr(S|G_p) Pr(G_rel | S)
