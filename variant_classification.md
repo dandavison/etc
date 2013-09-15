@@ -17,8 +17,10 @@ Informally:
 Summary
 =======
 
-The following notes are based on what Myriad does (Myriad 2013a,
-2013b; Easton et al. 2007; Thompson et al. 2003).
+The following proposal is based on what Myriad has described (Myriad
+2013a, 2013b; Easton et al. 2007; Thompson et al. 2003), and on
+Peterson et al.'s (1998) analysis using sequencing of affected
+relatives to classify VUSs.
 
 - We compute a Variant Causality Score (VCS) for each VUS.
 - The VCS quantifies the evidence that the VUS is causal.
@@ -71,9 +73,6 @@ relatives; `LR_seg` summarizes information on cosegregation of the VUS
 with disease phenotype status -- it requires that we have sequenced
 additional relatives.
 
-The analysis depends on the study design (ascertainment of sequenced
-relatives). We first consider a design in which affected relatives are
-the only relatives to be sequenced (Peterson et al. 1998).
 
 Family history analysis
 =======================
@@ -81,14 +80,62 @@ Family history analysis
 This section corresponds to Myriad's "History Weighting Algorithm"
 (Myriad 2013a, Easton et al. 2007).
 
+#### Numerator
+
+```
+  Pr(G_p, Y_p, Y_rel | Asc, causal)
+= Pr(G_p, Y_p, Y_rel | causal)          # There is no ascertainment bias
+= Pr(G_p) Pr(Y_p, Y_rel | G_p, causal)  # Patient genotype unaffected by causal/noncausal
+```
+
+`Pr(G_p)` is a constant multiplicative factor in the likelihood and so
+can be ignored.
+
+
 #### Denominator
 
 ```
-Pr(G_p, Y_p, Y_rel | Asc, noncausal)
-= Pr(G_p, Y_p, Y_rel=aff | Y_rel=aff, noncausal)
-= Pr(G_p, Y_p | noncausal)  # Y_rel is uninformative due to ascertainment
-= Pr(G_p | noncausal) Pr(Y_p | noncausal)  # VUS genotypes do not predict phenotype
+  Pr(G_p, Y_p, Y_rel | Asc, noncausal)
+= Pr(G_p, Y_p, Y_rel | noncausal)                 # There is no ascertainment bias
+= Pr(G_p | noncausal) Pr(Y_p, Y_rel | noncausal)  # VUS genotypes do not predict phenotype
+= Pr(G_p) Pr(Y_p, Y_rel | noncausal)   # Patient genotype unaffected by causal/noncausal
 ```
+
+#### Likelihood Ratio
+
+The likelihood ratio is
+
+```
+              Pr(Y_p, Y_rel | G_p, causal)
+LR_famhist =  ----------------------------
+              Pr(Y_p, Y_rel | noncausal)
+```
+
+Myriad estimate `Pr(Y_p, Y_rel | G_p, causal)` by fitting a logistic
+regression model to a data set comprising multiple tested individuals
+and various summaries of the disease history of themselves and their
+family (Easton et al. 2007). The individuals are either positive for a
+known deleterious mutation, or lack any VUS. Fitting the model
+provides a function predicting the probability that an individual has
+a deleterious mutation, given their family disease history:
+`Pr(causal|Y_p, Y_rel)`.
+
+They also estimate `Pr(causal)` as the overall proportion of
+individuals with a known deleterious mutation.
+
+Then, using Bayes rule:
+
+```
+              Pr(causal|Y_p, Y_rel)       [1 - Pr(causal)]
+LR_famhist =  --------------------------------------------
+              [1 - Pr(causal|Y_p, Y_rel)] Pr(causal)
+```
+
+
+
+
+TODO: What happened to `G_p`?
+
 
 
 Segregation analysis
@@ -99,8 +146,11 @@ The following is based on Peterson et al. (1998).
 TODO: Would we need to make use of anything in Myriad's paper
 (D. Thompson et al. 2003)?
 
-The pedigree is known, and is implicit in the notation below. We
-consider the numerator and denominator of the LR separately:
+The analysis depends on the study design (ascertainment of sequenced
+relatives). We first consider a design in which affected relatives are
+the only relatives to be sequenced (Peterson et al. 1998). The
+pedigree is known, and is implicit in the notation below. We consider
+the numerator and denominator of the LR separately:
 
 #### Denominator: Segregation likelihood assuming VUS is non-causal
 
@@ -158,7 +208,7 @@ at meiosis (see e.g. E. A. Thompson 2007)
 = Pr(G_rel | G_p, Y_rel=aff, causal)  # given G_p, Y_p is uninformative about G_rel
 
 =             Pr(G_rel | G_p) Pr(Y_rel=aff|G_rel, causal)
-  ----------------------------------------------------
+  -------------------------------------------------------
   sum_{G_rel} Pr(G_rel | G_p) Pr(Y_rel=aff|G_rel, causal)
 ```
 
