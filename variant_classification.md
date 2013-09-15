@@ -4,6 +4,11 @@ Variant reclassification
 In variant classification, we use phenotype and genotype observations
 to classify mutations as benign, pathogenic, or uncertain.
 
+The following notes are based on what Myriad has described (Myriad
+2013a, 2013b; Easton et al. 2007; Thompson et al. 2003), and on
+Peterson et al. (1998), which uses sequencing of affected relatives to
+classify VUSs.
+
 ### Requirements for reclassification procedure
 
 Informally:
@@ -13,12 +18,7 @@ Informally:
 2. Co-segregation of disease status and VUS in pedigrees is evidence of
   a causal VUS.
 
-### Summary
-
-The following proposal is based on what Myriad has described (Myriad
-2013a, 2013b; Easton et al. 2007; Thompson et al. 2003), and on
-Peterson et al. (1998), which uses sequencing of affected relatives to
-classify VUSs.
+### Summary of procedure
 
 - We compute a Variant Causality Score (VCS) for each VUS (we
   recalculate this with some frequency to pick up new data)
@@ -26,16 +26,15 @@ classify VUSs.
 - This score is a likelihood ratio (LR) comparing the likelihood of
   the observed phenotype and genotype data under a model of a causal VUS
   against that under a non-causal model.
-- The analysis decomposes into independent parts corresponding to
-  requirements (1) and (2) above.
 - One way to use the VCS for a VUS would be to compare it to the
-  distribution of VCSs for known deleterious variants.
+  distribution of VCSs for known deleterious/benign variants.
 
-<!-- Myriad -->
-### -------
+### Myriad
 
-Myriad [1,2,3] treat the following as independent sources of
-information for VUS classification (roughly in order of importance)
+Myriad treat the following as independent sources of information for
+VUS classification (roughly in order of importance). These notes cover
+only (1) and (3). Easton et al. (2007) additionally describes
+likelihood-ratio approaches for (2) and (4).
 
 1. "History weighting algorithm": If a VUS is deleterious then family
    history of individuals with that VUS will resemble family history
@@ -90,10 +89,11 @@ Pr(G_p, Y_p, Y_rel | Asc, noncausal)     Pr(G_rel | G_p, Y_p, Y_rel, Asc, noncau
 `LR_famhist` summarizes the information on disease incidence among
 relatives; `LR_seg` summarizes information on cosegregation of the VUS
 with disease phenotype status -- it requires that we have sequenced
-additional relatives.
+additional relatives. The rest of this document describes how to
+compute these LRs.
 
 
-### Family history analysis
+### Family history likelihood ratio `LR_famhist`
 
 This section corresponds to Myriad's "History Weighting Algorithm"
 (Myriad 2013a, Easton et al. 2007).
@@ -163,18 +163,18 @@ estimate `Pr(del)` as the overall proportion of individuals with a
 known deleterious mutation.
 
 
-### Segregation analysis
+### Segregation likelihood ratio `LR_seg`
 
 The following is based on Peterson et al. (1998).
 
-TODO: Would we need to make use of anything in Myriad's paper
-(D. Thompson et al. 2003)?
+TODO: Extend these notes to explain Myriad's pedigree segregation
+analysis paper (D. Thompson et al. 2003).
 
 The analysis depends on the study design (ascertainment of sequenced
 relatives). We first consider a design in which affected relatives are
-the only relatives to be sequenced (Peterson et al. 1998). The
-pedigree is known, and is implicit in the notation below. We consider
-the numerator and denominator of the LR separately:
+the only relatives to be sequenced (`Y_rel=aff`; Peterson et
+al. 1998). The pedigree is known, and is implicit in the notation
+below. We consider the numerator and denominator of the LR separately:
 
 ##### Denominator: Segregation likelihood assuming VUS is non-causal
 
@@ -238,8 +238,6 @@ at meiosis (see e.g. E. A. Thompson 2007)
 
 where the sum is over all possible relative genotype vectors.
 
-<!-- = Pr(G_rel, Y_rel=aff | G_p, causal) / Pr(Y_rel=aff | G_p, causal) -->
-
 ```
 P_aa = Pr(affected|aa genotype)   # similar to population prevalence
 P_Aa = Pr(affected|Aa genotype)   # based on penetrance for known deleterious alleles
@@ -251,8 +249,6 @@ penetrances, the phenotype probabilities are:
 ```
 Pr(Y_rel=aff|G_rel, causal) = P_aa ^ #{aa relatives}  x  P_Aa ^ #{Aa relatives}
 ```
-
-
 
 
 ### References
