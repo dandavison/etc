@@ -20,8 +20,8 @@ Informally:
 
 ### Summary of procedure
 
-- We compute a Variant Causality Score (VCS) for each VUS (we
-  recalculate this with some frequency to pick up new data)
+- We compute a Variant Causality Score (VCS) for each VUS
+  (recalculated periodically)
 - The VCS quantifies the evidence that the VUS is causal.
 - This score is a likelihood ratio (LR) comparing the likelihood of
   the observed phenotype and genotype data under a model of a causal VUS
@@ -29,7 +29,7 @@ Informally:
 - One way to use the VCS for a VUS would be to compare it to the
   distribution of VCSs for known deleterious/benign variants.
 
-### Myriad
+### Sources of information used by Myriad
 
 Myriad treat the following as independent sources of information for
 VUS classification (roughly in order of importance). These notes cover
@@ -258,26 +258,26 @@ ascertainment of sequenced relatives.
 
 ### References
 
-1. Myriad (2013a) **A clinical history weighting algorithm accurately
-   classifies BRCA1 and BRCA2 variants.** ESHG Product Literature
-2. Myriad (2013b) **Segregation analysis offers a mechanism for
-   variant reclassification...** ESHG Product Literature
-3. Easton et al. \[Myriad\] (2007) **A systematic genetic assessment
+1. Myriad (2013a) [**A clinical history weighting algorithm accurately
+   classifies BRCA1 and BRCA2 variants.**](https://docs.google.com/a/counsyl.com/document/d/1NE_1j3H5N5sqvXVHUnshbNBT7itFeKTGoxV2FD92s3w/edit#heading=h.jw4sind13pop) ESHG Product Literature
+2. Myriad (2013b)
+   [**Segregation analysis offers a mechanism for variant reclassification...**](https://docs.google.com/a/counsyl.com/document/d/1NE_1j3H5N5sqvXVHUnshbNBT7itFeKTGoxV2FD92s3w/edit#heading=h.u92owrh3qhv6)
+   ESHG Product Literature
+3. Easton et al. \[Myriad\] (2007) [**A systematic genetic assessment
    of 1,433 sequence variants of unknown significance in the BRCA1
-   and BRCA2 breast cancer-predisposition genes.** Am. J. Hum. Genet. 81:873
+   and BRCA2 breast cancer-predisposition genes.**](http://download.cell.com/AJHG/pdf/PIIS0002929707638658.pdf) Am. J. Hum. Genet. 81:873
    *[Useful. Describes mathematical details for History-weighting, Co-occurrence and Segregation analyses.]*
-4. Goldgar et al. \[Myriad\] (2008) **Genetic evidence and
+4. Goldgar et al. \[Myriad\] (2008) [**Genetic evidence and
    intergration of various data sources for classifying uncertain
-   variants into a single model.** Hum. Mutat. 29:1265
+   variants into a single model.**](http://onlinelibrary.wiley.com/doi/10.1002/humu.20897/pdf) Hum. Mutat. 29:1265
    *[Mostly a rehash of Easton et al. (2007); discusses two-component mixture model approach]*
-5. D. Thompson et al. (2003) **A full-likelihood method for the
-   evaluation of causality of sequence variants from family data.**
+5. D. Thompson et al. (2003)
+   **[A full-likelihood method for the evaluation of causality of sequence variants from family data.](http://www.cell.com/AJHG/retrieve/pii/S000292970762028X)**
    Am. J. Hum. Genet. 73:652
-   *[Myriad's main reference for their pedigree segregation analysis.
-   Presented as an advance over Peterson, Parmigiani et al. (1998).
-   Minimal mathematical detail.]*
-6. Peterson, Parmigiani and Thomas (1998) **Missense mutations in
-   disease genes: a Bayesian approach to evaluate causality.**
-   Am. J. Hum. Genet. 62:1516 *[Very useful; clear mathematical presentation.]*
-7. E. A. Thompson (2007) **Linkage Analysis** ch.33 Handbook of
-   Statistical Genetics 3rd Ed.
+   *[Myriad's main reference for their pedigree segregation analysis.  Presented as an advance over Peterson, Parmigiani et al. (1998).  Minimal mathematical detail.]*
+6. Peterson, Parmigiani and Thomas (1998)
+   **[Missense mutations in disease genes: a Bayesian approach to evaluate causality.](http://www.cell.com/AJHG/retrieve/pii/S0002929707627955)**
+   Am. J. Hum. Genet. 62:1516
+   *[Very useful; clear mathematical presentation.]*
+7. E. A. Thompson (2007) **Linkage Analysis** ch.33 [Handbook of
+   Statistical Genetics 3rd Ed.](http://medacadem.chita.ru/docs/medstat/14.pdf)
