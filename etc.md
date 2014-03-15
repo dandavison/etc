@@ -1,3 +1,12 @@
+> What is the sensitivity and specificity of these existing classifications? That is, what is the basis for computing ground truth here?
+
+If one were to be in possession of data like Myriad has, then ground truth would be 
+
+sensitivity: Compute causality score for known deleterious variants.
+specificity: Compute causality score for known benign variants.
+
+
+
 ### Questions
 
 -   Should we collect data on numbers of non-affected relatives in
@@ -9,8 +18,11 @@
 - Validation on existing data?
 
 
-sensitivity: Compute causality score for each known deleterious variant.
-specificity: Compute causality score for probands with neither VUS nor known del.
+
+
+
+
+
 
 evidence:
 

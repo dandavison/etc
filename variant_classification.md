@@ -14,10 +14,10 @@ Informally:
 
 ### Summary of procedure
 
-- We compute a Variant Causality Score (VCS) for each VUS (recalculated periodically)
-- The VCS quantifies the evidence that the VUS is causal.
+- We compute a Variant Causality Score for each VUS (recalculated periodically)
+- The score quantifies the evidence that the VUS is causal.
 - This score is a likelihood ratio (LR) comparing the likelihood of the observed phenotype and genotype data under a model of a causal VUS against that under a non-causal model.
-- One way to use the VCS for a VUS would be to compare it to the distribution of VCSs for known deleterious/benign variants.
+- One way to use the score for a VUS would be to compare it to the distribution of scores for known deleterious and known benign variants.
 
 ### Sources of information used by Myriad
 
