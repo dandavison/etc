@@ -3,14 +3,14 @@
 The combination of sequence data and family disease data contains
 information about whether mutations are disease-causing.
 
-If we have a large data set, and we observe a rare VUS mutation in 20
-families, and all those families have a high disease incidence, then
-we need to seriously consider the possibility that the VUS is causal.
+**Intuition**: If we have a large data set, and we observe a rare VUS
+  mutation in 20 families, and all those families have a high disease
+  incidence, then the VUS may be causal.
 
 So we should:
 
 1. Take all historical data into account when first releasing results.
-2. Continually revise tjhis classification as we accumulate more
+2. Continually revise this classification as we accumulate more
    sequence data and family disease data.
 
 
@@ -42,3 +42,31 @@ In the future we might sequence relatives:
 | Aunt 1  | $$G_{rel,2}$$   | $$Y_{rel,2}$$     |
 | Aunt 2  | $$G_{rel,3}$$   | $$?$$             |
 
+
+# How do we formalize this analysis?
+
+Our data looks like it might suggest a causal variant.
+
+But could it have happened by chance? (p-value)
+
+What's the probability it's causal? (Bayesian posterior probability)
+
+
+## Write down the likelihood: probability of observed data
+
+$$Pr(G_p, Y_p, G_{rel}, Y_{rel})$$
+
+
+$$ Pr(A ~\text{and}~ B) = Pr(A) ~ Pr(B ~|~ A) $$
+
+$$ Pr(G_p, Y_p, Y_{rel} ) Pr(G_{rel} | G_p, Y_p, Y_{rel}) $$
+
+We can quantify the evidence for causality by calculating a *likelihood ratio*
+
+
+$$\frac{ Pr(G_p, Y_p, G_{rel}, Y_{rel} | \text{causal}) }{ Pr(G_p, Y_p, G_{rel}, Y_{rel} | \text{benign}) }$$
+
+
+But, what if we don't have sequence data from the relatives?
+
+$$\frac{ Pr(G_p, Y_p, Y_{rel} | \text{causal})  Pr(G_{rel} | G_p, Y_p, Y_{rel}) }{ Pr(G_p, Y_p, Y_{rel} | \text{benign}) Pr(G_{rel} | G_p, Y_p, Y_{rel}) }$$
