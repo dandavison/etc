@@ -78,7 +78,9 @@ $$\frac{ \Pr(G, Y ~|~ \text{causal}) }{ \Pr(G, Y ~|~ \text{noncausal}) }$$
 $$ \text{LR} = \prod_{families} \frac{ \Pr(G, Y ~|~ \text{causal}) }{ \Pr(G, Y ~|~ \text{noncausal}) }$$
 
 
-## So what is that? How do we calculate it?
+## OK...so how does this connect with reality?
+
+Just a tiny bit more rearranging...
 
 $$ \Pr(G, Y ~|~ \text{causal}) = \Pr(G) \Pr(Y ~|~ G, \text{causal}) = \Pr(G) \Pr(Y ~|~ \text{del}) $$ 
 
@@ -92,28 +94,58 @@ $$ \text{LR} = \prod_{families} \frac{ \Pr(Y ~|~ \text{del}) }
 $$~$$
 
 
-$$ \text{LR} = \prod_{families} \frac{ \Pr(\text{del} ~|~ Y)    ~/~ \Pr(\text{del}) }
-                                     { \Pr(\text{benign} ~|~ Y) ~/~ \Pr(\text{benign}) }$$
-
+( Bayes Rule $ \Pr(X|Y) = \Pr(X)~\Pr(Y|X) ~/~ \Pr(Y) $ )
 
 $$~$$
 
 
-$$ \text{LR} = \prod_{families} \frac{ \Pr(\text{del} ~|~ Y) }
-                                     { \Pr(\text{benign} ~|~ Y) }
+$$ \text{LR} = \prod_{families} \frac{     \Pr(\text{del} ~|~ Y) }
+                                     { 1 - \Pr(\text{del} ~|~ Y) }
 /
-                                \frac{ \Pr(\text{del}) }
-                                     { \Pr(\text{benign}) }$$
+                                \frac{     \Pr(\text{del}) }
+                                     { 1 - \Pr(\text{del}) }$$
 
 
 
-## OK...so how is this math useful?
+## How do we use this?
 
-$$                                 \frac{ \Pr(\text{del}) }
-                                     { \Pr(\text{benign}) }$$
+#### $ \Pr(\text{del}) $ => fraction of people with any known deleterious mutation.
 
-We can estimate this.
+#### $ \Pr(\text{del} ~|~ Y) $ => probability of deleterious mutation given family history
 
-$$
-\frac{\text{Fraction of known deleterious mutations}}{\text{Fraction of known benign mutations}
-$$
+
+## Logistic Regression
+
+
+| Family | Patient has Known Del? | BRCA < 50 score | BRCA > 50 score | Ovarian < 50 score | ... |
+|--------|------------------------|-----------------|-----------------|--------------------|-----|
+|      1 | No                     |               0 |               0 |                  0 | ... |
+|      2 | No                     |               0 |               1 |                  0 | ... |
+|      3 | Yes                    |               2 |               0 |                  0 | ... |
+|      4 | Yes                    |               0 |               1 |                  0 | ... |
+|      5 | No                     |               0 |               0 |                  0 | ... |
+
+
+## Classification Algorithm
+
+
+1. Estimate $ \Pr(\text{del}) $
+
+2. Fit logistic regression
+
+3. Calculate LR for each VUS
+```
+for each VUS
+    for each family with the VUS
+        calculate LR using family history data
+    calculate product over families
+```
+
+4. Compare LRs for VUSs to LRs for known benign and known deleterious mutations
+   VUS LRs that look like they come from the deleterious distribution => reclassify as deleterious
+
+5. Let our physicians and patients know about the reclassifications if they have asked to be kept informed.
+
+6. Publish the reclassification.
+
+
