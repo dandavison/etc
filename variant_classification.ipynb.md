@@ -43,9 +43,9 @@ In the future we might sequence relatives:
 | Aunt 2  | $$G_{rel,3}$$   | $$?$$             |
 
 
-# How do we formalize this analysis?
+# How do we make this quantitative?
 
-Our data looks like it might suggest a causal variant.
+Our data "looks like" it might suggest a causal variant.
 
 But could it have happened by chance? (p-value)
 
@@ -57,16 +57,62 @@ What's the probability it's causal? (Bayesian posterior probability)
 $$Pr(G_p, Y_p, G_{rel}, Y_{rel})$$
 
 
-$$ Pr(A ~\text{and}~ B) = Pr(A) ~ Pr(B ~|~ A) $$
+$$ Pr(A ~\text{and}~ B) = Pr(A) ~ Pr(B ~~|~~ A) $$
 
-$$ Pr(G_p, Y_p, Y_{rel} ) Pr(G_{rel} | G_p, Y_p, Y_{rel}) $$
-
-We can quantify the evidence for causality by calculating a *likelihood ratio*
+$$ Pr(G_p, Y_p, Y_{rel} ) Pr(G_{rel} ~|~ G_p, Y_p, Y_{rel}) $$
 
 
-$$\frac{ Pr(G_p, Y_p, G_{rel}, Y_{rel} | \text{causal}) }{ Pr(G_p, Y_p, G_{rel}, Y_{rel} | \text{benign}) }$$
+## Let's ignore sequenced relatives
+
+## We can quantify the evidence for causality by calculating a *likelihood ratio*
 
 
-But, what if we don't have sequence data from the relatives?
+$$\frac{ Pr(G_p, Y_p, Y_{rel} ~|~ \text{causal}) }{ Pr(G_p, Y_p, Y_{rel} ~|~ \text{benign}) }$$
 
-$$\frac{ Pr(G_p, Y_p, Y_{rel} | \text{causal})  Pr(G_{rel} | G_p, Y_p, Y_{rel}) }{ Pr(G_p, Y_p, Y_{rel} | \text{benign}) Pr(G_{rel} | G_p, Y_p, Y_{rel}) }$$
+
+## Putting it together across all families
+
+$$ \text{LR} = \prod_{families} \frac{ Pr(G_p, Y_p, Y_{rel} ~|~ \text{causal}) }{ Pr(G_p, Y_p, Y_{rel} ~|~ \text{benign}) }$$
+
+
+## So what is that? How do we calculate it?
+
+$$ Pr(G_p, Y_p, Y_{rel} ~|~ \text{causal}) = Pr(G_p) Pr(Y_p, Y_{rel} ~|~ G_p, \text{causal}) $$ 
+
+
+$$~$$
+
+
+$$ \text{LR} = \prod_{families} \frac{ Pr(Y_p, Y_{rel} ~|~ G_p, \text{causal}) }
+                                     { Pr(Y_p, Y_{rel} ~|~ G_p, \text{benign}) }$$
+
+$$~$$
+
+
+$$ \text{LR} = \prod_{families} \frac{ Pr(\text{causal}, G_p ~|~ Y_p, Y_{rel}) ~/~ Pr(\text{causal}, G_p) }
+                                     { Pr(\text{noncausal} ~|~ Y_p, Y_{rel})   ~/~ Pr(\text{noncausal}) }$$
+
+
+$$~$$
+
+
+$$ \text{LR} = \prod_{families} \frac{ Pr(\text{del} ~|~ Y_p, Y_{rel})       ~/~ Pr(\text{del}) }
+                                     { [1 - Pr(\text{del} ~|~ Y_p, Y_{rel})] ~/~ [1 - Pr(\text{del})] }$$
+
+
+$$~$$
+
+$$ \text{LR} = \prod_{families} \frac{ Pr(\text{del} ~|~ Y_p, Y_{rel})       ~/~ Pr(\text{del}) }
+                                     { Pr(\text{benign} ~|~ Y_p, Y_{rel}) ~/~ Pr(\text{benign}) }$$
+
+
+$$~$$
+
+$$ \text{LR} = \prod_{families} \frac{ Pr(\text{del} ~|~ Y_p, Y_{rel}) }
+                                     { Pr(\text{benign} ~|~ Y_p, Y_{rel}) }
+/
+                                \frac{ Pr(\text{del}) }
+                                     { Pr(\text{benign}) }$$
+
+
+
