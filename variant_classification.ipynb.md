@@ -147,5 +147,3 @@ for each VUS
 5. Let our physicians and patients know about the reclassifications if they have asked to be kept informed.
 
 6. Publish the reclassification.
-
-
