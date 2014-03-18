@@ -66,41 +66,54 @@ $$ Pr(G_p, Y_p, Y_{rel} ) Pr(G_{rel} ~|~ G_p, Y_p, Y_{rel}) $$
 
 ## We can quantify the evidence for causality by calculating a *likelihood ratio*
 
+\newcommand{\Pr}{\text{Pr}}
 
-$$\frac{ Pr(G, Y ~|~ \text{causal}) }{ Pr(G, Y ~|~ \text{benign}) }$$
+
+
+$$\frac{ \Pr(G, Y ~|~ \text{causal}) }{ \Pr(G, Y ~|~ \text{noncausal}) }$$
 
 
 ## Putting it together across all families
 
-$$ \text{LR} = \prod_{families} \frac{ Pr(G, Y ~|~ \text{causal}) }{ Pr(G, Y ~|~ \text{benign}) }$$
+$$ \text{LR} = \prod_{families} \frac{ \Pr(G, Y ~|~ \text{causal}) }{ \Pr(G, Y ~|~ \text{noncausal}) }$$
 
 
 ## So what is that? How do we calculate it?
 
-$$ Pr(G, Y ~|~ \text{causal}) = Pr(G) Pr(Y ~|~ G, \text{causal}) $$ 
+$$ \Pr(G, Y ~|~ \text{causal}) = \Pr(G) \Pr(Y ~|~ G, \text{causal}) = \Pr(G) \Pr(Y ~|~ \text{del}) $$ 
 
 
 $$~$$
 
 
-$$ \text{LR} = \prod_{families} \frac{ Pr(Y ~|~ G, \text{causal}) }
-                                     { Pr(Y ~|~ G, \text{benign}) }$$
+$$ \text{LR} = \prod_{families} \frac{ \Pr(Y ~|~ \text{del}) }
+                                     { \Pr(Y ~|~ \text{benign}) }$$
 
 $$~$$
 
 
-$$ \text{LR} = \prod_{families} \frac{ Pr(\text{causal}, G ~|~ Y) ~/~ Pr(\text{causal}, G) }
-                                     { Pr(\text{benign} ~|~ Y)    ~/~ Pr(\text{benign}) }$$
+$$ \text{LR} = \prod_{families} \frac{ \Pr(\text{del} ~|~ Y)    ~/~ \Pr(\text{del}) }
+                                     { \Pr(\text{benign} ~|~ Y) ~/~ \Pr(\text{benign}) }$$
 
 
 $$~$$
 
 
-$$ \text{LR} = \prod_{families} \frac{ Pr(\text{del} ~|~ Y) }
-                                     { Pr(\text{benign} ~|~ Y) }
+$$ \text{LR} = \prod_{families} \frac{ \Pr(\text{del} ~|~ Y) }
+                                     { \Pr(\text{benign} ~|~ Y) }
 /
-                                \frac{ Pr(\text{del}) }
-                                     { Pr(\text{benign}) }$$
+                                \frac{ \Pr(\text{del}) }
+                                     { \Pr(\text{benign}) }$$
 
 
 
+## OK...so how is this math useful?
+
+$$                                 \frac{ \Pr(\text{del}) }
+                                     { \Pr(\text{benign}) }$$
+
+We can estimate this.
+
+$$
+\frac{\text{Fraction of known deleterious mutations}}{\text{Fraction of known benign mutations}
+$$
