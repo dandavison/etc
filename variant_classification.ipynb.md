@@ -67,49 +67,37 @@ $$ Pr(G_p, Y_p, Y_{rel} ) Pr(G_{rel} ~|~ G_p, Y_p, Y_{rel}) $$
 ## We can quantify the evidence for causality by calculating a *likelihood ratio*
 
 
-$$\frac{ Pr(G_p, Y_p, Y_{rel} ~|~ \text{causal}) }{ Pr(G_p, Y_p, Y_{rel} ~|~ \text{benign}) }$$
+$$\frac{ Pr(G, Y ~|~ \text{causal}) }{ Pr(G, Y ~|~ \text{benign}) }$$
 
 
 ## Putting it together across all families
 
-$$ \text{LR} = \prod_{families} \frac{ Pr(G_p, Y_p, Y_{rel} ~|~ \text{causal}) }{ Pr(G_p, Y_p, Y_{rel} ~|~ \text{benign}) }$$
+$$ \text{LR} = \prod_{families} \frac{ Pr(G, Y ~|~ \text{causal}) }{ Pr(G, Y ~|~ \text{benign}) }$$
 
 
 ## So what is that? How do we calculate it?
 
-$$ Pr(G_p, Y_p, Y_{rel} ~|~ \text{causal}) = Pr(G_p) Pr(Y_p, Y_{rel} ~|~ G_p, \text{causal}) $$ 
+$$ Pr(G, Y ~|~ \text{causal}) = Pr(G) Pr(Y ~|~ G, \text{causal}) $$ 
 
 
 $$~$$
 
 
-$$ \text{LR} = \prod_{families} \frac{ Pr(Y_p, Y_{rel} ~|~ G_p, \text{causal}) }
-                                     { Pr(Y_p, Y_{rel} ~|~ G_p, \text{benign}) }$$
+$$ \text{LR} = \prod_{families} \frac{ Pr(Y ~|~ G, \text{causal}) }
+                                     { Pr(Y ~|~ G, \text{benign}) }$$
 
 $$~$$
 
 
-$$ \text{LR} = \prod_{families} \frac{ Pr(\text{causal}, G_p ~|~ Y_p, Y_{rel}) ~/~ Pr(\text{causal}, G_p) }
-                                     { Pr(\text{noncausal} ~|~ Y_p, Y_{rel})   ~/~ Pr(\text{noncausal}) }$$
+$$ \text{LR} = \prod_{families} \frac{ Pr(\text{causal}, G ~|~ Y) ~/~ Pr(\text{causal}, G) }
+                                     { Pr(\text{benign} ~|~ Y)    ~/~ Pr(\text{benign}) }$$
 
 
 $$~$$
 
 
-$$ \text{LR} = \prod_{families} \frac{ Pr(\text{del} ~|~ Y_p, Y_{rel})       ~/~ Pr(\text{del}) }
-                                     { [1 - Pr(\text{del} ~|~ Y_p, Y_{rel})] ~/~ [1 - Pr(\text{del})] }$$
-
-
-$$~$$
-
-$$ \text{LR} = \prod_{families} \frac{ Pr(\text{del} ~|~ Y_p, Y_{rel})       ~/~ Pr(\text{del}) }
-                                     { Pr(\text{benign} ~|~ Y_p, Y_{rel}) ~/~ Pr(\text{benign}) }$$
-
-
-$$~$$
-
-$$ \text{LR} = \prod_{families} \frac{ Pr(\text{del} ~|~ Y_p, Y_{rel}) }
-                                     { Pr(\text{benign} ~|~ Y_p, Y_{rel}) }
+$$ \text{LR} = \prod_{families} \frac{ Pr(\text{del} ~|~ Y) }
+                                     { Pr(\text{benign} ~|~ Y) }
 /
                                 \frac{ Pr(\text{del}) }
                                      { Pr(\text{benign}) }$$
