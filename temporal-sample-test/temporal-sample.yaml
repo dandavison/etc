@@ -1,0 +1,17 @@
+version: 1
+language: python
+scaffold:
+  pyproject.toml: |
+    [project]
+    name = "{{name}}"
+    version = "0.1.0"
+    requires-python = ">=3.10"
+    dependencies = [{{dependencies}}]
+    [build-system]
+    requires = ["hatchling"]
+    build-backend = "hatchling.build"
+samples:
+  - path: .
+    description: Test sample for CLI development
+    dependencies:
+      - temporalio>=1.23.0,<2
