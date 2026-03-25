@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abstract Graph Eval: Do LLMs Use Semantic Priors?</title>
+<style>
+:root {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --surface2: #0f3460;
+  --text: #e0e0e0;
+  --text-muted: #8892b0;
+  --accent: #64ffda;
+  --accent2: #bd93f9;
+  --red: #ff5555;
+  --orange: #ffb86c;
+  --green: #50fa7b;
+  --yellow: #f1fa8c;
+  --border: #233554;
+  --mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  --sans: 'Inter', -apple-system, system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1 { color: var(--accent); font-size: 1.8rem; margin-bottom: 0.5rem; }
+h2 { color: var(--accent2); font-size: 1.4rem; margin: 2rem 0 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+h3 { color: var(--text); font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+p, li { color: var(--text-muted); margin-bottom: 0.5rem; }
+strong { color: var(--text); }
+a { color: var(--accent); }
+code { font-family: var(--mono); font-size: 0.85em; background: var(--surface); padding: 0.15em 0.4em; border-radius: 3px; }
+
+.prompt-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent2);
+  padding: 1.2rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+th, td {
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+th {
+  background: var(--surface2);
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+td { background: var(--surface); }
+td:first-child, th:first-child { text-align: left; }
+
+.pass-100 { color: var(--green); font-weight: 700; }
+.pass-90 { color: var(--yellow); font-weight: 600; }
+.pass-80 { color: var(--orange); font-weight: 600; }
+.pass-low { color: var(--red); font-weight: 700; }
+
+.graph-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+.graph-header {
+  background: var(--surface2);
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.graph-header:hover { background: #1a4a7a; }
+.graph-header h3 { margin: 0; }
+.graph-header .meta { color: var(--text-muted); font-size: 0.85rem; }
+.graph-body { padding: 1.2rem; display: none; }
+.graph-body.open { display: block; }
+
+.tab-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 1rem;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: var(--sans);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.15s;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+pre.rendering {
+  background: #0d1117;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #c9d1d9;
+  white-space: pre;
+  max-height: 600px;
+}
+
+.findings { margin: 1rem 0; }
+.findings li { margin-bottom: 0.8rem; padding-left: 0.5rem; }
+.findings li strong { color: var(--accent); }
+
+.q-table td.pass { color: var(--green); }
+.q-table td.fail { color: var(--red); font-weight: 700; }
+
+.subtitle { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
+.section-note { color: var(--text-muted); font-size: 0.85rem; font-style: italic; margin: 0.5rem 0 1rem; }
+
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem; }
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.comparison-grid > div {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+}
+.comparison-grid h4 {
+  color: var(--accent2);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.delta-positive { color: var(--green); }
+.delta-negative { color: var(--red); }
+.delta-zero { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<h1>Abstract Graph Eval</h1>
+<p class="subtitle">Do LLMs use semantic priors when parsing graph topology? A controlled comparison with meaningless node labels.</p>
+<h2>Motivation</h2>
+<div class="prompt-box">Donald says:
+
+"I'd also be interested in seeing a repeat of this experiment, but instead of system
+architecture graphs, arbitrary meaningless graphs (nodes labeled A, B, C, etc.). LLMs
+likely are inferring graph facts based on implied semantics of nodes."</div>
+<p>This is a follow-up to the <a href="../graph-eval/">system architecture eval</a>.
+That experiment found that mermaid, JSON, YAML, and verbal prose all communicated graph topology
+well, while ASCII art degraded at higher complexity. But a confound remained: with nodes named
+"Load Balancer", "API Gateway", "Database", the LLM may have been <em>inferring</em> edges from
+domain knowledge rather than <em>reading</em> them from the representation.</p>
+<p>This experiment uses the <strong>identical topologies</strong> but replaces all semantic node names
+with abstract letters (A, B, C, &hellip;). Any drop in performance isolates the contribution of
+semantic priors.</p>
+<h2>Experiment Design</h2>
+<ul>
+<li><strong>Subject model:</strong> Claude Sonnet 4.6 (temperature=1.0, 3 runs per condition)</li>
+<li><strong>Grader model:</strong> Claude Sonnet 4.6 (temperature=0, comparing against algorithmically-computed ground truth)</li>
+<li><strong>Formats:</strong> verbal edge list, ASCII art, JSON, YAML, mermaid</li>
+<li><strong>Graphs:</strong> 5 directed graphs at increasing complexity (3&rarr;22 nodes, 2&rarr;34 edges)</li>
+<li><strong>Key difference from architecture eval:</strong> nodes labeled A, B, C, &hellip; with no edge labels.
+Verbal format lists edges as "A &rarr; B" rather than "Client sends HTTP requests to API Server"</li>
+<li><strong>Questions per graph:</strong> 6 topology questions &mdash; forward neighbors, backward neighbors, reachability, sources, sinks, total degree</li>
+<li><strong>Total eval calls:</strong> 75 subject + 450 grading = 525 API calls</li>
+</ul>
+<h2>Results: Abstract Graphs</h2>
+<table><thead><tr><th>Complexity</th>
+<th>verbal</th>
+<th>ascii</th>
+<th>json</th>
+<th>yaml</th>
+<th>mermaid</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>tiny</strong> (3n/2e)</td>
+<td class="pass-80">83%±0%</td>
+<td class="pass-80">83%±0%</td>
+<td class="pass-80">83%±0%</td>
+<td class="pass-low">78%±8%</td>
+<td class="pass-low">72%±8%</td>
+</tr>
+<tr>
+<td><strong>small</strong> (6n/7e)</td>
+<td class="pass-90">94%±8%</td>
+<td class="pass-low">50%±0%</td>
+<td class="pass-low">72%±8%</td>
+<td class="pass-80">83%±14%</td>
+<td class="pass-100">100%±0%</td>
+</tr>
+<tr>
+<td><strong>medium</strong> (10n/14e)</td>
+<td class="pass-low">67%±0%</td>
+<td class="pass-low">17%±0%</td>
+<td class="pass-low">67%±0%</td>
+<td class="pass-low">78%±16%</td>
+<td class="pass-100">100%±0%</td>
+</tr>
+<tr>
+<td><strong>large</strong> (16n/24e)</td>
+<td class="pass-80">83%±0%</td>
+<td class="pass-low">28%±8%</td>
+<td class="pass-90">94%±8%</td>
+<td class="pass-90">94%±8%</td>
+<td class="pass-100">100%±0%</td>
+</tr>
+<tr>
+<td><strong>xl</strong> (22n/34e)</td>
+<td class="pass-100">100%±0%</td>
+<td class="pass-low">0%±0%</td>
+<td class="pass-100">100%±0%</td>
+<td class="pass-100">100%±0%</td>
+<td class="pass-100">100%±0%</td>
+</tr>
+</tbody></table>
+<h2>Comparison: Architecture vs Abstract Labels</h2>
+<p class="section-note">Same topologies, same questions, same model. Only difference: node naming.</p>
+<table><thead><tr><th>Complexity</th>
+<th colspan="2">verbal</th>
+<th colspan="2">ascii</th>
+<th colspan="2">json</th>
+<th colspan="2">yaml</th>
+<th colspan="2">mermaid</th>
+</tr><tr><th></th>
+<th>Arch</th><th>Abstract</th>
+<th>Arch</th><th>Abstract</th>
+<th>Arch</th><th>Abstract</th>
+<th>Arch</th><th>Abstract</th>
+<th>Arch</th><th>Abstract</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>tiny</strong></td>
+<td class="pass-100">100%</td>
+<td class="pass-80">83%</td>
+<td class="pass-100">100%</td>
+<td class="pass-80">83%</td>
+<td class="pass-100">100%</td>
+<td class="pass-80">83%</td>
+<td class="pass-100">100%</td>
+<td class="pass-low">78%</td>
+<td class="pass-100">100%</td>
+<td class="pass-low">72%</td>
+</tr>
+<tr>
+<td><strong>small</strong></td>
+<td class="pass-100">100%</td>
+<td class="pass-90">94%</td>
+<td class="pass-100">100%</td>
+<td class="pass-low">50%</td>
+<td class="pass-100">100%</td>
+<td class="pass-low">72%</td>
+<td class="pass-100">100%</td>
+<td class="pass-80">83%</td>
+<td class="pass-100">100%</td>
+<td class="pass-100">100%</td>
+</tr>
+<tr>
+<td><strong>medium</strong></td>
+<td class="pass-90">94%</td>
+<td class="pass-low">67%</td>
+<td class="pass-low">61%</td>
+<td class="pass-low">17%</td>
+<td class="pass-90">94%</td>
+<td class="pass-low">67%</td>
+<td class="pass-90">94%</td>
+<td class="pass-low">78%</td>
+<td class="pass-100">100%</td>
+<td class="pass-100">100%</td>
+</tr>
+<tr>
+<td><strong>large</strong></td>
+<td class="pass-100">100%</td>
+<td class="pass-80">83%</td>
+<td class="pass-80">83%</td>
+<td class="pass-low">28%</td>
+<td class="pass-100">100%</td>
+<td class="pass-90">94%</td>
+<td class="pass-100">100%</td>
+<td class="pass-90">94%</td>
+<td class="pass-100">100%</td>
+<td class="pass-100">100%</td>
+</tr>
+<tr>
+<td><strong>xl</strong></td>
+<td class="pass-80">89%</td>
+<td class="pass-100">100%</td>
+<td class="pass-90">94%</td>
+<td class="pass-low">0%</td>
+<td class="pass-100">100%</td>
+<td class="pass-100">100%</td>
+<td class="pass-100">100%</td>
+<td class="pass-100">100%</td>
+<td class="pass-100">100%</td>
+<td class="pass-100">100%</td>
+</tr>
+</tbody></table>
+<h3>Performance Delta (Abstract minus Architecture)</h3>
+<p class="section-note">Negative values (red) show where semantic priors were helping.</p>
+<table><thead><tr><th>Complexity</th>
+<th>verbal</th>
+<th>ascii</th>
+<th>json</th>
+<th>yaml</th>
+<th>mermaid</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>tiny</strong></td>
+<td class="delta-negative">-17%</td>
+<td class="delta-negative">-17%</td>
+<td class="delta-negative">-17%</td>
+<td class="delta-negative">-22%</td>
+<td class="delta-negative">-28%</td>
+</tr>
+<tr>
+<td><strong>small</strong></td>
+<td class="delta-negative">-6%</td>
+<td class="delta-negative">-50%</td>
+<td class="delta-negative">-28%</td>
+<td class="delta-negative">-17%</td>
+<td class="delta-zero">0</td>
+</tr>
+<tr>
+<td><strong>medium</strong></td>
+<td class="delta-negative">-28%</td>
+<td class="delta-negative">-44%</td>
+<td class="delta-negative">-28%</td>
+<td class="delta-negative">-17%</td>
+<td class="delta-zero">0</td>
+</tr>
+<tr>
+<td><strong>large</strong></td>
+<td class="delta-negative">-17%</td>
+<td class="delta-negative">-55%</td>
+<td class="delta-negative">-6%</td>
+<td class="delta-negative">-6%</td>
+<td class="delta-zero">0</td>
+</tr>
+<tr>
+<td><strong>xl</strong></td>
+<td class="delta-positive">+11%</td>
+<td class="delta-negative">-94%</td>
+<td class="delta-zero">0</td>
+<td class="delta-zero">0</td>
+<td class="delta-zero">0</td>
+</tr>
+</tbody></table>
+<h2>Per-Question Breakdown</h2>
+<p class="section-note">Correct / total across 3 runs per condition</p>
+<h3>TINY &mdash; G1 (3n/2e)</h3>
+<table class="q-table"><thead><tr><th>Question</th>
+<th>verbal</th>
+<th>ascii</th>
+<th>json</th>
+<th>yaml</th>
+<th>mermaid</th>
+</tr></thead><tbody>
+<tr><td>Q1: Forward neighbors</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q2: Backward neighbors</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q3: Reachability</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q4: Sources (no incoming)</td>
+<td class="fail">0/3</td>
+<td class="fail">0/3</td>
+<td class="fail">0/3</td>
+<td class="fail">0/3</td>
+<td class="fail">0/3</td>
+</tr>
+<tr><td>Q5: Sinks (no outgoing)</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="fail">2/3</td>
+<td class="fail">1/3</td>
+</tr>
+<tr><td>Q6: Total degree</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+</tbody></table>
+<h3>SMALL &mdash; G2 (6n/7e)</h3>
+<table class="q-table"><thead><tr><th>Question</th>
+<th>verbal</th>
+<th>ascii</th>
+<th>json</th>
+<th>yaml</th>
+<th>mermaid</th>
+</tr></thead><tbody>
+<tr><td>Q1: Forward neighbors</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q2: Backward neighbors</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="fail">0/3</td>
+<td class="fail">2/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q3: Reachability</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q4: Sources (no incoming)</td>
+<td class="fail">2/3</td>
+<td class="pass">3/3</td>
+<td class="fail">1/3</td>
+<td class="fail">1/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q5: Sinks (no outgoing)</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q6: Total degree</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+</tbody></table>
+<h3>MEDIUM &mdash; G3 (10n/14e)</h3>
+<table class="q-table"><thead><tr><th>Question</th>
+<th>verbal</th>
+<th>ascii</th>
+<th>json</th>
+<th>yaml</th>
+<th>mermaid</th>
+</tr></thead><tbody>
+<tr><td>Q1: Forward neighbors</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q2: Backward neighbors</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q3: Reachability</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q4: Sources (no incoming)</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="fail">1/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q5: Sinks (no outgoing)</td>
+<td class="fail">0/3</td>
+<td class="fail">0/3</td>
+<td class="fail">0/3</td>
+<td class="fail">1/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q6: Total degree</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+</tbody></table>
+<h3>LARGE &mdash; G4 (16n/24e)</h3>
+<table class="q-table"><thead><tr><th>Question</th>
+<th>verbal</th>
+<th>ascii</th>
+<th>json</th>
+<th>yaml</th>
+<th>mermaid</th>
+</tr></thead><tbody>
+<tr><td>Q1: Forward neighbors</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q2: Backward neighbors</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q3: Reachability</td>
+<td class="pass">3/3</td>
+<td class="fail">2/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q4: Sources (no incoming)</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q5: Sinks (no outgoing)</td>
+<td class="fail">0/3</td>
+<td class="fail">0/3</td>
+<td class="fail">2/3</td>
+<td class="fail">2/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q6: Total degree</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+</tbody></table>
+<h3>XL &mdash; G5 (22n/34e)</h3>
+<table class="q-table"><thead><tr><th>Question</th>
+<th>verbal</th>
+<th>ascii</th>
+<th>json</th>
+<th>yaml</th>
+<th>mermaid</th>
+</tr></thead><tbody>
+<tr><td>Q1: Forward neighbors</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q2: Backward neighbors</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q3: Reachability</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q4: Sources (no incoming)</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q5: Sinks (no outgoing)</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+<tr><td>Q6: Total degree</td>
+<td class="pass">3/3</td>
+<td class="fail">0/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+<td class="pass">3/3</td>
+</tr>
+</tbody></table>
+<h2>Graphs &amp; Renderings</h2>
+<p class="section-note">Click each graph to expand and view all 5 representations</p>
+<div class="graph-section">
+<div class="graph-header" onclick="toggleGraph('graph-tiny')">
+<h3>TINY: G1</h3>
+<span class="meta">3 nodes, 2 edges &mdash; [A, B, C]</span>
+</div>
+<div class="graph-body" id="graph-tiny">
+<div class="tab-bar">
+<button class="tab-btn active" onclick="switchTab('graph-tiny', 'verbal')">verbal</button>
+<button class="tab-btn " onclick="switchTab('graph-tiny', 'ascii')">ascii</button>
+<button class="tab-btn " onclick="switchTab('graph-tiny', 'json')">json</button>
+<button class="tab-btn " onclick="switchTab('graph-tiny', 'yaml')">yaml</button>
+<button class="tab-btn " onclick="switchTab('graph-tiny', 'mermaid')">mermaid</button>
+</div>
+<div class="tab-panel active" id="graph-tiny-verbal">
+<pre class="rendering">This is a directed graph with 3 nodes: A, B, C.
+
+The directed edges are:
+  A -&gt; B
+  B -&gt; C</pre>
+</div>
+<div class="tab-panel " id="graph-tiny-ascii">
+<pre class="rendering">+---+     +---+     +---+
+| A |----&gt;| B |----&gt;| C |
++---+     +---+     +---+</pre>
+</div>
+<div class="tab-panel " id="graph-tiny-json">
+<pre class="rendering">{
+  &quot;nodes&quot;: [
+    &quot;A&quot;,
+    &quot;B&quot;,
+    &quot;C&quot;
+  ],
+  &quot;edges&quot;: [
+    {
+      &quot;from&quot;: &quot;A&quot;,
+      &quot;to&quot;: &quot;B&quot;
+    },
+    {
+      &quot;from&quot;: &quot;B&quot;,
+      &quot;to&quot;: &quot;C&quot;
+    }
+  ]
+}</pre>
+</div>
+<div class="tab-panel " id="graph-tiny-yaml">
+<pre class="rendering">nodes:
+  - A
+  - B
+  - C
+edges:
+  - from: A
+    to: B
+  - from: B
+    to: C</pre>
+</div>
+<div class="tab-panel " id="graph-tiny-mermaid">
+<pre class="rendering">graph LR
+    A --&gt; B
+    B --&gt; C</pre>
+</div>
+<h3 style="margin-top:1rem">Questions asked</h3>
+<ol style="padding-left:1.5rem; font-size:0.85rem">
+<li style="margin-bottom:0.3rem">What nodes does A have directed edges to? List all of them.<br><code>Ground truth: B</code></li>
+<li style="margin-bottom:0.3rem">What nodes have directed edges to C? List all of them.<br><code>Ground truth: B</code></li>
+<li style="margin-bottom:0.3rem">Is there a directed path from A to C? Answer yes or no, and if yes, list the nodes on the path in order.<br><code>Ground truth: yes, path: A -&gt; B -&gt; C</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no incoming edges (nothing points to them)? List all.<br><code>Ground truth: A</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no outgoing edges (they don&#x27;t point to anything)? List all.<br><code>Ground truth: C</code></li>
+<li style="margin-bottom:0.3rem">How many total direct connections does B have, counting both incoming and outgoing edges?<br><code>Ground truth: 2</code></li>
+</ol>
+</div></div>
+<div class="graph-section">
+<div class="graph-header" onclick="toggleGraph('graph-small')">
+<h3>SMALL: G2</h3>
+<span class="meta">6 nodes, 7 edges &mdash; [A, B, C, D, E, F]</span>
+</div>
+<div class="graph-body" id="graph-small">
+<div class="tab-bar">
+<button class="tab-btn active" onclick="switchTab('graph-small', 'verbal')">verbal</button>
+<button class="tab-btn " onclick="switchTab('graph-small', 'ascii')">ascii</button>
+<button class="tab-btn " onclick="switchTab('graph-small', 'json')">json</button>
+<button class="tab-btn " onclick="switchTab('graph-small', 'yaml')">yaml</button>
+<button class="tab-btn " onclick="switchTab('graph-small', 'mermaid')">mermaid</button>
+</div>
+<div class="tab-panel active" id="graph-small-verbal">
+<pre class="rendering">This is a directed graph with 6 nodes: A, B, C, D, E, F.
+
+The directed edges are:
+  A -&gt; B
+  B -&gt; C
+  B -&gt; D
+  C -&gt; E
+  D -&gt; F
+  D -&gt; C
+  D -&gt; B</pre>
+</div>
+<div class="tab-panel " id="graph-small-ascii">
+<pre class="rendering">                    +---+     +---+
+               +---&gt;| C |----&gt;| E |
+               |    +---+     +---+
++---+    +---+ |      ^
+| A |---&gt;| B |-+      | F-&gt;C
++---+    +---+ |      |
+               |    +---+     +---+
+               +---&gt;| D |----&gt;| F |
+                    +---+     +---+</pre>
+</div>
+<div class="tab-panel " id="graph-small-json">
+<pre class="rendering">{
+  &quot;nodes&quot;: [
+    &quot;A&quot;,
+    &quot;B&quot;,
+    &quot;C&quot;,
+    &quot;D&quot;,
+    &quot;E&quot;,
+    &quot;F&quot;
+  ],
+  &quot;edges&quot;: [
+    {
+      &quot;from&quot;: &quot;A&quot;,
+      &quot;to&quot;: &quot;B&quot;
+    },
+    {
+      &quot;from&quot;: &quot;B&quot;,
+      &quot;to&quot;: &quot;C&quot;
+    },
+    {
+      &quot;from&quot;: &quot;B&quot;,
+      &quot;to&quot;: &quot;D&quot;
+    },
+    {
+      &quot;from&quot;: &quot;C&quot;,
+      &quot;to&quot;: &quot;E&quot;
+    },
+    {
+      &quot;from&quot;: &quot;D&quot;,
+      &quot;to&quot;: &quot;F&quot;
+    },
+    {
+      &quot;from&quot;: &quot;D&quot;,
+      &quot;to&quot;: &quot;C&quot;
+    },
+    {
+      &quot;from&quot;: &quot;D&quot;,
+      &quot;to&quot;: &quot;B&quot;
+    }
+  ]
+}</pre>
+</div>
+<div class="tab-panel " id="graph-small-yaml">
+<pre class="rendering">nodes:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+edges:
+  - from: A
+    to: B
+  - from: B
+    to: C
+  - from: B
+    to: D
+  - from: C
+    to: E
+  - from: D
+    to: F
+  - from: D
+    to: C
+  - from: D
+    to: B</pre>
+</div>
+<div class="tab-panel " id="graph-small-mermaid">
+<pre class="rendering">graph LR
+    A --&gt; B
+    B --&gt; C
+    B --&gt; D
+    C --&gt; E
+    D --&gt; F
+    D --&gt; C
+    D --&gt; B</pre>
+</div>
+<h3 style="margin-top:1rem">Questions asked</h3>
+<ol style="padding-left:1.5rem; font-size:0.85rem">
+<li style="margin-bottom:0.3rem">What nodes does B have directed edges to? List all of them.<br><code>Ground truth: C, D</code></li>
+<li style="margin-bottom:0.3rem">What nodes have directed edges to C? List all of them.<br><code>Ground truth: B, D</code></li>
+<li style="margin-bottom:0.3rem">Is there a directed path from A to F? Answer yes or no, and if yes, list the nodes on the path in order.<br><code>Ground truth: yes, path: A -&gt; B -&gt; D -&gt; F</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no incoming edges (nothing points to them)? List all.<br><code>Ground truth: A</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no outgoing edges (they don&#x27;t point to anything)? List all.<br><code>Ground truth: E, F</code></li>
+<li style="margin-bottom:0.3rem">How many total direct connections does D have, counting both incoming and outgoing edges?<br><code>Ground truth: 4</code></li>
+</ol>
+</div></div>
+<div class="graph-section">
+<div class="graph-header" onclick="toggleGraph('graph-medium')">
+<h3>MEDIUM: G3</h3>
+<span class="meta">10 nodes, 14 edges &mdash; [A, B, C, D, E, F, G, H, I, J]</span>
+</div>
+<div class="graph-body" id="graph-medium">
+<div class="tab-bar">
+<button class="tab-btn active" onclick="switchTab('graph-medium', 'verbal')">verbal</button>
+<button class="tab-btn " onclick="switchTab('graph-medium', 'ascii')">ascii</button>
+<button class="tab-btn " onclick="switchTab('graph-medium', 'json')">json</button>
+<button class="tab-btn " onclick="switchTab('graph-medium', 'yaml')">yaml</button>
+<button class="tab-btn " onclick="switchTab('graph-medium', 'mermaid')">mermaid</button>
+</div>
+<div class="tab-panel active" id="graph-medium-verbal">
+<pre class="rendering">This is a directed graph with 10 nodes: A, B, C, D, E, F, G, H, I, J.
+
+The directed edges are:
+  A -&gt; B
+  A -&gt; C
+  C -&gt; D
+  C -&gt; E
+  C -&gt; F
+  D -&gt; J
+  E -&gt; J
+  E -&gt; I
+  F -&gt; J
+  F -&gt; G
+  F -&gt; I
+  G -&gt; H
+  H -&gt; J
+  B -&gt; C</pre>
+</div>
+<div class="tab-panel " id="graph-medium-ascii">
+<pre class="rendering">+---+     +---+     +---+
+| A |----&gt;| B |----&gt;| C |
++---+     +---+     +---+
+  |         |         |
+  v         v         v
++---+     +---+     +---+
+| D |     | E |     | F |
++---+     +---+     +---+
+  |         |  \      |
+  v         v   \     v
++---+     +---+  \  +---+     +---+
+| G |     | H |   +&gt;| I |----&gt;| J |
++---+     +---+     +---+     +---+</pre>
+</div>
+<div class="tab-panel " id="graph-medium-json">
+<pre class="rendering">{
+  &quot;nodes&quot;: [
+    &quot;A&quot;,
+    &quot;B&quot;,
+    &quot;C&quot;,
+    &quot;D&quot;,
+    &quot;E&quot;,
+    &quot;F&quot;,
+    &quot;G&quot;,
+    &quot;H&quot;,
+    &quot;I&quot;,
+    &quot;J&quot;
+  ],
+  &quot;edges&quot;: [
+    {
+      &quot;from&quot;: &quot;A&quot;,
+      &quot;to&quot;: &quot;B&quot;
+    },
+    {
+      &quot;from&quot;: &quot;A&quot;,
+      &quot;to&quot;: &quot;C&quot;
+    },
+    {
+      &quot;from&quot;: &quot;C&quot;,
+      &quot;to&quot;: &quot;D&quot;
+    },
+    {
+      &quot;from&quot;: &quot;C&quot;,
+      &quot;to&quot;: &quot;E&quot;
+    },
+    {
+      &quot;from&quot;: &quot;C&quot;,
+      &quot;to&quot;: &quot;F&quot;
+    },
+    {
+      &quot;from&quot;: &quot;D&quot;,
+      &quot;to&quot;: &quot;J&quot;
+    },
+    {
+      &quot;from&quot;: &quot;E&quot;,
+      &quot;to&quot;: &quot;J&quot;
+    },
+    {
+      &quot;from&quot;: &quot;E&quot;,
+      &quot;to&quot;: &quot;I&quot;
+    },
+    {
+      &quot;from&quot;: &quot;F&quot;,
+      &quot;to&quot;: &quot;J&quot;
+    },
+    {
+      &quot;from&quot;: &quot;F&quot;,
+      &quot;to&quot;: &quot;G&quot;
+    },
+    {
+      &quot;from&quot;: &quot;F&quot;,
+      &quot;to&quot;: &quot;I&quot;
+    },
+    {
+      &quot;from&quot;: &quot;G&quot;,
+      &quot;to&quot;: &quot;H&quot;
+    },
+    {
+      &quot;from&quot;: &quot;H&quot;,
+      &quot;to&quot;: &quot;J&quot;
+    },
+    {
+      &quot;from&quot;: &quot;B&quot;,
+      &quot;to&quot;: &quot;C&quot;
+    }
+  ]
+}</pre>
+</div>
+<div class="tab-panel " id="graph-medium-yaml">
+<pre class="rendering">nodes:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+edges:
+  - from: A
+    to: B
+  - from: A
+    to: C
+  - from: C
+    to: D
+  - from: C
+    to: E
+  - from: C
+    to: F
+  - from: D
+    to: J
+  - from: E
+    to: J
+  - from: E
+    to: I
+  - from: F
+    to: J
+  - from: F
+    to: G
+  - from: F
+    to: I
+  - from: G
+    to: H
+  - from: H
+    to: J
+  - from: B
+    to: C</pre>
+</div>
+<div class="tab-panel " id="graph-medium-mermaid">
+<pre class="rendering">graph LR
+    A --&gt; B
+    A --&gt; C
+    C --&gt; D
+    C --&gt; E
+    C --&gt; F
+    D --&gt; J
+    E --&gt; J
+    E --&gt; I
+    F --&gt; J
+    F --&gt; G
+    F --&gt; I
+    G --&gt; H
+    H --&gt; J
+    B --&gt; C</pre>
+</div>
+<h3 style="margin-top:1rem">Questions asked</h3>
+<ol style="padding-left:1.5rem; font-size:0.85rem">
+<li style="margin-bottom:0.3rem">What nodes does F have directed edges to? List all of them.<br><code>Ground truth: G, I, J</code></li>
+<li style="margin-bottom:0.3rem">What nodes have directed edges to J? List all of them.<br><code>Ground truth: D, E, F, H</code></li>
+<li style="margin-bottom:0.3rem">Is there a directed path from A to H? Answer yes or no, and if yes, list the nodes on the path in order.<br><code>Ground truth: yes, path: A -&gt; C -&gt; F -&gt; G -&gt; H</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no incoming edges (nothing points to them)? List all.<br><code>Ground truth: A</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no outgoing edges (they don&#x27;t point to anything)? List all.<br><code>Ground truth: I, J</code></li>
+<li style="margin-bottom:0.3rem">How many total direct connections does C have, counting both incoming and outgoing edges?<br><code>Ground truth: 5</code></li>
+</ol>
+</div></div>
+<div class="graph-section">
+<div class="graph-header" onclick="toggleGraph('graph-large')">
+<h3>LARGE: G4</h3>
+<span class="meta">16 nodes, 24 edges &mdash; [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P]</span>
+</div>
+<div class="graph-body" id="graph-large">
+<div class="tab-bar">
+<button class="tab-btn active" onclick="switchTab('graph-large', 'verbal')">verbal</button>
+<button class="tab-btn " onclick="switchTab('graph-large', 'ascii')">ascii</button>
+<button class="tab-btn " onclick="switchTab('graph-large', 'json')">json</button>
+<button class="tab-btn " onclick="switchTab('graph-large', 'yaml')">yaml</button>
+<button class="tab-btn " onclick="switchTab('graph-large', 'mermaid')">mermaid</button>
+</div>
+<div class="tab-panel active" id="graph-large-verbal">
+<pre class="rendering">This is a directed graph with 16 nodes: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P.
+
+The directed edges are:
+  A -&gt; C
+  B -&gt; C
+  C -&gt; D
+  D -&gt; E
+  D -&gt; F
+  D -&gt; G
+  D -&gt; I
+  E -&gt; P
+  E -&gt; O
+  F -&gt; O
+  G -&gt; O
+  G -&gt; H
+  G -&gt; K
+  H -&gt; M
+  H -&gt; K
+  K -&gt; L
+  K -&gt; J
+  L -&gt; O
+  J -&gt; O
+  I -&gt; N
+  I -&gt; P
+  F -&gt; K
+  F -&gt; P
+  G -&gt; P</pre>
+</div>
+<div class="tab-panel " id="graph-large-ascii">
+<pre class="rendering">+---+   +---+
+| A |   | B |
++-+-+   +-+-+
+  |       |
+  v       v
+  +---+---+
+  |   C   |
+  +---+---+
+      |
+      v
+  +---+---+
+  |   D   |
+  +-+--+-++
+    |  | |
+    v  v  +------+------+------+
+  +--+ |         |      |      |
+  | E| v     +---+  +---+  +---+
+  +--++---+  | H |  | I |  | J |
+   |  | F |  +-+-+  +-+-+  +-+-+
+   |  +---+    |      |      |
+   |    |      |      |      |
+   v    v      v      v      |
+ +---+ +---+ +---+          |
+ | K | | L | | M |          |
+ +---+ +---+ +---+          |
+                |            |
+                v            v
+              +---+       +---+
+              | N |       | O |
+              +---+       +---+
+                |
+                v
+              +---+
+              | P |
+              +---+</pre>
+</div>
+<div class="tab-panel " id="graph-large-json">
+<pre class="rendering">{
+  &quot;nodes&quot;: [
+    &quot;A&quot;,
+    &quot;B&quot;,
+    &quot;C&quot;,
+    &quot;D&quot;,
+    &quot;E&quot;,
+    &quot;F&quot;,
+    &quot;G&quot;,
+    &quot;H&quot;,
+    &quot;I&quot;,
+    &quot;J&quot;,
+    &quot;K&quot;,
+    &quot;L&quot;,
+    &quot;M&quot;,
+    &quot;N&quot;,
+    &quot;O&quot;,
+    &quot;P&quot;
+  ],
+  &quot;edges&quot;: [
+    {
+      &quot;from&quot;: &quot;A&quot;,
+      &quot;to&quot;: &quot;C&quot;
+    },
+    {
+      &quot;from&quot;: &quot;B&quot;,
+      &quot;to&quot;: &quot;C&quot;
+    },
+    {
+      &quot;from&quot;: &quot;C&quot;,
+      &quot;to&quot;: &quot;D&quot;
+    },
+    {
+      &quot;from&quot;: &quot;D&quot;,
+      &quot;to&quot;: &quot;E&quot;
+    },
+    {
+      &quot;from&quot;: &quot;D&quot;,
+      &quot;to&quot;: &quot;F&quot;
+    },
+    {
+      &quot;from&quot;: &quot;D&quot;,
+      &quot;to&quot;: &quot;G&quot;
+    },
+    {
+      &quot;from&quot;: &quot;D&quot;,
+      &quot;to&quot;: &quot;I&quot;
+    },
+    {
+      &quot;from&quot;: &quot;E&quot;,
+      &quot;to&quot;: &quot;P&quot;
+    },
+    {
+      &quot;from&quot;: &quot;E&quot;,
+      &quot;to&quot;: &quot;O&quot;
+    },
+    {
+      &quot;from&quot;: &quot;F&quot;,
+      &quot;to&quot;: &quot;O&quot;
+    },
+    {
+      &quot;from&quot;: &quot;G&quot;,
+      &quot;to&quot;: &quot;O&quot;
+    },
+    {
+      &quot;from&quot;: &quot;G&quot;,
+      &quot;to&quot;: &quot;H&quot;
+    },
+    {
+      &quot;from&quot;: &quot;G&quot;,
+      &quot;to&quot;: &quot;K&quot;
+    },
+    {
+      &quot;from&quot;: &quot;H&quot;,
+      &quot;to&quot;: &quot;M&quot;
+    },
+    {
+      &quot;from&quot;: &quot;H&quot;,
+      &quot;to&quot;: &quot;K&quot;
+    },
+    {
+      &quot;from&quot;: &quot;K&quot;,
+      &quot;to&quot;: &quot;L&quot;
+    },
+    {
+      &quot;from&quot;: &quot;K&quot;,
+      &quot;to&quot;: &quot;J&quot;
+    },
+    {
+      &quot;from&quot;: &quot;L&quot;,
+      &quot;to&quot;: &quot;O&quot;
+    },
+    {
+      &quot;from&quot;: &quot;J&quot;,
+      &quot;to&quot;: &quot;O&quot;
+    },
+    {
+      &quot;from&quot;: &quot;I&quot;,
+      &quot;to&quot;: &quot;N&quot;
+    },
+    {
+      &quot;from&quot;: &quot;I&quot;,
+      &quot;to&quot;: &quot;P&quot;
+    },
+    {
+      &quot;from&quot;: &quot;F&quot;,
+      &quot;to&quot;: &quot;K&quot;
+    },
+    {
+      &quot;from&quot;: &quot;F&quot;,
+      &quot;to&quot;: &quot;P&quot;
+    },
+    {
+      &quot;from&quot;: &quot;G&quot;,
+      &quot;to&quot;: &quot;P&quot;
+    }
+  ]
+}</pre>
+</div>
+<div class="tab-panel " id="graph-large-yaml">
+<pre class="rendering">nodes:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+  - K
+  - L
+  - M
+  - N
+  - O
+  - P
+edges:
+  - from: A
+    to: C
+  - from: B
+    to: C
+  - from: C
+    to: D
+  - from: D
+    to: E
+  - from: D
+    to: F
+  - from: D
+    to: G
+  - from: D
+    to: I
+  - from: E
+    to: P
+  - from: E
+    to: O
+  - from: F
+    to: O
+  - from: G
+    to: O
+  - from: G
+    to: H
+  - from: G
+    to: K
+  - from: H
+    to: M
+  - from: H
+    to: K
+  - from: K
+    to: L
+  - from: K
+    to: J
+  - from: L
+    to: O
+  - from: J
+    to: O
+  - from: I
+    to: N
+  - from: I
+    to: P
+  - from: F
+    to: K
+  - from: F
+    to: P
+  - from: G
+    to: P</pre>
+</div>
+<div class="tab-panel " id="graph-large-mermaid">
+<pre class="rendering">graph LR
+    A --&gt; C
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    D --&gt; F
+    D --&gt; G
+    D --&gt; I
+    E --&gt; P
+    E --&gt; O
+    F --&gt; O
+    G --&gt; O
+    G --&gt; H
+    G --&gt; K
+    H --&gt; M
+    H --&gt; K
+    K --&gt; L
+    K --&gt; J
+    L --&gt; O
+    J --&gt; O
+    I --&gt; N
+    I --&gt; P
+    F --&gt; K
+    F --&gt; P
+    G --&gt; P</pre>
+</div>
+<h3 style="margin-top:1rem">Questions asked</h3>
+<ol style="padding-left:1.5rem; font-size:0.85rem">
+<li style="margin-bottom:0.3rem">What nodes does G have directed edges to? List all of them.<br><code>Ground truth: H, K, O, P</code></li>
+<li style="margin-bottom:0.3rem">What nodes have directed edges to K? List all of them.<br><code>Ground truth: F, G, H</code></li>
+<li style="margin-bottom:0.3rem">Is there a directed path from A to M? Answer yes or no, and if yes, list the nodes on the path in order.<br><code>Ground truth: yes, path: A -&gt; C -&gt; D -&gt; G -&gt; H -&gt; M</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no incoming edges (nothing points to them)? List all.<br><code>Ground truth: A, B</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no outgoing edges (they don&#x27;t point to anything)? List all.<br><code>Ground truth: M, N, O, P</code></li>
+<li style="margin-bottom:0.3rem">How many total direct connections does D have, counting both incoming and outgoing edges?<br><code>Ground truth: 5</code></li>
+</ol>
+</div></div>
+<div class="graph-section">
+<div class="graph-header" onclick="toggleGraph('graph-xl')">
+<h3>XL: G5</h3>
+<span class="meta">22 nodes, 34 edges &mdash; [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V]</span>
+</div>
+<div class="graph-body" id="graph-xl">
+<div class="tab-bar">
+<button class="tab-btn active" onclick="switchTab('graph-xl', 'verbal')">verbal</button>
+<button class="tab-btn " onclick="switchTab('graph-xl', 'ascii')">ascii</button>
+<button class="tab-btn " onclick="switchTab('graph-xl', 'json')">json</button>
+<button class="tab-btn " onclick="switchTab('graph-xl', 'yaml')">yaml</button>
+<button class="tab-btn " onclick="switchTab('graph-xl', 'mermaid')">mermaid</button>
+</div>
+<div class="tab-panel active" id="graph-xl-verbal">
+<pre class="rendering">This is a directed graph with 22 nodes: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V.
+
+The directed edges are:
+  A -&gt; C
+  B -&gt; C
+  A -&gt; D
+  B -&gt; D
+  C -&gt; D
+  D -&gt; E
+  E -&gt; F
+  E -&gt; G
+  E -&gt; H
+  E -&gt; M
+  E -&gt; O
+  F -&gt; T
+  F -&gt; R
+  G -&gt; R
+  G -&gt; T
+  G -&gt; P
+  H -&gt; R
+  H -&gt; I
+  H -&gt; J
+  H -&gt; P
+  I -&gt; S
+  I -&gt; T
+  J -&gt; V
+  J -&gt; P
+  K -&gt; S
+  K -&gt; P
+  P -&gt; L
+  P -&gt; N
+  P -&gt; K
+  Q -&gt; O
+  L -&gt; R
+  N -&gt; R
+  M -&gt; U
+  O -&gt; S</pre>
+</div>
+<div class="tab-panel " id="graph-xl-ascii">
+<pre class="rendering">+---+       +---+
+| A |       | B |
++-+-+       +-+-+
+  |   +---+   |
+  +--&gt;| C |&lt;--+
+  |   +-+-+   |
+  |     |     |
+  |     v     |
+  |   +---+   |
+  +--&gt;| D |&lt;--+
+      +-+-+
+        |
+        v
+      +---+
+      | E |
+      +-+-+-+-+--+-+
+        |   | |  | |
+        v   | v  | v
+      +---+ | +--++ +---+
+      | F | | | H | | K |
+      +---+ | +---+ +---+
+        |   v   |
+        v +---+ v
+      +---+| I |+---+
+      | G |+---+| L |
+      +---+  |  +---+
+             v
++---+      +---+       +---+
+| Q |-----&gt;| J |       | M |
++---+      +---+       +---+
+                          |
+           +---+          v
+           | R |        +---+       +---+
+           +---+        | N |       | P |
+             |          +---+       +---+
+             v            |
+           +---+          v
+           | S |        +---+
+           +---+        | O |
+             |          +---+
+             v
+           +---+
+           | T |
+           +---+
+             |
+             v
+           +---+        +---+
+           | U |        | V |
+           +---+        +---+
+
+E -&gt; K, E -&gt; H, E -&gt; F
+H -&gt; I, H -&gt; L
+I -&gt; J
+R -&gt; S -&gt; T -&gt; U
+M -&gt; N -&gt; O
+Q -&gt; J
+V has no connections (isolated sink)
+</pre>
+</div>
+<div class="tab-panel " id="graph-xl-json">
+<pre class="rendering">{
+  &quot;nodes&quot;: [
+    &quot;A&quot;,
+    &quot;B&quot;,
+    &quot;C&quot;,
+    &quot;D&quot;,
+    &quot;E&quot;,
+    &quot;F&quot;,
+    &quot;G&quot;,
+    &quot;H&quot;,
+    &quot;I&quot;,
+    &quot;J&quot;,
+    &quot;K&quot;,
+    &quot;L&quot;,
+    &quot;M&quot;,
+    &quot;N&quot;,
+    &quot;O&quot;,
+    &quot;P&quot;,
+    &quot;Q&quot;,
+    &quot;R&quot;,
+    &quot;S&quot;,
+    &quot;T&quot;,
+    &quot;U&quot;,
+    &quot;V&quot;
+  ],
+  &quot;edges&quot;: [
+    {
+      &quot;from&quot;: &quot;A&quot;,
+      &quot;to&quot;: &quot;C&quot;
+    },
+    {
+      &quot;from&quot;: &quot;B&quot;,
+      &quot;to&quot;: &quot;C&quot;
+    },
+    {
+      &quot;from&quot;: &quot;A&quot;,
+      &quot;to&quot;: &quot;D&quot;
+    },
+    {
+      &quot;from&quot;: &quot;B&quot;,
+      &quot;to&quot;: &quot;D&quot;
+    },
+    {
+      &quot;from&quot;: &quot;C&quot;,
+      &quot;to&quot;: &quot;D&quot;
+    },
+    {
+      &quot;from&quot;: &quot;D&quot;,
+      &quot;to&quot;: &quot;E&quot;
+    },
+    {
+      &quot;from&quot;: &quot;E&quot;,
+      &quot;to&quot;: &quot;F&quot;
+    },
+    {
+      &quot;from&quot;: &quot;E&quot;,
+      &quot;to&quot;: &quot;G&quot;
+    },
+    {
+      &quot;from&quot;: &quot;E&quot;,
+      &quot;to&quot;: &quot;H&quot;
+    },
+    {
+      &quot;from&quot;: &quot;E&quot;,
+      &quot;to&quot;: &quot;M&quot;
+    },
+    {
+      &quot;from&quot;: &quot;E&quot;,
+      &quot;to&quot;: &quot;O&quot;
+    },
+    {
+      &quot;from&quot;: &quot;F&quot;,
+      &quot;to&quot;: &quot;T&quot;
+    },
+    {
+      &quot;from&quot;: &quot;F&quot;,
+      &quot;to&quot;: &quot;R&quot;
+    },
+    {
+      &quot;from&quot;: &quot;G&quot;,
+      &quot;to&quot;: &quot;R&quot;
+    },
+    {
+      &quot;from&quot;: &quot;G&quot;,
+      &quot;to&quot;: &quot;T&quot;
+    },
+    {
+      &quot;from&quot;: &quot;G&quot;,
+      &quot;to&quot;: &quot;P&quot;
+    },
+    {
+      &quot;from&quot;: &quot;H&quot;,
+      &quot;to&quot;: &quot;R&quot;
+    },
+    {
+      &quot;from&quot;: &quot;H&quot;,
+      &quot;to&quot;: &quot;I&quot;
+    },
+    {
+      &quot;from&quot;: &quot;H&quot;,
+      &quot;to&quot;: &quot;J&quot;
+    },
+    {
+      &quot;from&quot;: &quot;H&quot;,
+      &quot;to&quot;: &quot;P&quot;
+    },
+    {
+      &quot;from&quot;: &quot;I&quot;,
+      &quot;to&quot;: &quot;S&quot;
+    },
+    {
+      &quot;from&quot;: &quot;I&quot;,
+      &quot;to&quot;: &quot;T&quot;
+    },
+    {
+      &quot;from&quot;: &quot;J&quot;,
+      &quot;to&quot;: &quot;V&quot;
+    },
+    {
+      &quot;from&quot;: &quot;J&quot;,
+      &quot;to&quot;: &quot;P&quot;
+    },
+    {
+      &quot;from&quot;: &quot;K&quot;,
+      &quot;to&quot;: &quot;S&quot;
+    },
+    {
+      &quot;from&quot;: &quot;K&quot;,
+      &quot;to&quot;: &quot;P&quot;
+    },
+    {
+      &quot;from&quot;: &quot;P&quot;,
+      &quot;to&quot;: &quot;L&quot;
+    },
+    {
+      &quot;from&quot;: &quot;P&quot;,
+      &quot;to&quot;: &quot;N&quot;
+    },
+    {
+      &quot;from&quot;: &quot;P&quot;,
+      &quot;to&quot;: &quot;K&quot;
+    },
+    {
+      &quot;from&quot;: &quot;Q&quot;,
+      &quot;to&quot;: &quot;O&quot;
+    },
+    {
+      &quot;from&quot;: &quot;L&quot;,
+      &quot;to&quot;: &quot;R&quot;
+    },
+    {
+      &quot;from&quot;: &quot;N&quot;,
+      &quot;to&quot;: &quot;R&quot;
+    },
+    {
+      &quot;from&quot;: &quot;M&quot;,
+      &quot;to&quot;: &quot;U&quot;
+    },
+    {
+      &quot;from&quot;: &quot;O&quot;,
+      &quot;to&quot;: &quot;S&quot;
+    }
+  ]
+}</pre>
+</div>
+<div class="tab-panel " id="graph-xl-yaml">
+<pre class="rendering">nodes:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+  - K
+  - L
+  - M
+  - N
+  - O
+  - P
+  - Q
+  - R
+  - S
+  - T
+  - U
+  - V
+edges:
+  - from: A
+    to: C
+  - from: B
+    to: C
+  - from: A
+    to: D
+  - from: B
+    to: D
+  - from: C
+    to: D
+  - from: D
+    to: E
+  - from: E
+    to: F
+  - from: E
+    to: G
+  - from: E
+    to: H
+  - from: E
+    to: M
+  - from: E
+    to: O
+  - from: F
+    to: T
+  - from: F
+    to: R
+  - from: G
+    to: R
+  - from: G
+    to: T
+  - from: G
+    to: P
+  - from: H
+    to: R
+  - from: H
+    to: I
+  - from: H
+    to: J
+  - from: H
+    to: P
+  - from: I
+    to: S
+  - from: I
+    to: T
+  - from: J
+    to: V
+  - from: J
+    to: P
+  - from: K
+    to: S
+  - from: K
+    to: P
+  - from: P
+    to: L
+  - from: P
+    to: N
+  - from: P
+    to: K
+  - from: Q
+    to: O
+  - from: L
+    to: R
+  - from: N
+    to: R
+  - from: M
+    to: U
+  - from: O
+    to: S</pre>
+</div>
+<div class="tab-panel " id="graph-xl-mermaid">
+<pre class="rendering">graph LR
+    A --&gt; C
+    B --&gt; C
+    A --&gt; D
+    B --&gt; D
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    E --&gt; G
+    E --&gt; H
+    E --&gt; M
+    E --&gt; O
+    F --&gt; T
+    F --&gt; R
+    G --&gt; R
+    G --&gt; T
+    G --&gt; P
+    H --&gt; R
+    H --&gt; I
+    H --&gt; J
+    H --&gt; P
+    I --&gt; S
+    I --&gt; T
+    J --&gt; V
+    J --&gt; P
+    K --&gt; S
+    K --&gt; P
+    P --&gt; L
+    P --&gt; N
+    P --&gt; K
+    Q --&gt; O
+    L --&gt; R
+    N --&gt; R
+    M --&gt; U
+    O --&gt; S</pre>
+</div>
+<h3 style="margin-top:1rem">Questions asked</h3>
+<ol style="padding-left:1.5rem; font-size:0.85rem">
+<li style="margin-bottom:0.3rem">What nodes does E have directed edges to? List all of them.<br><code>Ground truth: F, G, H, M, O</code></li>
+<li style="margin-bottom:0.3rem">What nodes have directed edges to R? List all of them.<br><code>Ground truth: F, G, H, L, N</code></li>
+<li style="margin-bottom:0.3rem">Is there a directed path from B to V? Answer yes or no, and if yes, list the nodes on the path in order.<br><code>Ground truth: yes, path: B -&gt; D -&gt; E -&gt; H -&gt; J -&gt; V</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no incoming edges (nothing points to them)? List all.<br><code>Ground truth: A, B, Q</code></li>
+<li style="margin-bottom:0.3rem">Which nodes have no outgoing edges (they don&#x27;t point to anything)? List all.<br><code>Ground truth: R, S, T, U, V</code></li>
+<li style="margin-bottom:0.3rem">How many total direct connections does P have, counting both incoming and outgoing edges?<br><code>Ground truth: 7</code></li>
+</ol>
+</div></div>
+<h2>Findings</h2>
+<ol class="findings">
+<li><strong>Donald's hypothesis is strongly confirmed.</strong>
+Removing semantic node labels causes significant performance degradation across most formats.
+The LLM was relying on domain knowledge ("load balancers connect to gateways") to supplement
+its parsing of the graph representation.</li>
+
+<li><strong>Mermaid remains the most robust format.</strong>
+100% from small complexity onward, even with abstract labels. Its formal directed-edge syntax
+(<code>A --&gt; B</code>) is unambiguous regardless of whether nodes carry meaning.
+The only failures are at tiny complexity on Q4 (sources) and Q5 (sinks) &mdash; a reasoning issue
+not a parsing issue.</li>
+
+<li><strong>ASCII art collapses completely without semantics.</strong>
+From 61% (architecture, medium) to 17% (abstract, medium), reaching 0% at XL. Without semantic
+cues about what should connect to what, the model cannot reliably trace arrows through a 2D
+character grid.</li>
+
+<li><strong>Verbal and JSON/YAML degrade on negative-universal questions.</strong>
+Q4 (sources) and Q5 (sinks) are disproportionately affected. With architecture labels, the model
+could reason "Clients and Browsers are obviously entry points." With abstract labels, it must
+verify that a node <em>never</em> appears as an edge target &mdash; a harder scan over an unordered list.</li>
+
+<li><strong>The Q4 (sources) failure at tiny is striking.</strong>
+A 3-node graph <code>A&rarr;B&rarr;C</code> produces 0/3 on "which nodes have no incoming edges?"
+for verbal, ASCII, JSON, and YAML. The model fails to identify A as the sole source of a trivial
+graph. Only mermaid is <em>also</em> susceptible at tiny (0/3). This suggests the question framing
+itself is hard for the model &mdash; "no incoming edges" requires checking a universal negative.</li>
+
+<li><strong>Surprisingly, some conditions <em>improve</em> without semantics.</strong>
+Verbal at XL goes from 89% to 100%. The plain edge list <code>A &rarr; B</code> may actually be
+<em>easier</em> to scan than prose like "Auth Service reads user credentials from PostgreSQL" where
+the semantic content is distracting from the structural task.</li>
+
+<li><strong>The complexity threshold shifts downward.</strong>
+With architecture labels, degradation began at medium (10 nodes). With abstract labels, it begins
+at tiny (3 nodes) for some questions. The semantic scaffolding was masking fundamental limitations
+in the model's graph reasoning.</li>
+</ol>
+<h2>Practical Implications</h2>
+<ul>
+<li><strong>For LLM consumption of arbitrary graphs:</strong> mermaid is the clear winner. It's the
+only format that maintains near-perfect accuracy without semantic assistance.</li>
+<li><strong>JSON/YAML edge lists</strong> remain strong for forward/backward neighbor and reachability
+queries, but struggle with global properties (sources, sinks) when nodes are abstract.</li>
+<li><strong>ASCII art should be avoided</strong> for communicating graph structure to LLMs, especially
+when the graph represents something the model cannot semantically reason about.</li>
+<li><strong>When using verbal descriptions,</strong> the plain edge-list format (<code>A &rarr; B</code>)
+may outperform prose with semantic edge labels at high complexity &mdash; less distraction, more scannable.</li>
+<li><strong>Be cautious when an LLM appears to understand your architecture diagram.</strong>
+Some of that "understanding" may be pattern-matching on component names rather than genuine
+structural comprehension.</li>
+</ul>
+<footer>
+Generated from <a href="https://github.com/dandavison/etc/tree/master/generic-graph-eval">generic-graph-eval</a> experiment.
+Follow-up to the <a href="../graph-eval/">architecture graph eval</a>.
+Subject model: Claude Sonnet 4.6. March 2026.
+</footer>
+
+<script>
+function toggleGraph(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+function switchTab(graphId, fmt) {
+  const section = document.getElementById(graphId);
+  section.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  section.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  section.querySelector(`.tab-btn[onclick*="'${fmt}'"]`).classList.add('active');
+  document.getElementById(`${graphId}-${fmt}`).classList.add('active');
+}
+</script>
+</body>
+</html>
