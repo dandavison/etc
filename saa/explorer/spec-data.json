@@ -21,7 +21,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 3,
           "reject": "",
@@ -29,7 +29,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -37,7 +37,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -45,7 +45,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 1,
           "reject": "",
@@ -53,7 +53,7 @@
         },
         {
           "name": "reset",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -61,7 +61,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 2,
           "reject": "",
@@ -173,7 +173,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -181,7 +181,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -189,7 +189,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -197,7 +197,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -205,7 +205,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -213,7 +213,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -325,7 +325,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -333,7 +333,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -341,7 +341,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -349,7 +349,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -357,7 +357,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -365,7 +365,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -477,7 +477,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 3,
           "reject": "FailedPrecondition",
@@ -485,7 +485,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -493,7 +493,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 3,
           "reject": "",
@@ -501,7 +501,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 1,
           "reject": "",
@@ -509,7 +509,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -517,7 +517,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 2,
           "reject": "",
@@ -629,7 +629,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 6,
           "reject": "",
@@ -637,7 +637,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -645,7 +645,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 4,
           "reject": "FailedPrecondition",
@@ -653,7 +653,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 8,
           "reject": "",
@@ -661,7 +661,7 @@
         },
         {
           "name": "reset",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -669,7 +669,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 9,
           "reject": "",
@@ -781,7 +781,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 5,
           "reject": "FailedPrecondition",
@@ -789,7 +789,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -797,7 +797,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 5,
           "reject": "",
@@ -805,7 +805,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 11,
           "reject": "",
@@ -813,7 +813,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -821,7 +821,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 12,
           "reject": "",
@@ -933,7 +933,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 6,
           "reject": "FailedPrecondition",
@@ -941,7 +941,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -949,7 +949,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 6,
           "reject": "FailedPrecondition",
@@ -957,7 +957,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 8,
           "reject": "",
@@ -965,7 +965,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -973,7 +973,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 9,
           "reject": "",
@@ -1085,7 +1085,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 19,
           "reject": "",
@@ -1093,7 +1093,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 7,
           "reject": "",
@@ -1101,7 +1101,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 7,
           "reject": "FailedPrecondition",
@@ -1109,7 +1109,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 17,
           "reject": "",
@@ -1117,7 +1117,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -1125,7 +1125,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -1237,7 +1237,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1245,7 +1245,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1253,7 +1253,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1261,7 +1261,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1269,7 +1269,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1277,7 +1277,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1389,7 +1389,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1397,7 +1397,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1405,7 +1405,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1413,7 +1413,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1421,7 +1421,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1429,7 +1429,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1541,7 +1541,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1549,7 +1549,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1557,7 +1557,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1565,7 +1565,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1573,7 +1573,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1581,7 +1581,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1693,7 +1693,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1701,7 +1701,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1709,7 +1709,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1717,7 +1717,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1725,7 +1725,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1733,7 +1733,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1845,7 +1845,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1853,7 +1853,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1861,7 +1861,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1869,7 +1869,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1877,7 +1877,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1885,7 +1885,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1997,7 +1997,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 13,
           "reject": "FailedPrecondition",
@@ -2005,7 +2005,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -2013,7 +2013,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 13,
           "reject": "FailedPrecondition",
@@ -2021,7 +2021,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 22,
           "reject": "",
@@ -2029,7 +2029,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -2037,7 +2037,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 23,
           "reject": "",
@@ -2149,7 +2149,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2157,7 +2157,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2165,7 +2165,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2173,7 +2173,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2181,7 +2181,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2189,7 +2189,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2301,7 +2301,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 27,
           "reject": "",
@@ -2309,7 +2309,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 15,
           "reject": "",
@@ -2317,7 +2317,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 15,
           "reject": "FailedPrecondition",
@@ -2325,7 +2325,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 25,
           "reject": "",
@@ -2333,7 +2333,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -2341,7 +2341,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 26,
           "reject": "",
@@ -2453,7 +2453,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2461,7 +2461,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2469,7 +2469,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2477,7 +2477,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2485,7 +2485,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2493,7 +2493,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2605,7 +2605,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 17,
           "reject": "FailedPrecondition",
@@ -2613,7 +2613,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 17,
           "reject": "",
@@ -2621,7 +2621,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 17,
           "reject": "FailedPrecondition",
@@ -2629,7 +2629,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 17,
           "reject": "FailedPrecondition",
@@ -2637,7 +2637,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 17,
           "reject": "FailedPrecondition",
@@ -2645,7 +2645,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -2757,7 +2757,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2765,7 +2765,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2773,7 +2773,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2781,7 +2781,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2789,7 +2789,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2797,7 +2797,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2909,7 +2909,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 19,
           "reject": "FailedPrecondition",
@@ -2917,7 +2917,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 7,
           "reject": "",
@@ -2925,7 +2925,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 19,
           "reject": "FailedPrecondition",
@@ -2933,7 +2933,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 17,
           "reject": "",
@@ -2941,7 +2941,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -2949,7 +2949,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -3061,7 +3061,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 20,
           "reject": "FailedPrecondition",
@@ -3069,7 +3069,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 20,
           "reject": "",
@@ -3077,7 +3077,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 20,
           "reject": "FailedPrecondition",
@@ -3085,7 +3085,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 17,
           "reject": "",
@@ -3093,7 +3093,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 20,
           "reject": "FailedPrecondition",
@@ -3101,7 +3101,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -3213,7 +3213,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3221,7 +3221,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3229,7 +3229,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3237,7 +3237,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3245,7 +3245,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3253,7 +3253,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3365,7 +3365,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3373,7 +3373,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3381,7 +3381,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3389,7 +3389,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3397,7 +3397,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3405,7 +3405,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3517,7 +3517,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3525,7 +3525,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3533,7 +3533,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3541,7 +3541,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3549,7 +3549,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3557,7 +3557,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3669,7 +3669,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3677,7 +3677,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3685,7 +3685,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3693,7 +3693,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3701,7 +3701,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3709,7 +3709,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3821,7 +3821,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3829,7 +3829,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3837,7 +3837,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3845,7 +3845,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3853,7 +3853,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3861,7 +3861,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3973,7 +3973,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -3981,7 +3981,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -3989,7 +3989,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -3997,7 +3997,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -4005,7 +4005,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -4013,7 +4013,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -4125,7 +4125,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 27,
           "reject": "FailedPrecondition",
@@ -4133,7 +4133,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 15,
           "reject": "",
@@ -4141,7 +4141,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 27,
           "reject": "FailedPrecondition",
@@ -4149,7 +4149,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 25,
           "reject": "",
@@ -4157,7 +4157,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -4165,7 +4165,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 26,
           "reject": "",
@@ -4277,7 +4277,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 35,
           "reject": "",
@@ -4285,7 +4285,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -4293,7 +4293,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 28,
           "reject": "FailedPrecondition",
@@ -4301,7 +4301,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 31,
           "reject": "",
@@ -4309,7 +4309,7 @@
         },
         {
           "name": "reset",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -4317,7 +4317,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -4429,7 +4429,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4437,7 +4437,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4445,7 +4445,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4453,7 +4453,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4461,7 +4461,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4469,7 +4469,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4581,7 +4581,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 34,
           "reject": "",
@@ -4589,7 +4589,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 30,
           "reject": "",
@@ -4597,7 +4597,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 30,
           "reject": "FailedPrecondition",
@@ -4605,7 +4605,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 37,
           "reject": "",
@@ -4613,7 +4613,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -4621,7 +4621,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -4733,7 +4733,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4741,7 +4741,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4749,7 +4749,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4757,7 +4757,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4765,7 +4765,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4773,7 +4773,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4885,7 +4885,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 32,
           "reject": "FailedPrecondition",
@@ -4893,7 +4893,7 @@
         },
         {
           "name": "unpause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -4901,7 +4901,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 32,
           "reject": "FailedPrecondition",
@@ -4909,7 +4909,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 42,
           "reject": "",
@@ -4917,7 +4917,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 32,
           "reject": "FailedPrecondition",
@@ -4925,7 +4925,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -5037,7 +5037,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 33,
           "reject": "FailedPrecondition",
@@ -5045,7 +5045,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5053,7 +5053,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 33,
           "reject": "FailedPrecondition",
@@ -5061,7 +5061,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 45,
           "reject": "",
@@ -5069,7 +5069,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5077,7 +5077,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 46,
           "reject": "",
@@ -5189,7 +5189,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 34,
           "reject": "FailedPrecondition",
@@ -5197,7 +5197,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 30,
           "reject": "",
@@ -5205,7 +5205,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 34,
           "reject": "FailedPrecondition",
@@ -5213,7 +5213,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 37,
           "reject": "",
@@ -5221,7 +5221,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5229,7 +5229,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -5341,7 +5341,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 35,
           "reject": "FailedPrecondition",
@@ -5349,7 +5349,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5357,7 +5357,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 35,
           "reject": "FailedPrecondition",
@@ -5365,7 +5365,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 31,
           "reject": "",
@@ -5373,7 +5373,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5381,7 +5381,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -5493,7 +5493,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 52,
           "reject": "",
@@ -5501,7 +5501,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 36,
           "reject": "",
@@ -5509,7 +5509,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 36,
           "reject": "FailedPrecondition",
@@ -5517,7 +5517,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 51,
           "reject": "",
@@ -5525,7 +5525,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -5533,7 +5533,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -5645,7 +5645,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5653,7 +5653,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5661,7 +5661,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5669,7 +5669,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5677,7 +5677,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5685,7 +5685,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5797,7 +5797,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5805,7 +5805,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5813,7 +5813,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5821,7 +5821,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5829,7 +5829,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5837,7 +5837,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5949,7 +5949,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5957,7 +5957,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5965,7 +5965,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5973,7 +5973,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5981,7 +5981,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5989,7 +5989,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -6101,7 +6101,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6109,7 +6109,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6117,7 +6117,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6125,7 +6125,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6133,7 +6133,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6141,7 +6141,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6253,7 +6253,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 41,
           "reject": "FailedPrecondition",
@@ -6261,7 +6261,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -6269,7 +6269,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 41,
           "reject": "FailedPrecondition",
@@ -6277,7 +6277,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 54,
           "reject": "",
@@ -6285,7 +6285,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -6293,7 +6293,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 55,
           "reject": "",
@@ -6405,7 +6405,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 42,
           "reject": "FailedPrecondition",
@@ -6413,7 +6413,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 42,
           "reject": "",
@@ -6421,7 +6421,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 42,
           "reject": "FailedPrecondition",
@@ -6429,7 +6429,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 42,
           "reject": "FailedPrecondition",
@@ -6437,7 +6437,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 42,
           "reject": "FailedPrecondition",
@@ -6445,7 +6445,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -6557,7 +6557,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6565,7 +6565,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6573,7 +6573,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6581,7 +6581,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6589,7 +6589,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6597,7 +6597,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6709,7 +6709,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6717,7 +6717,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6725,7 +6725,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6733,7 +6733,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6741,7 +6741,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6749,7 +6749,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6861,7 +6861,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6869,7 +6869,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6877,7 +6877,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6885,7 +6885,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6893,7 +6893,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6901,7 +6901,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -7013,7 +7013,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7021,7 +7021,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7029,7 +7029,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7037,7 +7037,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7045,7 +7045,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7053,7 +7053,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7165,7 +7165,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7173,7 +7173,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7181,7 +7181,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7189,7 +7189,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7197,7 +7197,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7205,7 +7205,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7317,7 +7317,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7325,7 +7325,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7333,7 +7333,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7341,7 +7341,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7349,7 +7349,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7357,7 +7357,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7469,7 +7469,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 62,
           "reject": "",
@@ -7477,7 +7477,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 49,
           "reject": "",
@@ -7485,7 +7485,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 49,
           "reject": "FailedPrecondition",
@@ -7493,7 +7493,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 60,
           "reject": "",
@@ -7501,7 +7501,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -7509,7 +7509,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 61,
           "reject": "",
@@ -7621,7 +7621,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7629,7 +7629,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7637,7 +7637,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7645,7 +7645,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7653,7 +7653,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7661,7 +7661,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7773,7 +7773,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 51,
           "reject": "FailedPrecondition",
@@ -7781,7 +7781,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 51,
           "reject": "",
@@ -7789,7 +7789,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 51,
           "reject": "FailedPrecondition",
@@ -7797,7 +7797,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 51,
           "reject": "FailedPrecondition",
@@ -7805,7 +7805,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 51,
           "reject": "FailedPrecondition",
@@ -7813,7 +7813,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -7925,7 +7925,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 52,
           "reject": "FailedPrecondition",
@@ -7933,7 +7933,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 36,
           "reject": "",
@@ -7941,7 +7941,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 52,
           "reject": "FailedPrecondition",
@@ -7949,7 +7949,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 51,
           "reject": "",
@@ -7957,7 +7957,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -7965,7 +7965,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -8077,7 +8077,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 53,
           "reject": "FailedPrecondition",
@@ -8085,7 +8085,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 53,
           "reject": "",
@@ -8093,7 +8093,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 53,
           "reject": "FailedPrecondition",
@@ -8101,7 +8101,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 51,
           "reject": "",
@@ -8109,7 +8109,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 53,
           "reject": "FailedPrecondition",
@@ -8117,7 +8117,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -8229,7 +8229,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8237,7 +8237,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8245,7 +8245,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8253,7 +8253,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8261,7 +8261,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8269,7 +8269,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8381,7 +8381,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8389,7 +8389,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8397,7 +8397,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8405,7 +8405,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8413,7 +8413,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8421,7 +8421,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8533,7 +8533,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 67,
           "reject": "",
@@ -8541,7 +8541,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -8549,7 +8549,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 56,
           "reject": "FailedPrecondition",
@@ -8557,7 +8557,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 59,
           "reject": "",
@@ -8565,7 +8565,7 @@
         },
         {
           "name": "reset",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -8573,7 +8573,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -8685,7 +8685,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8693,7 +8693,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8701,7 +8701,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8709,7 +8709,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8717,7 +8717,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8725,7 +8725,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8837,7 +8837,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8845,7 +8845,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8853,7 +8853,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8861,7 +8861,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8869,7 +8869,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8877,7 +8877,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8989,7 +8989,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -8997,7 +8997,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9005,7 +9005,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9013,7 +9013,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9021,7 +9021,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9029,7 +9029,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9141,7 +9141,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9149,7 +9149,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9157,7 +9157,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9165,7 +9165,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9173,7 +9173,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9181,7 +9181,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9293,7 +9293,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9301,7 +9301,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9309,7 +9309,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9317,7 +9317,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9325,7 +9325,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9333,7 +9333,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9445,7 +9445,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 62,
           "reject": "FailedPrecondition",
@@ -9453,7 +9453,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 49,
           "reject": "",
@@ -9461,7 +9461,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 62,
           "reject": "FailedPrecondition",
@@ -9469,7 +9469,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 60,
           "reject": "",
@@ -9477,7 +9477,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -9485,7 +9485,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 61,
           "reject": "",
@@ -9597,7 +9597,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9605,7 +9605,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9613,7 +9613,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9621,7 +9621,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9629,7 +9629,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9637,7 +9637,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9749,7 +9749,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 68,
           "reject": "",
@@ -9757,7 +9757,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 64,
           "reject": "",
@@ -9765,7 +9765,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 64,
           "reject": "FailedPrecondition",
@@ -9773,7 +9773,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 70,
           "reject": "",
@@ -9781,7 +9781,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -9789,7 +9789,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -9901,7 +9901,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 65,
           "reject": "FailedPrecondition",
@@ -9909,7 +9909,7 @@
         },
         {
           "name": "unpause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -9917,7 +9917,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 65,
           "reject": "FailedPrecondition",
@@ -9925,7 +9925,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 74,
           "reject": "",
@@ -9933,7 +9933,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 65,
           "reject": "FailedPrecondition",
@@ -9941,7 +9941,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -10053,7 +10053,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 78,
           "reject": "",
@@ -10061,7 +10061,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 66,
           "reject": "",
@@ -10069,7 +10069,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 66,
           "reject": "FailedPrecondition",
@@ -10077,7 +10077,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 42,
           "reject": "",
@@ -10085,7 +10085,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -10093,7 +10093,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -10205,7 +10205,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 67,
           "reject": "FailedPrecondition",
@@ -10213,7 +10213,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -10221,7 +10221,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 67,
           "reject": "FailedPrecondition",
@@ -10229,7 +10229,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 59,
           "reject": "",
@@ -10237,7 +10237,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -10245,7 +10245,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -10357,7 +10357,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 68,
           "reject": "FailedPrecondition",
@@ -10365,7 +10365,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 64,
           "reject": "",
@@ -10373,7 +10373,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 68,
           "reject": "FailedPrecondition",
@@ -10381,7 +10381,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 70,
           "reject": "",
@@ -10389,7 +10389,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -10397,7 +10397,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -10509,7 +10509,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 82,
           "reject": "",
@@ -10517,7 +10517,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 69,
           "reject": "",
@@ -10525,7 +10525,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 69,
           "reject": "FailedPrecondition",
@@ -10533,7 +10533,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 81,
           "reject": "",
@@ -10541,7 +10541,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -10549,7 +10549,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -10661,7 +10661,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10669,7 +10669,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10677,7 +10677,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10685,7 +10685,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10693,7 +10693,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10701,7 +10701,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10813,7 +10813,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10821,7 +10821,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10829,7 +10829,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10837,7 +10837,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10845,7 +10845,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10853,7 +10853,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10965,7 +10965,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -10973,7 +10973,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -10981,7 +10981,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -10989,7 +10989,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -10997,7 +10997,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -11005,7 +11005,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -11117,7 +11117,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11125,7 +11125,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11133,7 +11133,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11141,7 +11141,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11149,7 +11149,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11157,7 +11157,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11269,7 +11269,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 74,
           "reject": "FailedPrecondition",
@@ -11277,7 +11277,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 74,
           "reject": "",
@@ -11285,7 +11285,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 74,
           "reject": "FailedPrecondition",
@@ -11293,7 +11293,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 74,
           "reject": "FailedPrecondition",
@@ -11301,7 +11301,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 74,
           "reject": "FailedPrecondition",
@@ -11309,7 +11309,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -11421,7 +11421,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11429,7 +11429,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11437,7 +11437,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11445,7 +11445,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11453,7 +11453,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11461,7 +11461,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11573,7 +11573,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11581,7 +11581,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11589,7 +11589,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11597,7 +11597,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11605,7 +11605,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11613,7 +11613,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11725,7 +11725,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 88,
           "reject": "",
@@ -11733,7 +11733,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 77,
           "reject": "",
@@ -11741,7 +11741,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 77,
           "reject": "FailedPrecondition",
@@ -11749,7 +11749,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 86,
           "reject": "",
@@ -11757,7 +11757,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -11765,7 +11765,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 87,
           "reject": "",
@@ -11877,7 +11877,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 78,
           "reject": "FailedPrecondition",
@@ -11885,7 +11885,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 66,
           "reject": "",
@@ -11893,7 +11893,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 78,
           "reject": "FailedPrecondition",
@@ -11901,7 +11901,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 42,
           "reject": "",
@@ -11909,7 +11909,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -11917,7 +11917,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -12029,7 +12029,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12037,7 +12037,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12045,7 +12045,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12053,7 +12053,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12061,7 +12061,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12069,7 +12069,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12181,7 +12181,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12189,7 +12189,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12197,7 +12197,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12205,7 +12205,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12213,7 +12213,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12221,7 +12221,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12333,7 +12333,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 81,
           "reject": "FailedPrecondition",
@@ -12341,7 +12341,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 81,
           "reject": "",
@@ -12349,7 +12349,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 81,
           "reject": "FailedPrecondition",
@@ -12357,7 +12357,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 81,
           "reject": "FailedPrecondition",
@@ -12365,7 +12365,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 81,
           "reject": "FailedPrecondition",
@@ -12373,7 +12373,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -12485,7 +12485,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 82,
           "reject": "FailedPrecondition",
@@ -12493,7 +12493,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 69,
           "reject": "",
@@ -12501,7 +12501,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 82,
           "reject": "FailedPrecondition",
@@ -12509,7 +12509,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 81,
           "reject": "",
@@ -12517,7 +12517,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -12525,7 +12525,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -12637,7 +12637,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 83,
           "reject": "FailedPrecondition",
@@ -12645,7 +12645,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 83,
           "reject": "",
@@ -12653,7 +12653,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 83,
           "reject": "FailedPrecondition",
@@ -12661,7 +12661,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 81,
           "reject": "",
@@ -12669,7 +12669,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 83,
           "reject": "FailedPrecondition",
@@ -12677,7 +12677,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -12789,7 +12789,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12797,7 +12797,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12805,7 +12805,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12813,7 +12813,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12821,7 +12821,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12829,7 +12829,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12941,7 +12941,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12949,7 +12949,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12957,7 +12957,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12965,7 +12965,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12973,7 +12973,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12981,7 +12981,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -13093,7 +13093,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13101,7 +13101,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13109,7 +13109,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13117,7 +13117,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13125,7 +13125,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13133,7 +13133,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13245,7 +13245,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13253,7 +13253,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13261,7 +13261,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13269,7 +13269,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13277,7 +13277,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13285,7 +13285,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13397,7 +13397,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 88,
           "reject": "FailedPrecondition",
@@ -13405,7 +13405,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 77,
           "reject": "",
@@ -13413,7 +13413,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 88,
           "reject": "FailedPrecondition",
@@ -13421,7 +13421,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 86,
           "reject": "",
@@ -13429,7 +13429,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -13437,7 +13437,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 87,
           "reject": "",
@@ -13549,7 +13549,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13557,7 +13557,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13565,7 +13565,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13573,7 +13573,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13581,7 +13581,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13589,7 +13589,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13701,7 +13701,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 92,
           "reject": "",
@@ -13709,7 +13709,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 90,
           "reject": "",
@@ -13717,7 +13717,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 90,
           "reject": "FailedPrecondition",
@@ -13725,7 +13725,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 85,
           "reject": "",
@@ -13733,7 +13733,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -13741,7 +13741,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -13853,7 +13853,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 91,
           "reject": "FailedPrecondition",
@@ -13861,7 +13861,7 @@
         },
         {
           "name": "unpause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -13869,7 +13869,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 91,
           "reject": "FailedPrecondition",
@@ -13877,7 +13877,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 95,
           "reject": "",
@@ -13885,7 +13885,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 91,
           "reject": "FailedPrecondition",
@@ -13893,7 +13893,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -14005,7 +14005,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 92,
           "reject": "FailedPrecondition",
@@ -14013,7 +14013,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 90,
           "reject": "",
@@ -14021,7 +14021,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 92,
           "reject": "FailedPrecondition",
@@ -14029,7 +14029,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 85,
           "reject": "",
@@ -14037,7 +14037,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -14045,7 +14045,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -14157,7 +14157,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 99,
           "reject": "",
@@ -14165,7 +14165,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 93,
           "reject": "",
@@ -14173,7 +14173,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 93,
           "reject": "FailedPrecondition",
@@ -14181,7 +14181,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 74,
           "reject": "",
@@ -14189,7 +14189,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -14197,7 +14197,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -14309,7 +14309,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14317,7 +14317,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14325,7 +14325,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14333,7 +14333,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14341,7 +14341,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14349,7 +14349,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14461,7 +14461,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 95,
           "reject": "FailedPrecondition",
@@ -14469,7 +14469,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 95,
           "reject": "",
@@ -14477,7 +14477,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 95,
           "reject": "FailedPrecondition",
@@ -14485,7 +14485,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 95,
           "reject": "FailedPrecondition",
@@ -14493,7 +14493,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 95,
           "reject": "FailedPrecondition",
@@ -14501,7 +14501,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -14613,7 +14613,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14621,7 +14621,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14629,7 +14629,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14637,7 +14637,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14645,7 +14645,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14653,7 +14653,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14765,7 +14765,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14773,7 +14773,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14781,7 +14781,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14789,7 +14789,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14797,7 +14797,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14805,7 +14805,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14917,7 +14917,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 104,
           "reject": "",
@@ -14925,7 +14925,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 98,
           "reject": "",
@@ -14933,7 +14933,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 98,
           "reject": "FailedPrecondition",
@@ -14941,7 +14941,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 102,
           "reject": "",
@@ -14949,7 +14949,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -14957,7 +14957,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 103,
           "reject": "",
@@ -15069,7 +15069,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 99,
           "reject": "FailedPrecondition",
@@ -15077,7 +15077,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 93,
           "reject": "",
@@ -15085,7 +15085,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 99,
           "reject": "FailedPrecondition",
@@ -15093,7 +15093,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 74,
           "reject": "",
@@ -15101,7 +15101,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -15109,7 +15109,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -15221,7 +15221,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15229,7 +15229,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15237,7 +15237,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15245,7 +15245,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15253,7 +15253,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15261,7 +15261,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15373,7 +15373,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15381,7 +15381,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15389,7 +15389,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15397,7 +15397,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15405,7 +15405,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15413,7 +15413,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15525,7 +15525,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15533,7 +15533,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15541,7 +15541,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15549,7 +15549,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15557,7 +15557,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15565,7 +15565,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15677,7 +15677,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15685,7 +15685,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15693,7 +15693,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15701,7 +15701,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15709,7 +15709,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15717,7 +15717,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15829,7 +15829,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 104,
           "reject": "FailedPrecondition",
@@ -15837,7 +15837,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 98,
           "reject": "",
@@ -15845,7 +15845,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 104,
           "reject": "FailedPrecondition",
@@ -15853,7 +15853,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 102,
           "reject": "",
@@ -15861,7 +15861,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -15869,7 +15869,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 103,
           "reject": "",
@@ -15981,7 +15981,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -15989,7 +15989,7 @@
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -15997,7 +15997,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -16005,7 +16005,7 @@
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -16013,7 +16013,7 @@
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -16021,7 +16021,7 @@
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -16133,7 +16133,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 107,
           "reject": "",
@@ -16141,7 +16141,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 106,
           "reject": "",
@@ -16149,7 +16149,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 106,
           "reject": "FailedPrecondition",
@@ -16157,7 +16157,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 101,
           "reject": "",
@@ -16165,7 +16165,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -16173,7 +16173,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -16285,7 +16285,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 107,
           "reject": "FailedPrecondition",
@@ -16293,7 +16293,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 106,
           "reject": "",
@@ -16301,7 +16301,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 107,
           "reject": "FailedPrecondition",
@@ -16309,7 +16309,7 @@
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 101,
           "reject": "",
@@ -16317,7 +16317,7 @@
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -16325,7 +16325,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -16437,7 +16437,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 109,
           "reject": "",
@@ -16445,7 +16445,7 @@
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 108,
           "reject": "",
@@ -16453,7 +16453,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 108,
           "reject": "FailedPrecondition",
@@ -16461,7 +16461,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 95,
           "reject": "",
@@ -16469,7 +16469,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -16477,7 +16477,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -16589,7 +16589,7 @@
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 109,
           "reject": "FailedPrecondition",
@@ -16597,7 +16597,7 @@
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 108,
           "reject": "",
@@ -16605,7 +16605,7 @@
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 109,
           "reject": "FailedPrecondition",
@@ -16613,7 +16613,7 @@
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 95,
           "reject": "",
@@ -16621,7 +16621,7 @@
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -16629,7 +16629,7 @@
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",

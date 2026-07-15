@@ -23,7 +23,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 3,
           "reject": "",
@@ -31,7 +31,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -39,7 +39,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -47,7 +47,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 1,
           "reject": "",
@@ -55,7 +55,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -63,7 +63,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 2,
           "reject": "",
@@ -175,7 +175,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -183,7 +183,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -191,7 +191,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -199,7 +199,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -207,7 +207,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -215,7 +215,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 1,
           "reject": "FailedPrecondition",
@@ -327,7 +327,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -335,7 +335,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -343,7 +343,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -351,7 +351,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -359,7 +359,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -367,7 +367,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 2,
           "reject": "FailedPrecondition",
@@ -479,7 +479,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 3,
           "reject": "FailedPrecondition",
@@ -487,7 +487,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -495,7 +495,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 3,
           "reject": "",
@@ -503,7 +503,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 1,
           "reject": "",
@@ -511,7 +511,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -519,7 +519,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 2,
           "reject": "",
@@ -631,7 +631,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 6,
           "reject": "",
@@ -639,7 +639,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -647,7 +647,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 4,
           "reject": "FailedPrecondition",
@@ -655,7 +655,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 8,
           "reject": "",
@@ -663,7 +663,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -671,7 +671,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 9,
           "reject": "",
@@ -783,7 +783,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 5,
           "reject": "FailedPrecondition",
@@ -791,7 +791,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -799,7 +799,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 5,
           "reject": "",
@@ -807,7 +807,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 11,
           "reject": "",
@@ -815,7 +815,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 0,
           "reject": "",
@@ -823,7 +823,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 12,
           "reject": "",
@@ -935,7 +935,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 6,
           "reject": "FailedPrecondition",
@@ -943,7 +943,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -951,7 +951,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 6,
           "reject": "FailedPrecondition",
@@ -959,7 +959,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 8,
           "reject": "",
@@ -967,7 +967,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -975,7 +975,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 9,
           "reject": "",
@@ -1087,7 +1087,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 19,
           "reject": "",
@@ -1095,7 +1095,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 7,
           "reject": "",
@@ -1103,7 +1103,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 7,
           "reject": "FailedPrecondition",
@@ -1111,7 +1111,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 17,
           "reject": "",
@@ -1119,7 +1119,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -1127,7 +1127,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -1239,7 +1239,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1247,7 +1247,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1255,7 +1255,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1263,7 +1263,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1271,7 +1271,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1279,7 +1279,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 8,
           "reject": "FailedPrecondition",
@@ -1391,7 +1391,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1399,7 +1399,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1407,7 +1407,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1415,7 +1415,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1423,7 +1423,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1431,7 +1431,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 9,
           "reject": "FailedPrecondition",
@@ -1543,7 +1543,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1551,7 +1551,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1559,7 +1559,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1567,7 +1567,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1575,7 +1575,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1583,7 +1583,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 10,
           "reject": "FailedPrecondition",
@@ -1695,7 +1695,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1703,7 +1703,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1711,7 +1711,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1719,7 +1719,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1727,7 +1727,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1735,7 +1735,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 11,
           "reject": "FailedPrecondition",
@@ -1847,7 +1847,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1855,7 +1855,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1863,7 +1863,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1871,7 +1871,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1879,7 +1879,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1887,7 +1887,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 12,
           "reject": "FailedPrecondition",
@@ -1999,7 +1999,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 13,
           "reject": "FailedPrecondition",
@@ -2007,7 +2007,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -2015,7 +2015,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 13,
           "reject": "FailedPrecondition",
@@ -2023,7 +2023,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 22,
           "reject": "",
@@ -2031,7 +2031,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 4,
           "reject": "",
@@ -2039,7 +2039,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 23,
           "reject": "",
@@ -2151,7 +2151,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2159,7 +2159,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2167,7 +2167,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2175,7 +2175,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2183,7 +2183,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2191,7 +2191,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 14,
           "reject": "FailedPrecondition",
@@ -2303,7 +2303,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 27,
           "reject": "",
@@ -2311,7 +2311,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 15,
           "reject": "",
@@ -2319,7 +2319,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 15,
           "reject": "FailedPrecondition",
@@ -2327,7 +2327,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 25,
           "reject": "",
@@ -2335,7 +2335,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -2343,7 +2343,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 26,
           "reject": "",
@@ -2455,7 +2455,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2463,7 +2463,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2471,7 +2471,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2479,7 +2479,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2487,7 +2487,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2495,7 +2495,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 16,
           "reject": "FailedPrecondition",
@@ -2607,7 +2607,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 17,
           "reject": "FailedPrecondition",
@@ -2615,7 +2615,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 17,
           "reject": "",
@@ -2623,7 +2623,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 17,
           "reject": "FailedPrecondition",
@@ -2631,7 +2631,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 17,
           "reject": "FailedPrecondition",
@@ -2639,7 +2639,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 17,
           "reject": "FailedPrecondition",
@@ -2647,7 +2647,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -2759,7 +2759,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2767,7 +2767,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2775,7 +2775,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2783,7 +2783,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2791,7 +2791,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2799,7 +2799,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 18,
           "reject": "FailedPrecondition",
@@ -2911,7 +2911,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 19,
           "reject": "FailedPrecondition",
@@ -2919,7 +2919,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 7,
           "reject": "",
@@ -2927,7 +2927,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 19,
           "reject": "FailedPrecondition",
@@ -2935,7 +2935,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 17,
           "reject": "",
@@ -2943,7 +2943,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -2951,7 +2951,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -3063,7 +3063,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 20,
           "reject": "FailedPrecondition",
@@ -3071,7 +3071,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 20,
           "reject": "",
@@ -3079,7 +3079,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 20,
           "reject": "FailedPrecondition",
@@ -3087,7 +3087,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 17,
           "reject": "",
@@ -3095,7 +3095,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 20,
           "reject": "FailedPrecondition",
@@ -3103,7 +3103,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -3215,7 +3215,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3223,7 +3223,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3231,7 +3231,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3239,7 +3239,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3247,7 +3247,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3255,7 +3255,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 21,
           "reject": "FailedPrecondition",
@@ -3367,7 +3367,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3375,7 +3375,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3383,7 +3383,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3391,7 +3391,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3399,7 +3399,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3407,7 +3407,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 22,
           "reject": "FailedPrecondition",
@@ -3519,7 +3519,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3527,7 +3527,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3535,7 +3535,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3543,7 +3543,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3551,7 +3551,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3559,7 +3559,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 23,
           "reject": "FailedPrecondition",
@@ -3671,7 +3671,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3679,7 +3679,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3687,7 +3687,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3695,7 +3695,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3703,7 +3703,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3711,7 +3711,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 24,
           "reject": "FailedPrecondition",
@@ -3823,7 +3823,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3831,7 +3831,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3839,7 +3839,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3847,7 +3847,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3855,7 +3855,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3863,7 +3863,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 25,
           "reject": "FailedPrecondition",
@@ -3975,7 +3975,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -3983,7 +3983,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -3991,7 +3991,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -3999,7 +3999,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -4007,7 +4007,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -4015,7 +4015,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 26,
           "reject": "FailedPrecondition",
@@ -4127,7 +4127,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 27,
           "reject": "FailedPrecondition",
@@ -4135,7 +4135,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 15,
           "reject": "",
@@ -4143,7 +4143,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 27,
           "reject": "FailedPrecondition",
@@ -4151,7 +4151,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 25,
           "reject": "",
@@ -4159,7 +4159,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -4167,7 +4167,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 26,
           "reject": "",
@@ -4279,7 +4279,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 35,
           "reject": "",
@@ -4287,7 +4287,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -4295,7 +4295,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 28,
           "reject": "FailedPrecondition",
@@ -4303,7 +4303,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 31,
           "reject": "",
@@ -4311,7 +4311,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -4319,7 +4319,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -4431,7 +4431,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4439,7 +4439,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4447,7 +4447,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4455,7 +4455,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4463,7 +4463,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4471,7 +4471,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 29,
           "reject": "FailedPrecondition",
@@ -4583,7 +4583,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 34,
           "reject": "",
@@ -4591,7 +4591,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 30,
           "reject": "",
@@ -4599,7 +4599,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 30,
           "reject": "FailedPrecondition",
@@ -4607,7 +4607,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 37,
           "reject": "",
@@ -4615,7 +4615,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -4623,7 +4623,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -4735,7 +4735,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4743,7 +4743,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4751,7 +4751,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4759,7 +4759,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4767,7 +4767,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4775,7 +4775,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 31,
           "reject": "FailedPrecondition",
@@ -4887,7 +4887,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 32,
           "reject": "FailedPrecondition",
@@ -4895,7 +4895,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -4903,7 +4903,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 32,
           "reject": "FailedPrecondition",
@@ -4911,7 +4911,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 42,
           "reject": "",
@@ -4919,7 +4919,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 32,
           "reject": "FailedPrecondition",
@@ -4927,7 +4927,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -5039,7 +5039,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 33,
           "reject": "FailedPrecondition",
@@ -5047,7 +5047,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5055,7 +5055,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 33,
           "reject": "FailedPrecondition",
@@ -5063,7 +5063,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 45,
           "reject": "",
@@ -5071,7 +5071,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5079,7 +5079,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 46,
           "reject": "",
@@ -5191,7 +5191,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 34,
           "reject": "FailedPrecondition",
@@ -5199,7 +5199,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 30,
           "reject": "",
@@ -5207,7 +5207,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 34,
           "reject": "FailedPrecondition",
@@ -5215,7 +5215,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 37,
           "reject": "",
@@ -5223,7 +5223,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5231,7 +5231,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -5343,7 +5343,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 35,
           "reject": "FailedPrecondition",
@@ -5351,7 +5351,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5359,7 +5359,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 35,
           "reject": "FailedPrecondition",
@@ -5367,7 +5367,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 31,
           "reject": "",
@@ -5375,7 +5375,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -5383,7 +5383,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 18,
           "reject": "",
@@ -5495,7 +5495,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 52,
           "reject": "",
@@ -5503,7 +5503,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 36,
           "reject": "",
@@ -5511,7 +5511,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 36,
           "reject": "FailedPrecondition",
@@ -5519,7 +5519,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 51,
           "reject": "",
@@ -5527,7 +5527,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -5535,7 +5535,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -5647,7 +5647,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5655,7 +5655,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5663,7 +5663,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5671,7 +5671,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5679,7 +5679,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5687,7 +5687,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 37,
           "reject": "FailedPrecondition",
@@ -5799,7 +5799,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5807,7 +5807,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5815,7 +5815,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5823,7 +5823,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5831,7 +5831,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5839,7 +5839,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 38,
           "reject": "FailedPrecondition",
@@ -5951,7 +5951,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5959,7 +5959,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5967,7 +5967,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5975,7 +5975,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5983,7 +5983,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -5991,7 +5991,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 39,
           "reject": "FailedPrecondition",
@@ -6103,7 +6103,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6111,7 +6111,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6119,7 +6119,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6127,7 +6127,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6135,7 +6135,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6143,7 +6143,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 40,
           "reject": "FailedPrecondition",
@@ -6255,7 +6255,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 41,
           "reject": "FailedPrecondition",
@@ -6263,7 +6263,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -6271,7 +6271,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 41,
           "reject": "FailedPrecondition",
@@ -6279,7 +6279,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 54,
           "reject": "",
@@ -6287,7 +6287,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -6295,7 +6295,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 55,
           "reject": "",
@@ -6407,7 +6407,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 42,
           "reject": "FailedPrecondition",
@@ -6415,7 +6415,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 42,
           "reject": "",
@@ -6423,7 +6423,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 42,
           "reject": "FailedPrecondition",
@@ -6431,7 +6431,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 42,
           "reject": "FailedPrecondition",
@@ -6439,7 +6439,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 42,
           "reject": "FailedPrecondition",
@@ -6447,7 +6447,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -6559,7 +6559,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6567,7 +6567,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6575,7 +6575,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6583,7 +6583,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6591,7 +6591,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6599,7 +6599,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 43,
           "reject": "FailedPrecondition",
@@ -6711,7 +6711,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6719,7 +6719,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6727,7 +6727,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6735,7 +6735,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6743,7 +6743,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6751,7 +6751,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 44,
           "reject": "FailedPrecondition",
@@ -6863,7 +6863,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6871,7 +6871,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6879,7 +6879,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6887,7 +6887,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6895,7 +6895,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -6903,7 +6903,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 45,
           "reject": "FailedPrecondition",
@@ -7015,7 +7015,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7023,7 +7023,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7031,7 +7031,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7039,7 +7039,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7047,7 +7047,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7055,7 +7055,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 46,
           "reject": "FailedPrecondition",
@@ -7167,7 +7167,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7175,7 +7175,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7183,7 +7183,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7191,7 +7191,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7199,7 +7199,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7207,7 +7207,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 47,
           "reject": "FailedPrecondition",
@@ -7319,7 +7319,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7327,7 +7327,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7335,7 +7335,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7343,7 +7343,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7351,7 +7351,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7359,7 +7359,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 48,
           "reject": "FailedPrecondition",
@@ -7471,7 +7471,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 62,
           "reject": "",
@@ -7479,7 +7479,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 49,
           "reject": "",
@@ -7487,7 +7487,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 49,
           "reject": "FailedPrecondition",
@@ -7495,7 +7495,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 60,
           "reject": "",
@@ -7503,7 +7503,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -7511,7 +7511,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 61,
           "reject": "",
@@ -7623,7 +7623,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7631,7 +7631,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7639,7 +7639,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7647,7 +7647,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7655,7 +7655,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7663,7 +7663,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 50,
           "reject": "FailedPrecondition",
@@ -7775,7 +7775,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 51,
           "reject": "FailedPrecondition",
@@ -7783,7 +7783,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 51,
           "reject": "",
@@ -7791,7 +7791,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 51,
           "reject": "FailedPrecondition",
@@ -7799,7 +7799,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 51,
           "reject": "FailedPrecondition",
@@ -7807,7 +7807,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 51,
           "reject": "FailedPrecondition",
@@ -7815,7 +7815,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -7927,7 +7927,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 52,
           "reject": "FailedPrecondition",
@@ -7935,7 +7935,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 36,
           "reject": "",
@@ -7943,7 +7943,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 52,
           "reject": "FailedPrecondition",
@@ -7951,7 +7951,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 51,
           "reject": "",
@@ -7959,7 +7959,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -7967,7 +7967,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -8079,7 +8079,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 53,
           "reject": "FailedPrecondition",
@@ -8087,7 +8087,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 53,
           "reject": "",
@@ -8095,7 +8095,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 53,
           "reject": "FailedPrecondition",
@@ -8103,7 +8103,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 51,
           "reject": "",
@@ -8111,7 +8111,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 53,
           "reject": "FailedPrecondition",
@@ -8119,7 +8119,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 38,
           "reject": "",
@@ -8231,7 +8231,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8239,7 +8239,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8247,7 +8247,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8255,7 +8255,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8263,7 +8263,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8271,7 +8271,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 54,
           "reject": "FailedPrecondition",
@@ -8383,7 +8383,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8391,7 +8391,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8399,7 +8399,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8407,7 +8407,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8415,7 +8415,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8423,7 +8423,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 55,
           "reject": "FailedPrecondition",
@@ -8535,7 +8535,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 67,
           "reject": "",
@@ -8543,7 +8543,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -8551,7 +8551,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 56,
           "reject": "FailedPrecondition",
@@ -8559,7 +8559,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 59,
           "reject": "",
@@ -8567,7 +8567,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -8575,7 +8575,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -8687,7 +8687,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8695,7 +8695,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8703,7 +8703,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8711,7 +8711,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8719,7 +8719,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8727,7 +8727,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 57,
           "reject": "FailedPrecondition",
@@ -8839,7 +8839,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8847,7 +8847,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8855,7 +8855,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8863,7 +8863,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8871,7 +8871,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8879,7 +8879,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 58,
           "reject": "FailedPrecondition",
@@ -8991,7 +8991,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -8999,7 +8999,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9007,7 +9007,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9015,7 +9015,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9023,7 +9023,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9031,7 +9031,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 59,
           "reject": "FailedPrecondition",
@@ -9143,7 +9143,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9151,7 +9151,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9159,7 +9159,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9167,7 +9167,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9175,7 +9175,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9183,7 +9183,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 60,
           "reject": "FailedPrecondition",
@@ -9295,7 +9295,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9303,7 +9303,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9311,7 +9311,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9319,7 +9319,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9327,7 +9327,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9335,7 +9335,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 61,
           "reject": "FailedPrecondition",
@@ -9447,7 +9447,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 62,
           "reject": "FailedPrecondition",
@@ -9455,7 +9455,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 49,
           "reject": "",
@@ -9463,7 +9463,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 62,
           "reject": "FailedPrecondition",
@@ -9471,7 +9471,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 60,
           "reject": "",
@@ -9479,7 +9479,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -9487,7 +9487,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 61,
           "reject": "",
@@ -9599,7 +9599,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9607,7 +9607,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9615,7 +9615,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9623,7 +9623,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9631,7 +9631,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9639,7 +9639,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 63,
           "reject": "FailedPrecondition",
@@ -9751,7 +9751,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 68,
           "reject": "",
@@ -9759,7 +9759,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 64,
           "reject": "",
@@ -9767,7 +9767,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 64,
           "reject": "FailedPrecondition",
@@ -9775,7 +9775,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 70,
           "reject": "",
@@ -9783,7 +9783,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -9791,7 +9791,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -9903,7 +9903,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 65,
           "reject": "FailedPrecondition",
@@ -9911,7 +9911,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -9919,7 +9919,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 65,
           "reject": "FailedPrecondition",
@@ -9927,7 +9927,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 74,
           "reject": "",
@@ -9935,7 +9935,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 65,
           "reject": "FailedPrecondition",
@@ -9943,7 +9943,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -10055,7 +10055,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 78,
           "reject": "",
@@ -10063,7 +10063,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 66,
           "reject": "",
@@ -10071,7 +10071,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 66,
           "reject": "FailedPrecondition",
@@ -10079,7 +10079,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 42,
           "reject": "",
@@ -10087,7 +10087,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -10095,7 +10095,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -10207,7 +10207,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 67,
           "reject": "FailedPrecondition",
@@ -10215,7 +10215,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -10223,7 +10223,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 67,
           "reject": "FailedPrecondition",
@@ -10231,7 +10231,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 59,
           "reject": "",
@@ -10239,7 +10239,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -10247,7 +10247,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -10359,7 +10359,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 68,
           "reject": "FailedPrecondition",
@@ -10367,7 +10367,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 64,
           "reject": "",
@@ -10375,7 +10375,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 68,
           "reject": "FailedPrecondition",
@@ -10383,7 +10383,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 70,
           "reject": "",
@@ -10391,7 +10391,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 28,
           "reject": "",
@@ -10399,7 +10399,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -10511,7 +10511,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 82,
           "reject": "",
@@ -10519,7 +10519,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 69,
           "reject": "",
@@ -10527,7 +10527,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 69,
           "reject": "FailedPrecondition",
@@ -10535,7 +10535,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 81,
           "reject": "",
@@ -10543,7 +10543,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -10551,7 +10551,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -10663,7 +10663,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10671,7 +10671,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10679,7 +10679,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10687,7 +10687,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10695,7 +10695,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10703,7 +10703,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 70,
           "reject": "FailedPrecondition",
@@ -10815,7 +10815,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10823,7 +10823,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10831,7 +10831,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10839,7 +10839,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10847,7 +10847,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10855,7 +10855,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 71,
           "reject": "FailedPrecondition",
@@ -10967,7 +10967,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -10975,7 +10975,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -10983,7 +10983,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -10991,7 +10991,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -10999,7 +10999,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -11007,7 +11007,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 72,
           "reject": "FailedPrecondition",
@@ -11119,7 +11119,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11127,7 +11127,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11135,7 +11135,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11143,7 +11143,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11151,7 +11151,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11159,7 +11159,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 73,
           "reject": "FailedPrecondition",
@@ -11271,7 +11271,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 74,
           "reject": "FailedPrecondition",
@@ -11279,7 +11279,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 74,
           "reject": "",
@@ -11287,7 +11287,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 74,
           "reject": "FailedPrecondition",
@@ -11295,7 +11295,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 74,
           "reject": "FailedPrecondition",
@@ -11303,7 +11303,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 74,
           "reject": "FailedPrecondition",
@@ -11311,7 +11311,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -11423,7 +11423,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11431,7 +11431,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11439,7 +11439,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11447,7 +11447,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11455,7 +11455,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11463,7 +11463,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 75,
           "reject": "FailedPrecondition",
@@ -11575,7 +11575,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11583,7 +11583,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11591,7 +11591,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11599,7 +11599,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11607,7 +11607,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11615,7 +11615,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 76,
           "reject": "FailedPrecondition",
@@ -11727,7 +11727,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 88,
           "reject": "",
@@ -11735,7 +11735,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 77,
           "reject": "",
@@ -11743,7 +11743,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 77,
           "reject": "FailedPrecondition",
@@ -11751,7 +11751,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 86,
           "reject": "",
@@ -11759,7 +11759,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -11767,7 +11767,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 87,
           "reject": "",
@@ -11879,7 +11879,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 78,
           "reject": "FailedPrecondition",
@@ -11887,7 +11887,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 66,
           "reject": "",
@@ -11895,7 +11895,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 78,
           "reject": "FailedPrecondition",
@@ -11903,7 +11903,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 42,
           "reject": "",
@@ -11911,7 +11911,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 20,
           "reject": "",
@@ -11919,7 +11919,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 43,
           "reject": "",
@@ -12031,7 +12031,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12039,7 +12039,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12047,7 +12047,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12055,7 +12055,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12063,7 +12063,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12071,7 +12071,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 79,
           "reject": "FailedPrecondition",
@@ -12183,7 +12183,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12191,7 +12191,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12199,7 +12199,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12207,7 +12207,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12215,7 +12215,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12223,7 +12223,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 80,
           "reject": "FailedPrecondition",
@@ -12335,7 +12335,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 81,
           "reject": "FailedPrecondition",
@@ -12343,7 +12343,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 81,
           "reject": "",
@@ -12351,7 +12351,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 81,
           "reject": "FailedPrecondition",
@@ -12359,7 +12359,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 81,
           "reject": "FailedPrecondition",
@@ -12367,7 +12367,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 81,
           "reject": "FailedPrecondition",
@@ -12375,7 +12375,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -12487,7 +12487,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 82,
           "reject": "FailedPrecondition",
@@ -12495,7 +12495,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 69,
           "reject": "",
@@ -12503,7 +12503,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 82,
           "reject": "FailedPrecondition",
@@ -12511,7 +12511,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 81,
           "reject": "",
@@ -12519,7 +12519,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -12527,7 +12527,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -12639,7 +12639,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 83,
           "reject": "FailedPrecondition",
@@ -12647,7 +12647,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 83,
           "reject": "",
@@ -12655,7 +12655,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 83,
           "reject": "FailedPrecondition",
@@ -12663,7 +12663,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 81,
           "reject": "",
@@ -12671,7 +12671,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 83,
           "reject": "FailedPrecondition",
@@ -12679,7 +12679,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 71,
           "reject": "",
@@ -12791,7 +12791,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12799,7 +12799,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12807,7 +12807,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12815,7 +12815,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12823,7 +12823,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12831,7 +12831,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 84,
           "reject": "FailedPrecondition",
@@ -12943,7 +12943,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12951,7 +12951,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12959,7 +12959,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12967,7 +12967,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12975,7 +12975,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -12983,7 +12983,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 85,
           "reject": "FailedPrecondition",
@@ -13095,7 +13095,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13103,7 +13103,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13111,7 +13111,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13119,7 +13119,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13127,7 +13127,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13135,7 +13135,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 86,
           "reject": "FailedPrecondition",
@@ -13247,7 +13247,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13255,7 +13255,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13263,7 +13263,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13271,7 +13271,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13279,7 +13279,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13287,7 +13287,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 87,
           "reject": "FailedPrecondition",
@@ -13399,7 +13399,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 88,
           "reject": "FailedPrecondition",
@@ -13407,7 +13407,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 77,
           "reject": "",
@@ -13415,7 +13415,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 88,
           "reject": "FailedPrecondition",
@@ -13423,7 +13423,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 86,
           "reject": "",
@@ -13431,7 +13431,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -13439,7 +13439,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 87,
           "reject": "",
@@ -13551,7 +13551,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13559,7 +13559,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13567,7 +13567,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13575,7 +13575,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13583,7 +13583,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13591,7 +13591,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 89,
           "reject": "FailedPrecondition",
@@ -13703,7 +13703,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 92,
           "reject": "",
@@ -13711,7 +13711,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 90,
           "reject": "",
@@ -13719,7 +13719,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 90,
           "reject": "FailedPrecondition",
@@ -13727,7 +13727,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 85,
           "reject": "",
@@ -13735,7 +13735,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -13743,7 +13743,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -13855,7 +13855,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 91,
           "reject": "FailedPrecondition",
@@ -13863,7 +13863,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -13871,7 +13871,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 91,
           "reject": "FailedPrecondition",
@@ -13879,7 +13879,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 95,
           "reject": "",
@@ -13887,7 +13887,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 91,
           "reject": "FailedPrecondition",
@@ -13895,7 +13895,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -14007,7 +14007,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 92,
           "reject": "FailedPrecondition",
@@ -14015,7 +14015,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 90,
           "reject": "",
@@ -14023,7 +14023,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 92,
           "reject": "FailedPrecondition",
@@ -14031,7 +14031,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 85,
           "reject": "",
@@ -14039,7 +14039,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -14047,7 +14047,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -14159,7 +14159,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 99,
           "reject": "",
@@ -14167,7 +14167,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 93,
           "reject": "",
@@ -14175,7 +14175,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 93,
           "reject": "FailedPrecondition",
@@ -14183,7 +14183,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 74,
           "reject": "",
@@ -14191,7 +14191,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -14199,7 +14199,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -14311,7 +14311,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14319,7 +14319,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14327,7 +14327,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14335,7 +14335,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14343,7 +14343,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14351,7 +14351,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 94,
           "reject": "FailedPrecondition",
@@ -14463,7 +14463,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 95,
           "reject": "FailedPrecondition",
@@ -14471,7 +14471,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 95,
           "reject": "",
@@ -14479,7 +14479,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 95,
           "reject": "FailedPrecondition",
@@ -14487,7 +14487,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 95,
           "reject": "FailedPrecondition",
@@ -14495,7 +14495,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 95,
           "reject": "FailedPrecondition",
@@ -14503,7 +14503,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -14615,7 +14615,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14623,7 +14623,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14631,7 +14631,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14639,7 +14639,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14647,7 +14647,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14655,7 +14655,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 96,
           "reject": "FailedPrecondition",
@@ -14767,7 +14767,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14775,7 +14775,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14783,7 +14783,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14791,7 +14791,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14799,7 +14799,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14807,7 +14807,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 97,
           "reject": "FailedPrecondition",
@@ -14919,7 +14919,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 104,
           "reject": "",
@@ -14927,7 +14927,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 98,
           "reject": "",
@@ -14935,7 +14935,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 98,
           "reject": "FailedPrecondition",
@@ -14943,7 +14943,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 102,
           "reject": "",
@@ -14951,7 +14951,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -14959,7 +14959,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 103,
           "reject": "",
@@ -15071,7 +15071,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 99,
           "reject": "FailedPrecondition",
@@ -15079,7 +15079,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 93,
           "reject": "",
@@ -15087,7 +15087,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 99,
           "reject": "FailedPrecondition",
@@ -15095,7 +15095,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 74,
           "reject": "",
@@ -15103,7 +15103,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 53,
           "reject": "",
@@ -15111,7 +15111,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 75,
           "reject": "",
@@ -15223,7 +15223,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15231,7 +15231,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15239,7 +15239,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15247,7 +15247,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15255,7 +15255,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15263,7 +15263,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 100,
           "reject": "FailedPrecondition",
@@ -15375,7 +15375,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15383,7 +15383,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15391,7 +15391,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15399,7 +15399,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15407,7 +15407,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15415,7 +15415,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 101,
           "reject": "FailedPrecondition",
@@ -15527,7 +15527,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15535,7 +15535,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15543,7 +15543,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15551,7 +15551,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15559,7 +15559,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15567,7 +15567,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 102,
           "reject": "FailedPrecondition",
@@ -15679,7 +15679,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15687,7 +15687,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15695,7 +15695,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15703,7 +15703,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15711,7 +15711,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15719,7 +15719,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 103,
           "reject": "FailedPrecondition",
@@ -15831,7 +15831,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 104,
           "reject": "FailedPrecondition",
@@ -15839,7 +15839,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 98,
           "reject": "",
@@ -15847,7 +15847,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 104,
           "reject": "FailedPrecondition",
@@ -15855,7 +15855,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 102,
           "reject": "",
@@ -15863,7 +15863,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -15871,7 +15871,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 103,
           "reject": "",
@@ -15983,7 +15983,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -15991,7 +15991,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -15999,7 +15999,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -16007,7 +16007,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -16015,7 +16015,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -16023,7 +16023,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 105,
           "reject": "FailedPrecondition",
@@ -16135,7 +16135,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 107,
           "reject": "",
@@ -16143,7 +16143,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 106,
           "reject": "",
@@ -16151,7 +16151,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 106,
           "reject": "FailedPrecondition",
@@ -16159,7 +16159,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 101,
           "reject": "",
@@ -16167,7 +16167,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -16175,7 +16175,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -16287,7 +16287,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 107,
           "reject": "FailedPrecondition",
@@ -16295,7 +16295,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 106,
           "reject": "",
@@ -16303,7 +16303,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 107,
           "reject": "FailedPrecondition",
@@ -16311,7 +16311,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 101,
           "reject": "",
@@ -16319,7 +16319,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 56,
           "reject": "",
@@ -16327,7 +16327,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -16439,7 +16439,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 109,
           "reject": "",
@@ -16447,7 +16447,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "accepted; no-op here",
+          "label": "would be accepted but a no-op",
           "category": "Immediate",
           "next": 108,
           "reject": "",
@@ -16455,7 +16455,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 108,
           "reject": "FailedPrecondition",
@@ -16463,7 +16463,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 95,
           "reject": "",
@@ -16471,7 +16471,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -16479,7 +16479,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
@@ -16591,7 +16591,7 @@ window.SAA_SPEC = {
       "ops": [
         {
           "name": "pause",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 109,
           "reject": "FailedPrecondition",
@@ -16599,7 +16599,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "unpause",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 108,
           "reject": "",
@@ -16607,7 +16607,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "update start_delay",
-          "label": "—",
+          "label": "would be rejected",
           "category": "NotPermitted",
           "next": 109,
           "reject": "FailedPrecondition",
@@ -16615,7 +16615,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "cancel",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 95,
           "reject": "",
@@ -16623,7 +16623,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "reset",
-          "label": "resolves at attempt boundary",
+          "label": "would be accepted",
           "category": "Deferred",
           "next": 83,
           "reject": "",
@@ -16631,7 +16631,7 @@ window.SAA_SPEC = {
         },
         {
           "name": "terminate",
-          "label": "takes effect now",
+          "label": "would be accepted",
           "category": "Immediate",
           "next": 96,
           "reject": "",
