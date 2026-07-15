@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Standalone Activity — behavior from the executable spec</title>
+    <style>
+      :root {
+        --bg: #0e1116;
+        --panel: #12161d;
+        --edge: #2a3240;
+        --text: #e8eaed;
+        --dim: #9aa0a6;
+        --accent: #ffd54f;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--mono);
+        line-height: 1.55;
+      }
+      main { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
+      h1 { font-size: 26px; font-weight: 600; margin: 0 0 8px; }
+      p.lede { color: var(--dim); margin: 0 0 28px; font-size: 15px; }
+      .frame {
+        border: 1px solid var(--edge);
+        border-radius: 14px;
+        overflow: hidden;
+        background: #000;
+      }
+      video { display: block; width: 100%; height: auto; }
+      section { margin-top: 36px; }
+      h2 { font-size: 18px; font-weight: 600; margin: 0 0 10px; color: var(--accent); }
+      ul { margin: 0; padding-left: 20px; }
+      li { margin: 4px 0; color: var(--text); font-size: 14px; }
+      .stats { display: flex; gap: 28px; flex-wrap: wrap; margin: 8px 0 0; }
+      .stat { background: var(--panel); border: 1px solid var(--edge); border-radius: 10px; padding: 12px 18px; }
+      .stat b { font-size: 22px; display: block; }
+      .stat span { color: var(--dim); font-size: 12px; }
+      code { background: var(--panel); border: 1px solid var(--edge); border-radius: 5px; padding: 1px 6px; font-size: 13px; }
+      a { color: var(--accent); }
+      footer { margin-top: 40px; color: var(--dim); font-size: 12px; border-top: 1px solid var(--edge); padding-top: 16px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Standalone Activity — behavior from the executable spec</h1>
+      <p class="lede">
+        A Canvas&nbsp;Commons animation of the Standalone Activity (SAA) state machine.
+        Nothing here is hand-authored behavior: an executable imports the Go spec
+        (<code>saaspec.Model</code>), walks its reachable state space, runs directed
+        traces, and emits the data that drives this animation.
+      </p>
+
+      <div class="frame">
+        <video src="saa.mp4" controls autoplay muted loop playsinline></video>
+      </div>
+
+      <section>
+        <h2>What the spec says</h2>
+        <div class="stats">
+          <div class="stat"><b>11</b><span>statuses</span></div>
+          <div class="stat"><b>59</b><span>status transitions</span></div>
+          <div class="stat"><b>82</b><span>rejections</span></div>
+          <div class="stat"><b>10</b><span>directed traces</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Traces shown</h2>
+        <ul>
+          <li>Happy path</li>
+          <li>Start delay defers the first dispatch</li>
+          <li>Retryable failure, then success</li>
+          <li>Retries exhausted</li>
+          <li>Pause while scheduled, then unpause</li>
+          <li>Pause takes effect on the retry</li>
+          <li>Cancel a running attempt</li>
+          <li>Reset applies when the attempt ends</li>
+          <li>Start-to-close timeout retries</li>
+          <li>Terminate</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>How it is generated</h2>
+        <ul>
+          <li><code>saaanim</code> (Go) imports <code>saaspec</code> and derives the graph, rejections, and traces by executing <code>Model</code> / <code>Initial</code> / <code>ExpectedDescribe</code> / <code>ExpectedHeartbeatFlags</code> — it encodes no product behavior of its own.</li>
+          <li>It emits a typed TypeScript data module.</li>
+          <li>A presentation-only Canvas&nbsp;Commons scene renders whatever that data contains; the rendered scene is encoded to the video above.</li>
+        </ul>
+      </section>
+
+      <footer>
+        Source spec:
+        <a href="https://github.com/dandavison/temporalio-temporal/blob/dan/saa-model-tests/chasm/lib/activity/saaspec/model.go">chasm/lib/activity/saaspec/model.go</a>.
+        Built with <a href="https://canvascommons.io/">Canvas&nbsp;Commons</a>.
+      </footer>
+    </main>
+  </body>
+</html>
