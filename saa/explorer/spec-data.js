@@ -75,6 +75,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 4,
           "reject": "",
           "noop": false
@@ -83,6 +84,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 0,
           "reject": "",
           "noop": true
@@ -91,6 +93,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 0,
           "reject": "",
           "noop": true
@@ -99,6 +102,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 0,
           "reject": "",
           "noop": true
@@ -107,6 +111,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 0,
           "reject": "",
           "noop": true
@@ -115,6 +120,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 0,
           "reject": "NotFound",
           "noop": false
@@ -123,6 +129,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 0,
           "reject": "NotFound",
           "noop": false
@@ -131,6 +138,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 0,
           "reject": "NotFound",
           "noop": false
@@ -139,6 +147,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 0,
           "reject": "NotFound",
           "noop": false
@@ -147,6 +156,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 0,
           "reject": "",
           "noop": true
@@ -155,6 +165,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 0,
           "reject": "",
           "noop": true
@@ -227,6 +238,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 1,
           "reject": "",
           "noop": true
@@ -235,6 +247,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 1,
           "reject": "",
           "noop": true
@@ -243,6 +256,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 1,
           "reject": "",
           "noop": true
@@ -251,6 +265,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 1,
           "reject": "",
           "noop": true
@@ -259,6 +274,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 1,
           "reject": "",
           "noop": true
@@ -267,6 +283,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 1,
           "reject": "NotFound",
           "noop": false
@@ -275,6 +292,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 1,
           "reject": "NotFound",
           "noop": false
@@ -283,6 +301,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 1,
           "reject": "NotFound",
           "noop": false
@@ -291,6 +310,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 1,
           "reject": "NotFound",
           "noop": false
@@ -299,6 +319,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 1,
           "reject": "",
           "noop": true
@@ -307,6 +328,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 1,
           "reject": "",
           "noop": true
@@ -379,6 +401,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 2,
           "reject": "",
           "noop": true
@@ -387,6 +410,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 2,
           "reject": "",
           "noop": true
@@ -395,6 +419,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 2,
           "reject": "",
           "noop": true
@@ -403,6 +428,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 2,
           "reject": "",
           "noop": true
@@ -411,6 +437,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 2,
           "reject": "",
           "noop": true
@@ -419,6 +446,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 2,
           "reject": "NotFound",
           "noop": false
@@ -427,6 +455,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 2,
           "reject": "NotFound",
           "noop": false
@@ -435,6 +464,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 2,
           "reject": "NotFound",
           "noop": false
@@ -443,6 +473,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 2,
           "reject": "NotFound",
           "noop": false
@@ -451,6 +482,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 2,
           "reject": "",
           "noop": true
@@ -459,6 +491,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 2,
           "reject": "",
           "noop": true
@@ -531,6 +564,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 6,
           "reject": "",
           "noop": false
@@ -539,6 +573,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 3,
           "reject": "",
           "noop": true
@@ -547,6 +582,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 3,
           "reject": "",
           "noop": true
@@ -555,6 +591,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 3,
           "reject": "",
           "noop": true
@@ -563,6 +600,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 3,
           "reject": "",
           "noop": true
@@ -571,6 +609,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 3,
           "reject": "NotFound",
           "noop": false
@@ -579,6 +618,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 3,
           "reject": "NotFound",
           "noop": false
@@ -587,6 +627,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 3,
           "reject": "NotFound",
           "noop": false
@@ -595,6 +636,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 3,
           "reject": "NotFound",
           "noop": false
@@ -603,6 +645,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 3,
           "reject": "",
           "noop": true
@@ -611,6 +654,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 3,
           "reject": "",
           "noop": true
@@ -683,6 +727,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 4,
           "reject": "",
           "noop": true
@@ -691,6 +736,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 4,
           "reject": "",
           "noop": true
@@ -699,6 +745,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 7,
           "reject": "",
           "noop": false
@@ -707,6 +754,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 10,
           "reject": "",
           "noop": false
@@ -715,6 +763,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 10,
           "reject": "",
           "noop": false
@@ -723,6 +772,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 4,
           "reject": "NotFound",
           "noop": false
@@ -731,6 +781,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 4,
           "reject": "NotFound",
           "noop": false
@@ -739,6 +790,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 4,
           "reject": "NotFound",
           "noop": false
@@ -747,6 +799,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 4,
           "reject": "NotFound",
           "noop": false
@@ -755,6 +808,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 4,
           "reject": "",
           "noop": true
@@ -763,6 +817,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 4,
           "reject": "",
           "noop": true
@@ -835,6 +890,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 13,
           "reject": "",
           "noop": false
@@ -843,6 +899,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 5,
           "reject": "",
           "noop": true
@@ -851,6 +908,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 5,
           "reject": "",
           "noop": true
@@ -859,6 +917,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 5,
           "reject": "",
           "noop": true
@@ -867,6 +926,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 5,
           "reject": "",
           "noop": true
@@ -875,6 +935,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 5,
           "reject": "NotFound",
           "noop": false
@@ -883,6 +944,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 5,
           "reject": "NotFound",
           "noop": false
@@ -891,6 +953,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 5,
           "reject": "NotFound",
           "noop": false
@@ -899,6 +962,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 5,
           "reject": "NotFound",
           "noop": false
@@ -907,6 +971,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 5,
           "reject": "",
           "noop": true
@@ -915,6 +980,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 5,
           "reject": "",
           "noop": true
@@ -987,6 +1053,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 6,
           "reject": "",
           "noop": true
@@ -995,6 +1062,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 6,
           "reject": "",
           "noop": true
@@ -1003,6 +1071,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 6,
           "reject": "",
           "noop": true
@@ -1011,6 +1080,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 6,
           "reject": "",
           "noop": true
@@ -1019,6 +1089,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 10,
           "reject": "",
           "noop": false
@@ -1027,6 +1098,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 6,
           "reject": "NotFound",
           "noop": false
@@ -1035,6 +1107,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 6,
           "reject": "NotFound",
           "noop": false
@@ -1043,6 +1116,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 6,
           "reject": "NotFound",
           "noop": false
@@ -1051,6 +1125,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 6,
           "reject": "NotFound",
           "noop": false
@@ -1059,6 +1134,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 6,
           "reject": "",
           "noop": true
@@ -1067,6 +1143,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 6,
           "reject": "",
           "noop": true
@@ -1139,6 +1216,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 7,
           "reject": "",
           "noop": true
@@ -1147,6 +1225,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 7,
           "reject": "",
           "noop": true
@@ -1155,6 +1234,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 7,
           "reject": "",
           "noop": true
@@ -1163,6 +1243,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 7,
           "reject": "",
           "noop": true
@@ -1171,6 +1252,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": false
@@ -1179,6 +1261,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 14,
           "reject": "",
           "noop": false
@@ -1187,6 +1270,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 15,
           "reject": "",
           "noop": false
@@ -1195,6 +1279,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 16,
           "reject": "",
           "noop": false
@@ -1203,6 +1288,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 7,
           "reject": "FailedPrecondition",
           "noop": false
@@ -1211,6 +1297,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 15,
           "reject": "",
           "noop": false
@@ -1219,6 +1306,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 15,
           "reject": "",
           "noop": false
@@ -1291,6 +1379,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 8,
           "reject": "",
           "noop": true
@@ -1299,6 +1388,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 8,
           "reject": "",
           "noop": true
@@ -1307,6 +1397,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 8,
           "reject": "",
           "noop": true
@@ -1315,6 +1406,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 8,
           "reject": "",
           "noop": true
@@ -1323,6 +1415,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 8,
           "reject": "",
           "noop": true
@@ -1331,6 +1424,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 8,
           "reject": "NotFound",
           "noop": false
@@ -1339,6 +1433,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 8,
           "reject": "NotFound",
           "noop": false
@@ -1347,6 +1442,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 8,
           "reject": "NotFound",
           "noop": false
@@ -1355,6 +1451,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 8,
           "reject": "NotFound",
           "noop": false
@@ -1363,6 +1460,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 8,
           "reject": "",
           "noop": true
@@ -1371,6 +1469,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 8,
           "reject": "",
           "noop": true
@@ -1443,6 +1542,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 9,
           "reject": "",
           "noop": true
@@ -1451,6 +1551,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 9,
           "reject": "",
           "noop": true
@@ -1459,6 +1560,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 9,
           "reject": "",
           "noop": true
@@ -1467,6 +1569,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 9,
           "reject": "",
           "noop": true
@@ -1475,6 +1578,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 9,
           "reject": "",
           "noop": true
@@ -1483,6 +1587,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 9,
           "reject": "NotFound",
           "noop": false
@@ -1491,6 +1596,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 9,
           "reject": "NotFound",
           "noop": false
@@ -1499,6 +1605,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 9,
           "reject": "NotFound",
           "noop": false
@@ -1507,6 +1614,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 9,
           "reject": "NotFound",
           "noop": false
@@ -1515,6 +1623,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 9,
           "reject": "",
           "noop": true
@@ -1523,6 +1632,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 9,
           "reject": "",
           "noop": true
@@ -1595,6 +1705,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 10,
           "reject": "",
           "noop": true
@@ -1603,6 +1714,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 10,
           "reject": "",
           "noop": true
@@ -1611,6 +1723,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 10,
           "reject": "",
           "noop": true
@@ -1619,6 +1732,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 10,
           "reject": "",
           "noop": true
@@ -1627,6 +1741,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 10,
           "reject": "",
           "noop": true
@@ -1635,6 +1750,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 10,
           "reject": "NotFound",
           "noop": false
@@ -1643,6 +1759,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 10,
           "reject": "NotFound",
           "noop": false
@@ -1651,6 +1768,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 10,
           "reject": "NotFound",
           "noop": false
@@ -1659,6 +1777,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 10,
           "reject": "NotFound",
           "noop": false
@@ -1667,6 +1786,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 10,
           "reject": "",
           "noop": true
@@ -1675,6 +1795,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 10,
           "reject": "",
           "noop": true
@@ -1747,6 +1868,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 11,
           "reject": "",
           "noop": true
@@ -1755,6 +1877,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 11,
           "reject": "",
           "noop": true
@@ -1763,6 +1886,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 11,
           "reject": "",
           "noop": true
@@ -1771,6 +1895,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 11,
           "reject": "",
           "noop": true
@@ -1779,6 +1904,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 11,
           "reject": "",
           "noop": true
@@ -1787,6 +1913,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 11,
           "reject": "NotFound",
           "noop": false
@@ -1795,6 +1922,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 11,
           "reject": "NotFound",
           "noop": false
@@ -1803,6 +1931,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 11,
           "reject": "NotFound",
           "noop": false
@@ -1811,6 +1940,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 11,
           "reject": "NotFound",
           "noop": false
@@ -1819,6 +1949,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 11,
           "reject": "",
           "noop": true
@@ -1827,6 +1958,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 11,
           "reject": "",
           "noop": true
@@ -1899,6 +2031,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 12,
           "reject": "",
           "noop": true
@@ -1907,6 +2040,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 12,
           "reject": "",
           "noop": true
@@ -1915,6 +2049,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 12,
           "reject": "",
           "noop": true
@@ -1923,6 +2058,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 12,
           "reject": "",
           "noop": true
@@ -1931,6 +2067,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 12,
           "reject": "",
           "noop": true
@@ -1939,6 +2076,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 12,
           "reject": "NotFound",
           "noop": false
@@ -1947,6 +2085,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 12,
           "reject": "NotFound",
           "noop": false
@@ -1955,6 +2094,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 12,
           "reject": "NotFound",
           "noop": false
@@ -1963,6 +2103,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 12,
           "reject": "NotFound",
           "noop": false
@@ -1971,6 +2112,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 12,
           "reject": "",
           "noop": true
@@ -1979,6 +2121,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 12,
           "reject": "",
           "noop": true
@@ -2051,6 +2194,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 13,
           "reject": "",
           "noop": true
@@ -2059,6 +2203,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 13,
           "reject": "",
           "noop": true
@@ -2067,6 +2212,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 13,
           "reject": "",
           "noop": true
@@ -2075,6 +2221,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 13,
           "reject": "",
           "noop": true
@@ -2083,6 +2230,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 24,
           "reject": "",
           "noop": false
@@ -2091,6 +2239,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 13,
           "reject": "NotFound",
           "noop": false
@@ -2099,6 +2248,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 13,
           "reject": "NotFound",
           "noop": false
@@ -2107,6 +2257,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 13,
           "reject": "NotFound",
           "noop": false
@@ -2115,6 +2266,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 13,
           "reject": "NotFound",
           "noop": false
@@ -2123,6 +2275,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 13,
           "reject": "",
           "noop": true
@@ -2131,6 +2284,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 13,
           "reject": "",
           "noop": true
@@ -2203,6 +2357,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 14,
           "reject": "",
           "noop": true
@@ -2211,6 +2366,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 14,
           "reject": "",
           "noop": true
@@ -2219,6 +2375,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 14,
           "reject": "",
           "noop": true
@@ -2227,6 +2384,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 14,
           "reject": "",
           "noop": true
@@ -2235,6 +2393,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 14,
           "reject": "",
           "noop": true
@@ -2243,6 +2402,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 14,
           "reject": "NotFound",
           "noop": false
@@ -2251,6 +2411,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 14,
           "reject": "NotFound",
           "noop": false
@@ -2259,6 +2420,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 14,
           "reject": "NotFound",
           "noop": false
@@ -2267,6 +2429,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 14,
           "reject": "NotFound",
           "noop": false
@@ -2275,6 +2438,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 14,
           "reject": "",
           "noop": true
@@ -2283,6 +2447,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 14,
           "reject": "",
           "noop": true
@@ -2355,6 +2520,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 15,
           "reject": "",
           "noop": true
@@ -2363,6 +2529,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 30,
           "reject": "",
           "noop": false
@@ -2371,6 +2538,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 15,
           "reject": "",
           "noop": true
@@ -2379,6 +2547,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 15,
           "reject": "",
           "noop": true
@@ -2387,6 +2556,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 29,
           "reject": "",
           "noop": false
@@ -2395,6 +2565,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 15,
           "reject": "NotFound",
           "noop": false
@@ -2403,6 +2574,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 15,
           "reject": "NotFound",
           "noop": false
@@ -2411,6 +2583,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 15,
           "reject": "NotFound",
           "noop": false
@@ -2419,6 +2592,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 15,
           "reject": "NotFound",
           "noop": false
@@ -2427,6 +2601,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 15,
           "reject": "",
           "noop": true
@@ -2435,6 +2610,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 15,
           "reject": "",
           "noop": true
@@ -2507,6 +2683,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 16,
           "reject": "",
           "noop": true
@@ -2515,6 +2692,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 16,
           "reject": "",
           "noop": true
@@ -2523,6 +2701,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 16,
           "reject": "",
           "noop": true
@@ -2531,6 +2710,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 16,
           "reject": "",
           "noop": true
@@ -2539,6 +2719,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 16,
           "reject": "",
           "noop": true
@@ -2547,6 +2728,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 16,
           "reject": "NotFound",
           "noop": false
@@ -2555,6 +2737,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 16,
           "reject": "NotFound",
           "noop": false
@@ -2563,6 +2746,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 16,
           "reject": "NotFound",
           "noop": false
@@ -2571,6 +2755,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 16,
           "reject": "NotFound",
           "noop": false
@@ -2579,6 +2764,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 16,
           "reject": "",
           "noop": true
@@ -2587,6 +2773,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 16,
           "reject": "",
           "noop": true
@@ -2659,6 +2846,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 17,
           "reject": "",
           "noop": true
@@ -2667,6 +2855,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 17,
           "reject": "",
           "noop": true
@@ -2675,6 +2864,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 17,
           "reject": "",
           "noop": true
@@ -2683,6 +2873,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 17,
           "reject": "",
           "noop": true
@@ -2691,6 +2882,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": false
@@ -2699,6 +2891,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 14,
           "reject": "",
           "noop": false
@@ -2707,6 +2900,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 16,
           "reject": "",
           "noop": false
@@ -2715,6 +2909,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 16,
           "reject": "",
           "noop": false
@@ -2723,6 +2918,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 31,
           "reject": "",
           "noop": false
@@ -2731,6 +2927,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": false
@@ -2739,6 +2936,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": false
@@ -2811,6 +3009,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 18,
           "reject": "",
           "noop": true
@@ -2819,6 +3018,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 18,
           "reject": "",
           "noop": true
@@ -2827,6 +3027,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 18,
           "reject": "",
           "noop": true
@@ -2835,6 +3036,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 18,
           "reject": "",
           "noop": true
@@ -2843,6 +3045,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 18,
           "reject": "",
           "noop": true
@@ -2851,6 +3054,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 18,
           "reject": "NotFound",
           "noop": false
@@ -2859,6 +3063,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 18,
           "reject": "NotFound",
           "noop": false
@@ -2867,6 +3072,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 18,
           "reject": "NotFound",
           "noop": false
@@ -2875,6 +3081,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 18,
           "reject": "NotFound",
           "noop": false
@@ -2883,6 +3090,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 18,
           "reject": "",
           "noop": true
@@ -2891,6 +3099,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 18,
           "reject": "",
           "noop": true
@@ -2963,6 +3172,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 19,
           "reject": "",
           "noop": true
@@ -2971,6 +3181,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 19,
           "reject": "",
           "noop": true
@@ -2979,6 +3190,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 19,
           "reject": "",
           "noop": true
@@ -2987,6 +3199,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 19,
           "reject": "",
           "noop": true
@@ -2995,6 +3208,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": false
@@ -3003,6 +3217,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 14,
           "reject": "",
           "noop": false
@@ -3011,6 +3226,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 27,
           "reject": "",
           "noop": false
@@ -3019,6 +3235,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 16,
           "reject": "",
           "noop": false
@@ -3027,6 +3244,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 19,
           "reject": "FailedPrecondition",
           "noop": false
@@ -3035,6 +3253,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 27,
           "reject": "",
           "noop": false
@@ -3043,6 +3262,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 27,
           "reject": "",
           "noop": false
@@ -3115,6 +3335,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 20,
           "reject": "",
           "noop": true
@@ -3123,6 +3344,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 20,
           "reject": "",
           "noop": true
@@ -3131,6 +3353,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 20,
           "reject": "",
           "noop": true
@@ -3139,6 +3362,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 20,
           "reject": "",
           "noop": true
@@ -3147,6 +3371,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": false
@@ -3155,6 +3380,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 14,
           "reject": "",
           "noop": false
@@ -3163,6 +3389,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "",
           "noop": false
@@ -3171,6 +3398,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "",
           "noop": false
@@ -3179,6 +3407,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 20,
           "reject": "FailedPrecondition",
           "noop": false
@@ -3187,6 +3416,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": false
@@ -3195,6 +3425,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": false
@@ -3267,6 +3498,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": true
@@ -3275,6 +3507,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": true
@@ -3283,6 +3516,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 21,
           "reject": "",
           "noop": true
@@ -3291,6 +3525,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": true
@@ -3299,6 +3534,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": true
@@ -3307,6 +3543,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 21,
           "reject": "NotFound",
           "noop": false
@@ -3315,6 +3552,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 21,
           "reject": "NotFound",
           "noop": false
@@ -3323,6 +3561,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 21,
           "reject": "NotFound",
           "noop": false
@@ -3331,6 +3570,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 21,
           "reject": "NotFound",
           "noop": false
@@ -3339,6 +3579,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": true
@@ -3347,6 +3588,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": true
@@ -3419,6 +3661,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 22,
           "reject": "",
           "noop": true
@@ -3427,6 +3670,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 22,
           "reject": "",
           "noop": true
@@ -3435,6 +3679,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 22,
           "reject": "",
           "noop": true
@@ -3443,6 +3688,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 22,
           "reject": "",
           "noop": true
@@ -3451,6 +3697,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 22,
           "reject": "",
           "noop": true
@@ -3459,6 +3706,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 22,
           "reject": "NotFound",
           "noop": false
@@ -3467,6 +3715,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 22,
           "reject": "NotFound",
           "noop": false
@@ -3475,6 +3724,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 22,
           "reject": "NotFound",
           "noop": false
@@ -3483,6 +3733,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 22,
           "reject": "NotFound",
           "noop": false
@@ -3491,6 +3742,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 22,
           "reject": "",
           "noop": true
@@ -3499,6 +3751,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 22,
           "reject": "",
           "noop": true
@@ -3571,6 +3824,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 23,
           "reject": "",
           "noop": true
@@ -3579,6 +3833,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 23,
           "reject": "",
           "noop": true
@@ -3587,6 +3842,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 23,
           "reject": "",
           "noop": true
@@ -3595,6 +3851,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 23,
           "reject": "",
           "noop": true
@@ -3603,6 +3860,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 23,
           "reject": "",
           "noop": true
@@ -3611,6 +3869,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 23,
           "reject": "NotFound",
           "noop": false
@@ -3619,6 +3878,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 23,
           "reject": "NotFound",
           "noop": false
@@ -3627,6 +3887,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 23,
           "reject": "NotFound",
           "noop": false
@@ -3635,6 +3896,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 23,
           "reject": "NotFound",
           "noop": false
@@ -3643,6 +3905,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 23,
           "reject": "",
           "noop": true
@@ -3651,6 +3914,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 23,
           "reject": "",
           "noop": true
@@ -3723,6 +3987,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 24,
           "reject": "",
           "noop": true
@@ -3731,6 +3996,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 24,
           "reject": "",
           "noop": true
@@ -3739,6 +4005,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 24,
           "reject": "",
           "noop": true
@@ -3747,6 +4014,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 24,
           "reject": "",
           "noop": true
@@ -3755,6 +4023,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 24,
           "reject": "",
           "noop": true
@@ -3763,6 +4032,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 24,
           "reject": "NotFound",
           "noop": false
@@ -3771,6 +4041,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 24,
           "reject": "NotFound",
           "noop": false
@@ -3779,6 +4050,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 24,
           "reject": "NotFound",
           "noop": false
@@ -3787,6 +4059,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 24,
           "reject": "NotFound",
           "noop": false
@@ -3795,6 +4068,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 24,
           "reject": "",
           "noop": true
@@ -3803,6 +4077,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 24,
           "reject": "",
           "noop": true
@@ -3875,6 +4150,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 25,
           "reject": "",
           "noop": true
@@ -3883,6 +4159,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 25,
           "reject": "",
           "noop": true
@@ -3891,6 +4168,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 25,
           "reject": "",
           "noop": true
@@ -3899,6 +4177,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 25,
           "reject": "",
           "noop": true
@@ -3907,6 +4186,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 25,
           "reject": "",
           "noop": true
@@ -3915,6 +4195,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 25,
           "reject": "NotFound",
           "noop": false
@@ -3923,6 +4204,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 25,
           "reject": "NotFound",
           "noop": false
@@ -3931,6 +4213,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 25,
           "reject": "NotFound",
           "noop": false
@@ -3939,6 +4222,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 25,
           "reject": "NotFound",
           "noop": false
@@ -3947,6 +4231,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 25,
           "reject": "",
           "noop": true
@@ -3955,6 +4240,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 25,
           "reject": "",
           "noop": true
@@ -4027,6 +4313,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 26,
           "reject": "",
           "noop": true
@@ -4035,6 +4322,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 26,
           "reject": "",
           "noop": true
@@ -4043,6 +4331,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 26,
           "reject": "",
           "noop": true
@@ -4051,6 +4340,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 26,
           "reject": "",
           "noop": true
@@ -4059,6 +4349,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 26,
           "reject": "",
           "noop": true
@@ -4067,6 +4358,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 26,
           "reject": "NotFound",
           "noop": false
@@ -4075,6 +4367,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 26,
           "reject": "NotFound",
           "noop": false
@@ -4083,6 +4376,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 26,
           "reject": "NotFound",
           "noop": false
@@ -4091,6 +4385,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 26,
           "reject": "NotFound",
           "noop": false
@@ -4099,6 +4394,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 26,
           "reject": "",
           "noop": true
@@ -4107,6 +4403,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 26,
           "reject": "",
           "noop": true
@@ -4179,6 +4476,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 27,
           "reject": "",
           "noop": true
@@ -4187,6 +4485,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 34,
           "reject": "",
           "noop": false
@@ -4195,6 +4494,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 27,
           "reject": "",
           "noop": true
@@ -4203,6 +4503,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 27,
           "reject": "",
           "noop": true
@@ -4211,6 +4512,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 29,
           "reject": "",
           "noop": false
@@ -4219,6 +4521,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 27,
           "reject": "NotFound",
           "noop": false
@@ -4227,6 +4530,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 27,
           "reject": "NotFound",
           "noop": false
@@ -4235,6 +4539,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 27,
           "reject": "NotFound",
           "noop": false
@@ -4243,6 +4548,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 27,
           "reject": "NotFound",
           "noop": false
@@ -4251,6 +4557,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 27,
           "reject": "",
           "noop": true
@@ -4259,6 +4566,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 27,
           "reject": "",
           "noop": true
@@ -4331,6 +4639,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": true
@@ -4339,6 +4648,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": true
@@ -4347,6 +4657,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 7,
           "reject": "",
           "noop": false
@@ -4355,6 +4666,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": false
@@ -4363,6 +4675,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": false
@@ -4371,6 +4684,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "NotFound",
           "noop": false
@@ -4379,6 +4693,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "NotFound",
           "noop": false
@@ -4387,6 +4702,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "NotFound",
           "noop": false
@@ -4395,6 +4711,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "NotFound",
           "noop": false
@@ -4403,6 +4720,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": true
@@ -4411,6 +4729,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": true
@@ -4483,6 +4802,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 29,
           "reject": "",
           "noop": true
@@ -4491,6 +4811,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 29,
           "reject": "",
           "noop": true
@@ -4499,6 +4820,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 29,
           "reject": "",
           "noop": true
@@ -4507,6 +4829,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 29,
           "reject": "",
           "noop": true
@@ -4515,6 +4838,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 29,
           "reject": "",
           "noop": true
@@ -4523,6 +4847,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 29,
           "reject": "NotFound",
           "noop": false
@@ -4531,6 +4856,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 29,
           "reject": "NotFound",
           "noop": false
@@ -4539,6 +4865,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 29,
           "reject": "NotFound",
           "noop": false
@@ -4547,6 +4874,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 29,
           "reject": "NotFound",
           "noop": false
@@ -4555,6 +4883,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 29,
           "reject": "",
           "noop": true
@@ -4563,6 +4892,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 29,
           "reject": "",
           "noop": true
@@ -4635,6 +4965,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 30,
           "reject": "",
           "noop": true
@@ -4643,6 +4974,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 30,
           "reject": "",
           "noop": true
@@ -4651,6 +4983,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 36,
           "reject": "",
           "noop": false
@@ -4659,6 +4992,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": false
@@ -4667,6 +5001,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": false
@@ -4675,6 +5010,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 30,
           "reject": "NotFound",
           "noop": false
@@ -4683,6 +5019,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 30,
           "reject": "NotFound",
           "noop": false
@@ -4691,6 +5028,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 30,
           "reject": "NotFound",
           "noop": false
@@ -4699,6 +5037,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 30,
           "reject": "NotFound",
           "noop": false
@@ -4707,6 +5046,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 30,
           "reject": "",
           "noop": true
@@ -4715,6 +5055,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 30,
           "reject": "",
           "noop": true
@@ -4787,6 +5128,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 31,
           "reject": "",
           "noop": true
@@ -4795,6 +5137,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 31,
           "reject": "",
           "noop": true
@@ -4803,6 +5146,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 31,
           "reject": "",
           "noop": true
@@ -4811,6 +5155,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 31,
           "reject": "",
           "noop": true
@@ -4819,6 +5164,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 31,
           "reject": "",
           "noop": true
@@ -4827,6 +5173,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 31,
           "reject": "NotFound",
           "noop": false
@@ -4835,6 +5182,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 31,
           "reject": "NotFound",
           "noop": false
@@ -4843,6 +5191,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 31,
           "reject": "NotFound",
           "noop": false
@@ -4851,6 +5200,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 31,
           "reject": "NotFound",
           "noop": false
@@ -4859,6 +5209,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 31,
           "reject": "",
           "noop": true
@@ -4867,6 +5218,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 31,
           "reject": "",
           "noop": true
@@ -4939,6 +5291,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 32,
           "reject": "",
           "noop": true
@@ -4947,6 +5300,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 32,
           "reject": "",
           "noop": true
@@ -4955,6 +5309,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 32,
           "reject": "",
           "noop": true
@@ -4963,6 +5318,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 32,
           "reject": "",
           "noop": true
@@ -4971,6 +5327,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": false
@@ -4979,6 +5336,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 40,
           "reject": "",
           "noop": false
@@ -4987,6 +5345,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "",
           "noop": false
@@ -4995,6 +5354,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "",
           "noop": false
@@ -5003,6 +5363,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 32,
           "reject": "FailedPrecondition",
           "noop": false
@@ -5011,6 +5372,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": false
@@ -5019,6 +5381,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": false
@@ -5091,6 +5454,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 33,
           "reject": "",
           "noop": true
@@ -5099,6 +5463,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 33,
           "reject": "",
           "noop": true
@@ -5107,6 +5472,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 33,
           "reject": "",
           "noop": true
@@ -5115,6 +5481,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 33,
           "reject": "",
           "noop": true
@@ -5123,6 +5490,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 47,
           "reject": "",
           "noop": false
@@ -5131,6 +5499,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 33,
           "reject": "NotFound",
           "noop": false
@@ -5139,6 +5508,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 33,
           "reject": "NotFound",
           "noop": false
@@ -5147,6 +5517,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 33,
           "reject": "NotFound",
           "noop": false
@@ -5155,6 +5526,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 33,
           "reject": "NotFound",
           "noop": false
@@ -5163,6 +5535,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 33,
           "reject": "",
           "noop": true
@@ -5171,6 +5544,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 33,
           "reject": "",
           "noop": true
@@ -5243,6 +5617,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 34,
           "reject": "",
           "noop": true
@@ -5251,6 +5626,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 34,
           "reject": "",
           "noop": true
@@ -5259,6 +5635,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 34,
           "reject": "",
           "noop": true
@@ -5267,6 +5644,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 34,
           "reject": "",
           "noop": true
@@ -5275,6 +5653,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": false
@@ -5283,6 +5662,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 34,
           "reject": "NotFound",
           "noop": false
@@ -5291,6 +5671,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 34,
           "reject": "NotFound",
           "noop": false
@@ -5299,6 +5680,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 34,
           "reject": "NotFound",
           "noop": false
@@ -5307,6 +5689,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 34,
           "reject": "NotFound",
           "noop": false
@@ -5315,6 +5698,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 34,
           "reject": "",
           "noop": true
@@ -5323,6 +5707,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 34,
           "reject": "",
           "noop": true
@@ -5395,6 +5780,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 35,
           "reject": "",
           "noop": true
@@ -5403,6 +5789,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 35,
           "reject": "",
           "noop": true
@@ -5411,6 +5798,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 35,
           "reject": "",
           "noop": true
@@ -5419,6 +5807,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 35,
           "reject": "",
           "noop": true
@@ -5427,6 +5816,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 21,
           "reject": "",
           "noop": false
@@ -5435,6 +5825,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 35,
           "reject": "NotFound",
           "noop": false
@@ -5443,6 +5834,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 35,
           "reject": "NotFound",
           "noop": false
@@ -5451,6 +5843,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 35,
           "reject": "NotFound",
           "noop": false
@@ -5459,6 +5852,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 35,
           "reject": "NotFound",
           "noop": false
@@ -5467,6 +5861,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 35,
           "reject": "",
           "noop": true
@@ -5475,6 +5870,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 35,
           "reject": "",
           "noop": true
@@ -5547,6 +5943,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 36,
           "reject": "",
           "noop": true
@@ -5555,6 +5952,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 36,
           "reject": "",
           "noop": true
@@ -5563,6 +5961,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 36,
           "reject": "",
           "noop": true
@@ -5571,6 +5970,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 36,
           "reject": "",
           "noop": true
@@ -5579,6 +5979,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": false
@@ -5587,6 +5988,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 48,
           "reject": "",
           "noop": false
@@ -5595,6 +5997,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 49,
           "reject": "",
           "noop": false
@@ -5603,6 +6006,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 50,
           "reject": "",
           "noop": false
@@ -5611,6 +6015,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 36,
           "reject": "FailedPrecondition",
           "noop": false
@@ -5619,6 +6024,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 49,
           "reject": "",
           "noop": false
@@ -5627,6 +6033,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 49,
           "reject": "",
           "noop": false
@@ -5699,6 +6106,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 37,
           "reject": "",
           "noop": true
@@ -5707,6 +6115,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 37,
           "reject": "",
           "noop": true
@@ -5715,6 +6124,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 37,
           "reject": "",
           "noop": true
@@ -5723,6 +6133,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 37,
           "reject": "",
           "noop": true
@@ -5731,6 +6142,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 37,
           "reject": "",
           "noop": true
@@ -5739,6 +6151,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 37,
           "reject": "NotFound",
           "noop": false
@@ -5747,6 +6160,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 37,
           "reject": "NotFound",
           "noop": false
@@ -5755,6 +6169,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 37,
           "reject": "NotFound",
           "noop": false
@@ -5763,6 +6178,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 37,
           "reject": "NotFound",
           "noop": false
@@ -5771,6 +6187,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 37,
           "reject": "",
           "noop": true
@@ -5779,6 +6196,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 37,
           "reject": "",
           "noop": true
@@ -5851,6 +6269,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 38,
           "reject": "",
           "noop": true
@@ -5859,6 +6278,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 38,
           "reject": "",
           "noop": true
@@ -5867,6 +6287,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 38,
           "reject": "",
           "noop": true
@@ -5875,6 +6296,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 38,
           "reject": "",
           "noop": true
@@ -5883,6 +6305,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 38,
           "reject": "",
           "noop": true
@@ -5891,6 +6314,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 38,
           "reject": "NotFound",
           "noop": false
@@ -5899,6 +6323,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 38,
           "reject": "NotFound",
           "noop": false
@@ -5907,6 +6332,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 38,
           "reject": "NotFound",
           "noop": false
@@ -5915,6 +6341,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 38,
           "reject": "NotFound",
           "noop": false
@@ -5923,6 +6350,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 38,
           "reject": "",
           "noop": true
@@ -5931,6 +6359,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 38,
           "reject": "",
           "noop": true
@@ -6003,6 +6432,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": true
@@ -6011,6 +6441,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": true
@@ -6019,6 +6450,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 39,
           "reject": "",
           "noop": true
@@ -6027,6 +6459,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": true
@@ -6035,6 +6468,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": true
@@ -6043,6 +6477,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 39,
           "reject": "NotFound",
           "noop": false
@@ -6051,6 +6486,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 39,
           "reject": "NotFound",
           "noop": false
@@ -6059,6 +6495,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 39,
           "reject": "NotFound",
           "noop": false
@@ -6067,6 +6504,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 39,
           "reject": "NotFound",
           "noop": false
@@ -6075,6 +6513,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": true
@@ -6083,6 +6522,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": true
@@ -6155,6 +6595,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 40,
           "reject": "",
           "noop": true
@@ -6163,6 +6604,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 40,
           "reject": "",
           "noop": true
@@ -6171,6 +6613,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 40,
           "reject": "",
           "noop": true
@@ -6179,6 +6622,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 40,
           "reject": "",
           "noop": true
@@ -6187,6 +6631,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 40,
           "reject": "",
           "noop": true
@@ -6195,6 +6640,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 40,
           "reject": "NotFound",
           "noop": false
@@ -6203,6 +6649,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 40,
           "reject": "NotFound",
           "noop": false
@@ -6211,6 +6658,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 40,
           "reject": "NotFound",
           "noop": false
@@ -6219,6 +6667,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 40,
           "reject": "NotFound",
           "noop": false
@@ -6227,6 +6676,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 40,
           "reject": "",
           "noop": true
@@ -6235,6 +6685,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 40,
           "reject": "",
           "noop": true
@@ -6307,6 +6758,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": true
@@ -6315,6 +6767,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": true
@@ -6323,6 +6776,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 41,
           "reject": "",
           "noop": true
@@ -6331,6 +6785,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": true
@@ -6339,6 +6794,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 57,
           "reject": "",
           "noop": false
@@ -6347,6 +6803,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "NotFound",
           "noop": false
@@ -6355,6 +6812,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "NotFound",
           "noop": false
@@ -6363,6 +6821,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "NotFound",
           "noop": false
@@ -6371,6 +6830,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "NotFound",
           "noop": false
@@ -6379,6 +6839,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": true
@@ -6387,6 +6848,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": true
@@ -6459,6 +6921,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 42,
           "reject": "",
           "noop": true
@@ -6467,6 +6930,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 42,
           "reject": "",
           "noop": true
@@ -6475,6 +6939,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 42,
           "reject": "",
           "noop": true
@@ -6483,6 +6948,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 42,
           "reject": "",
           "noop": true
@@ -6491,6 +6957,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": false
@@ -6499,6 +6966,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 40,
           "reject": "",
           "noop": false
@@ -6507,6 +6975,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 58,
           "reject": "",
           "noop": false
@@ -6515,6 +6984,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 58,
           "reject": "",
           "noop": false
@@ -6523,6 +6993,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 59,
           "reject": "",
           "noop": false
@@ -6531,6 +7002,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": false
@@ -6539,6 +7011,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": false
@@ -6611,6 +7084,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 43,
           "reject": "",
           "noop": true
@@ -6619,6 +7093,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 43,
           "reject": "",
           "noop": true
@@ -6627,6 +7102,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 43,
           "reject": "",
           "noop": true
@@ -6635,6 +7111,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 43,
           "reject": "",
           "noop": true
@@ -6643,6 +7120,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 43,
           "reject": "",
           "noop": true
@@ -6651,6 +7129,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 43,
           "reject": "NotFound",
           "noop": false
@@ -6659,6 +7138,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 43,
           "reject": "NotFound",
           "noop": false
@@ -6667,6 +7147,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 43,
           "reject": "NotFound",
           "noop": false
@@ -6675,6 +7156,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 43,
           "reject": "NotFound",
           "noop": false
@@ -6683,6 +7165,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 43,
           "reject": "",
           "noop": true
@@ -6691,6 +7174,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 43,
           "reject": "",
           "noop": true
@@ -6763,6 +7247,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": true
@@ -6771,6 +7256,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": true
@@ -6779,6 +7265,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 44,
           "reject": "",
           "noop": true
@@ -6787,6 +7274,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": true
@@ -6795,6 +7283,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": true
@@ -6803,6 +7292,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 44,
           "reject": "NotFound",
           "noop": false
@@ -6811,6 +7301,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 44,
           "reject": "NotFound",
           "noop": false
@@ -6819,6 +7310,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 44,
           "reject": "NotFound",
           "noop": false
@@ -6827,6 +7319,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 44,
           "reject": "NotFound",
           "noop": false
@@ -6835,6 +7328,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": true
@@ -6843,6 +7337,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": true
@@ -6915,6 +7410,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 45,
           "reject": "",
           "noop": true
@@ -6923,6 +7419,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 45,
           "reject": "",
           "noop": true
@@ -6931,6 +7428,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 45,
           "reject": "",
           "noop": true
@@ -6939,6 +7437,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 45,
           "reject": "",
           "noop": true
@@ -6947,6 +7446,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 45,
           "reject": "",
           "noop": true
@@ -6955,6 +7455,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 45,
           "reject": "NotFound",
           "noop": false
@@ -6963,6 +7464,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 45,
           "reject": "NotFound",
           "noop": false
@@ -6971,6 +7473,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 45,
           "reject": "NotFound",
           "noop": false
@@ -6979,6 +7482,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 45,
           "reject": "NotFound",
           "noop": false
@@ -6987,6 +7491,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 45,
           "reject": "",
           "noop": true
@@ -6995,6 +7500,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 45,
           "reject": "",
           "noop": true
@@ -7067,6 +7573,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 46,
           "reject": "",
           "noop": true
@@ -7075,6 +7582,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 46,
           "reject": "",
           "noop": true
@@ -7083,6 +7591,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 46,
           "reject": "",
           "noop": true
@@ -7091,6 +7600,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 46,
           "reject": "",
           "noop": true
@@ -7099,6 +7609,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 46,
           "reject": "",
           "noop": true
@@ -7107,6 +7618,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 46,
           "reject": "NotFound",
           "noop": false
@@ -7115,6 +7627,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 46,
           "reject": "NotFound",
           "noop": false
@@ -7123,6 +7636,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 46,
           "reject": "NotFound",
           "noop": false
@@ -7131,6 +7645,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 46,
           "reject": "NotFound",
           "noop": false
@@ -7139,6 +7654,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 46,
           "reject": "",
           "noop": true
@@ -7147,6 +7663,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 46,
           "reject": "",
           "noop": true
@@ -7219,6 +7736,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 47,
           "reject": "",
           "noop": true
@@ -7227,6 +7745,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 47,
           "reject": "",
           "noop": true
@@ -7235,6 +7754,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 47,
           "reject": "",
           "noop": true
@@ -7243,6 +7763,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 47,
           "reject": "",
           "noop": true
@@ -7251,6 +7772,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 47,
           "reject": "",
           "noop": true
@@ -7259,6 +7781,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 47,
           "reject": "NotFound",
           "noop": false
@@ -7267,6 +7790,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 47,
           "reject": "NotFound",
           "noop": false
@@ -7275,6 +7799,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 47,
           "reject": "NotFound",
           "noop": false
@@ -7283,6 +7808,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 47,
           "reject": "NotFound",
           "noop": false
@@ -7291,6 +7817,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 47,
           "reject": "",
           "noop": true
@@ -7299,6 +7826,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 47,
           "reject": "",
           "noop": true
@@ -7371,6 +7899,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 48,
           "reject": "",
           "noop": true
@@ -7379,6 +7908,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 48,
           "reject": "",
           "noop": true
@@ -7387,6 +7917,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 48,
           "reject": "",
           "noop": true
@@ -7395,6 +7926,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 48,
           "reject": "",
           "noop": true
@@ -7403,6 +7935,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 48,
           "reject": "",
           "noop": true
@@ -7411,6 +7944,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 48,
           "reject": "NotFound",
           "noop": false
@@ -7419,6 +7953,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 48,
           "reject": "NotFound",
           "noop": false
@@ -7427,6 +7962,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 48,
           "reject": "NotFound",
           "noop": false
@@ -7435,6 +7971,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 48,
           "reject": "NotFound",
           "noop": false
@@ -7443,6 +7980,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 48,
           "reject": "",
           "noop": true
@@ -7451,6 +7989,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 48,
           "reject": "",
           "noop": true
@@ -7523,6 +8062,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 49,
           "reject": "",
           "noop": true
@@ -7531,6 +8071,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 64,
           "reject": "",
           "noop": false
@@ -7539,6 +8080,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 49,
           "reject": "",
           "noop": true
@@ -7547,6 +8089,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 49,
           "reject": "",
           "noop": true
@@ -7555,6 +8098,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 63,
           "reject": "",
           "noop": false
@@ -7563,6 +8107,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 49,
           "reject": "NotFound",
           "noop": false
@@ -7571,6 +8116,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 49,
           "reject": "NotFound",
           "noop": false
@@ -7579,6 +8125,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 49,
           "reject": "NotFound",
           "noop": false
@@ -7587,6 +8134,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 49,
           "reject": "NotFound",
           "noop": false
@@ -7595,6 +8143,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 49,
           "reject": "",
           "noop": true
@@ -7603,6 +8152,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 49,
           "reject": "",
           "noop": true
@@ -7675,6 +8225,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 50,
           "reject": "",
           "noop": true
@@ -7683,6 +8234,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 50,
           "reject": "",
           "noop": true
@@ -7691,6 +8243,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 50,
           "reject": "",
           "noop": true
@@ -7699,6 +8252,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 50,
           "reject": "",
           "noop": true
@@ -7707,6 +8261,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 50,
           "reject": "",
           "noop": true
@@ -7715,6 +8270,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 50,
           "reject": "NotFound",
           "noop": false
@@ -7723,6 +8279,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 50,
           "reject": "NotFound",
           "noop": false
@@ -7731,6 +8288,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 50,
           "reject": "NotFound",
           "noop": false
@@ -7739,6 +8297,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 50,
           "reject": "NotFound",
           "noop": false
@@ -7747,6 +8306,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 50,
           "reject": "",
           "noop": true
@@ -7755,6 +8315,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 50,
           "reject": "",
           "noop": true
@@ -7827,6 +8388,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 51,
           "reject": "",
           "noop": true
@@ -7835,6 +8397,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 51,
           "reject": "",
           "noop": true
@@ -7843,6 +8406,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 51,
           "reject": "",
           "noop": true
@@ -7851,6 +8415,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 51,
           "reject": "",
           "noop": true
@@ -7859,6 +8424,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": false
@@ -7867,6 +8433,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 48,
           "reject": "",
           "noop": false
@@ -7875,6 +8442,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 50,
           "reject": "",
           "noop": false
@@ -7883,6 +8451,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 50,
           "reject": "",
           "noop": false
@@ -7891,6 +8460,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 37,
           "reject": "",
           "noop": false
@@ -7899,6 +8469,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": false
@@ -7907,6 +8478,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": false
@@ -7979,6 +8551,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 52,
           "reject": "",
           "noop": true
@@ -7987,6 +8560,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 52,
           "reject": "",
           "noop": true
@@ -7995,6 +8569,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 52,
           "reject": "",
           "noop": true
@@ -8003,6 +8578,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 52,
           "reject": "",
           "noop": true
@@ -8011,6 +8587,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": false
@@ -8019,6 +8596,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 48,
           "reject": "",
           "noop": false
@@ -8027,6 +8605,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 62,
           "reject": "",
           "noop": false
@@ -8035,6 +8614,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 50,
           "reject": "",
           "noop": false
@@ -8043,6 +8623,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 52,
           "reject": "FailedPrecondition",
           "noop": false
@@ -8051,6 +8632,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 62,
           "reject": "",
           "noop": false
@@ -8059,6 +8641,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 62,
           "reject": "",
           "noop": false
@@ -8131,6 +8714,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 53,
           "reject": "",
           "noop": true
@@ -8139,6 +8723,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 53,
           "reject": "",
           "noop": true
@@ -8147,6 +8732,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 53,
           "reject": "",
           "noop": true
@@ -8155,6 +8741,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 53,
           "reject": "",
           "noop": true
@@ -8163,6 +8750,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 39,
           "reject": "",
           "noop": false
@@ -8171,6 +8759,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 48,
           "reject": "",
           "noop": false
@@ -8179,6 +8768,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "",
           "noop": false
@@ -8187,6 +8777,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "",
           "noop": false
@@ -8195,6 +8786,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 53,
           "reject": "FailedPrecondition",
           "noop": false
@@ -8203,6 +8795,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": false
@@ -8211,6 +8804,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": false
@@ -8283,6 +8877,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 54,
           "reject": "",
           "noop": true
@@ -8291,6 +8886,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 54,
           "reject": "",
           "noop": true
@@ -8299,6 +8895,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 54,
           "reject": "",
           "noop": true
@@ -8307,6 +8904,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 54,
           "reject": "",
           "noop": true
@@ -8315,6 +8913,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 54,
           "reject": "",
           "noop": true
@@ -8323,6 +8922,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 54,
           "reject": "NotFound",
           "noop": false
@@ -8331,6 +8931,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 54,
           "reject": "NotFound",
           "noop": false
@@ -8339,6 +8940,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 54,
           "reject": "NotFound",
           "noop": false
@@ -8347,6 +8949,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 54,
           "reject": "NotFound",
           "noop": false
@@ -8355,6 +8958,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 54,
           "reject": "",
           "noop": true
@@ -8363,6 +8967,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 54,
           "reject": "",
           "noop": true
@@ -8435,6 +9040,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 55,
           "reject": "",
           "noop": true
@@ -8443,6 +9049,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 55,
           "reject": "",
           "noop": true
@@ -8451,6 +9058,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 55,
           "reject": "",
           "noop": true
@@ -8459,6 +9067,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 55,
           "reject": "",
           "noop": true
@@ -8467,6 +9076,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 55,
           "reject": "",
           "noop": true
@@ -8475,6 +9085,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 55,
           "reject": "NotFound",
           "noop": false
@@ -8483,6 +9094,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 55,
           "reject": "NotFound",
           "noop": false
@@ -8491,6 +9103,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 55,
           "reject": "NotFound",
           "noop": false
@@ -8499,6 +9112,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 55,
           "reject": "NotFound",
           "noop": false
@@ -8507,6 +9121,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 55,
           "reject": "",
           "noop": true
@@ -8515,6 +9130,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 55,
           "reject": "",
           "noop": true
@@ -8587,6 +9203,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 56,
           "reject": "",
           "noop": true
@@ -8595,6 +9212,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 56,
           "reject": "",
           "noop": true
@@ -8603,6 +9221,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 66,
           "reject": "",
           "noop": false
@@ -8611,6 +9230,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": false
@@ -8619,6 +9239,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": false
@@ -8627,6 +9248,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 56,
           "reject": "NotFound",
           "noop": false
@@ -8635,6 +9257,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 56,
           "reject": "NotFound",
           "noop": false
@@ -8643,6 +9266,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 56,
           "reject": "NotFound",
           "noop": false
@@ -8651,6 +9275,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 56,
           "reject": "NotFound",
           "noop": false
@@ -8659,6 +9284,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 56,
           "reject": "",
           "noop": true
@@ -8667,6 +9293,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 56,
           "reject": "",
           "noop": true
@@ -8739,6 +9366,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 57,
           "reject": "",
           "noop": true
@@ -8747,6 +9375,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 57,
           "reject": "",
           "noop": true
@@ -8755,6 +9384,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 57,
           "reject": "",
           "noop": true
@@ -8763,6 +9393,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 57,
           "reject": "",
           "noop": true
@@ -8771,6 +9402,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 57,
           "reject": "",
           "noop": true
@@ -8779,6 +9411,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 57,
           "reject": "NotFound",
           "noop": false
@@ -8787,6 +9420,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 57,
           "reject": "NotFound",
           "noop": false
@@ -8795,6 +9429,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 57,
           "reject": "NotFound",
           "noop": false
@@ -8803,6 +9438,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 57,
           "reject": "NotFound",
           "noop": false
@@ -8811,6 +9447,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 57,
           "reject": "",
           "noop": true
@@ -8819,6 +9456,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 57,
           "reject": "",
           "noop": true
@@ -8891,6 +9529,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 58,
           "reject": "",
           "noop": true
@@ -8899,6 +9538,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 58,
           "reject": "",
           "noop": true
@@ -8907,6 +9547,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 58,
           "reject": "",
           "noop": true
@@ -8915,6 +9556,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 58,
           "reject": "",
           "noop": true
@@ -8923,6 +9565,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 58,
           "reject": "",
           "noop": true
@@ -8931,6 +9574,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 58,
           "reject": "NotFound",
           "noop": false
@@ -8939,6 +9583,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 58,
           "reject": "NotFound",
           "noop": false
@@ -8947,6 +9592,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 58,
           "reject": "NotFound",
           "noop": false
@@ -8955,6 +9601,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 58,
           "reject": "NotFound",
           "noop": false
@@ -8963,6 +9610,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 58,
           "reject": "",
           "noop": true
@@ -8971,6 +9619,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 58,
           "reject": "",
           "noop": true
@@ -9043,6 +9692,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 59,
           "reject": "",
           "noop": true
@@ -9051,6 +9701,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 59,
           "reject": "",
           "noop": true
@@ -9059,6 +9710,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 59,
           "reject": "",
           "noop": true
@@ -9067,6 +9719,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 59,
           "reject": "",
           "noop": true
@@ -9075,6 +9728,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 59,
           "reject": "",
           "noop": true
@@ -9083,6 +9737,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 59,
           "reject": "NotFound",
           "noop": false
@@ -9091,6 +9746,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 59,
           "reject": "NotFound",
           "noop": false
@@ -9099,6 +9755,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 59,
           "reject": "NotFound",
           "noop": false
@@ -9107,6 +9764,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 59,
           "reject": "NotFound",
           "noop": false
@@ -9115,6 +9773,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 59,
           "reject": "",
           "noop": true
@@ -9123,6 +9782,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 59,
           "reject": "",
           "noop": true
@@ -9195,6 +9855,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 60,
           "reject": "",
           "noop": true
@@ -9203,6 +9864,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 60,
           "reject": "",
           "noop": true
@@ -9211,6 +9873,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 60,
           "reject": "",
           "noop": true
@@ -9219,6 +9882,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 60,
           "reject": "",
           "noop": true
@@ -9227,6 +9891,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 60,
           "reject": "",
           "noop": true
@@ -9235,6 +9900,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 60,
           "reject": "NotFound",
           "noop": false
@@ -9243,6 +9909,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 60,
           "reject": "NotFound",
           "noop": false
@@ -9251,6 +9918,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 60,
           "reject": "NotFound",
           "noop": false
@@ -9259,6 +9927,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 60,
           "reject": "NotFound",
           "noop": false
@@ -9267,6 +9936,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 60,
           "reject": "",
           "noop": true
@@ -9275,6 +9945,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 60,
           "reject": "",
           "noop": true
@@ -9347,6 +10018,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 61,
           "reject": "",
           "noop": true
@@ -9355,6 +10027,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 61,
           "reject": "",
           "noop": true
@@ -9363,6 +10036,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 61,
           "reject": "",
           "noop": true
@@ -9371,6 +10045,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 61,
           "reject": "",
           "noop": true
@@ -9379,6 +10054,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 61,
           "reject": "",
           "noop": true
@@ -9387,6 +10063,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 61,
           "reject": "NotFound",
           "noop": false
@@ -9395,6 +10072,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 61,
           "reject": "NotFound",
           "noop": false
@@ -9403,6 +10081,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 61,
           "reject": "NotFound",
           "noop": false
@@ -9411,6 +10090,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 61,
           "reject": "NotFound",
           "noop": false
@@ -9419,6 +10099,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 61,
           "reject": "",
           "noop": true
@@ -9427,6 +10108,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 61,
           "reject": "",
           "noop": true
@@ -9499,6 +10181,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 62,
           "reject": "",
           "noop": true
@@ -9507,6 +10190,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 68,
           "reject": "",
           "noop": false
@@ -9515,6 +10199,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 62,
           "reject": "",
           "noop": true
@@ -9523,6 +10208,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 62,
           "reject": "",
           "noop": true
@@ -9531,6 +10217,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 63,
           "reject": "",
           "noop": false
@@ -9539,6 +10226,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 62,
           "reject": "NotFound",
           "noop": false
@@ -9547,6 +10235,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 62,
           "reject": "NotFound",
           "noop": false
@@ -9555,6 +10244,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 62,
           "reject": "NotFound",
           "noop": false
@@ -9563,6 +10253,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 62,
           "reject": "NotFound",
           "noop": false
@@ -9571,6 +10262,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 62,
           "reject": "",
           "noop": true
@@ -9579,6 +10271,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 62,
           "reject": "",
           "noop": true
@@ -9651,6 +10344,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 63,
           "reject": "",
           "noop": true
@@ -9659,6 +10353,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 63,
           "reject": "",
           "noop": true
@@ -9667,6 +10362,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 63,
           "reject": "",
           "noop": true
@@ -9675,6 +10371,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 63,
           "reject": "",
           "noop": true
@@ -9683,6 +10380,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 63,
           "reject": "",
           "noop": true
@@ -9691,6 +10389,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 63,
           "reject": "NotFound",
           "noop": false
@@ -9699,6 +10398,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 63,
           "reject": "NotFound",
           "noop": false
@@ -9707,6 +10407,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 63,
           "reject": "NotFound",
           "noop": false
@@ -9715,6 +10416,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 63,
           "reject": "NotFound",
           "noop": false
@@ -9723,6 +10425,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 63,
           "reject": "",
           "noop": true
@@ -9731,6 +10434,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 63,
           "reject": "",
           "noop": true
@@ -9803,6 +10507,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 64,
           "reject": "",
           "noop": true
@@ -9811,6 +10516,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 64,
           "reject": "",
           "noop": true
@@ -9819,6 +10525,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 69,
           "reject": "",
           "noop": false
@@ -9827,6 +10534,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -9835,6 +10543,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -9843,6 +10552,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 64,
           "reject": "NotFound",
           "noop": false
@@ -9851,6 +10561,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 64,
           "reject": "NotFound",
           "noop": false
@@ -9859,6 +10570,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 64,
           "reject": "NotFound",
           "noop": false
@@ -9867,6 +10579,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 64,
           "reject": "NotFound",
           "noop": false
@@ -9875,6 +10588,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 64,
           "reject": "",
           "noop": true
@@ -9883,6 +10597,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 64,
           "reject": "",
           "noop": true
@@ -9955,6 +10670,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 65,
           "reject": "",
           "noop": true
@@ -9963,6 +10679,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 65,
           "reject": "",
           "noop": true
@@ -9971,6 +10688,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 65,
           "reject": "",
           "noop": true
@@ -9979,6 +10697,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 65,
           "reject": "",
           "noop": true
@@ -9987,6 +10706,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": false
@@ -9995,6 +10715,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 73,
           "reject": "",
           "noop": false
@@ -10003,6 +10724,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "",
           "noop": false
@@ -10011,6 +10733,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "",
           "noop": false
@@ -10019,6 +10742,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 65,
           "reject": "FailedPrecondition",
           "noop": false
@@ -10027,6 +10751,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": false
@@ -10035,6 +10760,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": false
@@ -10107,6 +10833,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 66,
           "reject": "",
           "noop": true
@@ -10115,6 +10842,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 66,
           "reject": "",
           "noop": true
@@ -10123,6 +10851,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 66,
           "reject": "",
           "noop": true
@@ -10131,6 +10860,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 66,
           "reject": "",
           "noop": true
@@ -10139,6 +10869,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": false
@@ -10147,6 +10878,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 40,
           "reject": "",
           "noop": false
@@ -10155,6 +10887,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 77,
           "reject": "",
           "noop": false
@@ -10163,6 +10896,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 58,
           "reject": "",
           "noop": false
@@ -10171,6 +10905,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 66,
           "reject": "FailedPrecondition",
           "noop": false
@@ -10179,6 +10914,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 77,
           "reject": "",
           "noop": false
@@ -10187,6 +10923,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 77,
           "reject": "",
           "noop": false
@@ -10259,6 +10996,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 67,
           "reject": "",
           "noop": true
@@ -10267,6 +11005,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 67,
           "reject": "",
           "noop": true
@@ -10275,6 +11014,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 67,
           "reject": "",
           "noop": true
@@ -10283,6 +11023,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 67,
           "reject": "",
           "noop": true
@@ -10291,6 +11032,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": false
@@ -10299,6 +11041,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 67,
           "reject": "NotFound",
           "noop": false
@@ -10307,6 +11050,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 67,
           "reject": "NotFound",
           "noop": false
@@ -10315,6 +11059,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 67,
           "reject": "NotFound",
           "noop": false
@@ -10323,6 +11068,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 67,
           "reject": "NotFound",
           "noop": false
@@ -10331,6 +11077,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 67,
           "reject": "",
           "noop": true
@@ -10339,6 +11086,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 67,
           "reject": "",
           "noop": true
@@ -10411,6 +11159,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 68,
           "reject": "",
           "noop": true
@@ -10419,6 +11168,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 68,
           "reject": "",
           "noop": true
@@ -10427,6 +11177,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 68,
           "reject": "",
           "noop": true
@@ -10435,6 +11186,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 68,
           "reject": "",
           "noop": true
@@ -10443,6 +11195,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -10451,6 +11204,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 68,
           "reject": "NotFound",
           "noop": false
@@ -10459,6 +11213,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 68,
           "reject": "NotFound",
           "noop": false
@@ -10467,6 +11222,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 68,
           "reject": "NotFound",
           "noop": false
@@ -10475,6 +11231,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 68,
           "reject": "NotFound",
           "noop": false
@@ -10483,6 +11240,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 68,
           "reject": "",
           "noop": true
@@ -10491,6 +11249,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 68,
           "reject": "",
           "noop": true
@@ -10563,6 +11322,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 69,
           "reject": "",
           "noop": true
@@ -10571,6 +11331,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 69,
           "reject": "",
           "noop": true
@@ -10579,6 +11340,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 69,
           "reject": "",
           "noop": true
@@ -10587,6 +11349,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 69,
           "reject": "",
           "noop": true
@@ -10595,6 +11358,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -10603,6 +11367,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 79,
           "reject": "",
           "noop": false
@@ -10611,6 +11376,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "",
           "noop": false
@@ -10619,6 +11385,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "",
           "noop": false
@@ -10627,6 +11394,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 69,
           "reject": "FailedPrecondition",
           "noop": false
@@ -10635,6 +11403,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -10643,6 +11412,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -10715,6 +11485,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 70,
           "reject": "",
           "noop": true
@@ -10723,6 +11494,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 70,
           "reject": "",
           "noop": true
@@ -10731,6 +11503,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 70,
           "reject": "",
           "noop": true
@@ -10739,6 +11512,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 70,
           "reject": "",
           "noop": true
@@ -10747,6 +11521,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 70,
           "reject": "",
           "noop": true
@@ -10755,6 +11530,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 70,
           "reject": "NotFound",
           "noop": false
@@ -10763,6 +11539,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 70,
           "reject": "NotFound",
           "noop": false
@@ -10771,6 +11548,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 70,
           "reject": "NotFound",
           "noop": false
@@ -10779,6 +11557,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 70,
           "reject": "NotFound",
           "noop": false
@@ -10787,6 +11566,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 70,
           "reject": "",
           "noop": true
@@ -10795,6 +11575,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 70,
           "reject": "",
           "noop": true
@@ -10867,6 +11648,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 71,
           "reject": "",
           "noop": true
@@ -10875,6 +11657,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 71,
           "reject": "",
           "noop": true
@@ -10883,6 +11666,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 71,
           "reject": "",
           "noop": true
@@ -10891,6 +11675,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 71,
           "reject": "",
           "noop": true
@@ -10899,6 +11684,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 71,
           "reject": "",
           "noop": true
@@ -10907,6 +11693,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 71,
           "reject": "NotFound",
           "noop": false
@@ -10915,6 +11702,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 71,
           "reject": "NotFound",
           "noop": false
@@ -10923,6 +11711,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 71,
           "reject": "NotFound",
           "noop": false
@@ -10931,6 +11720,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 71,
           "reject": "NotFound",
           "noop": false
@@ -10939,6 +11729,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 71,
           "reject": "",
           "noop": true
@@ -10947,6 +11738,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 71,
           "reject": "",
           "noop": true
@@ -11019,6 +11811,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": true
@@ -11027,6 +11820,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": true
@@ -11035,6 +11829,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 72,
           "reject": "",
           "noop": true
@@ -11043,6 +11838,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": true
@@ -11051,6 +11847,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": true
@@ -11059,6 +11856,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 72,
           "reject": "NotFound",
           "noop": false
@@ -11067,6 +11865,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 72,
           "reject": "NotFound",
           "noop": false
@@ -11075,6 +11874,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 72,
           "reject": "NotFound",
           "noop": false
@@ -11083,6 +11883,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 72,
           "reject": "NotFound",
           "noop": false
@@ -11091,6 +11892,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": true
@@ -11099,6 +11901,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": true
@@ -11171,6 +11974,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 73,
           "reject": "",
           "noop": true
@@ -11179,6 +11983,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 73,
           "reject": "",
           "noop": true
@@ -11187,6 +11992,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 73,
           "reject": "",
           "noop": true
@@ -11195,6 +12001,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 73,
           "reject": "",
           "noop": true
@@ -11203,6 +12010,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 73,
           "reject": "",
           "noop": true
@@ -11211,6 +12019,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 73,
           "reject": "NotFound",
           "noop": false
@@ -11219,6 +12028,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 73,
           "reject": "NotFound",
           "noop": false
@@ -11227,6 +12037,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 73,
           "reject": "NotFound",
           "noop": false
@@ -11235,6 +12046,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 73,
           "reject": "NotFound",
           "noop": false
@@ -11243,6 +12055,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 73,
           "reject": "",
           "noop": true
@@ -11251,6 +12064,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 73,
           "reject": "",
           "noop": true
@@ -11323,6 +12137,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 74,
           "reject": "",
           "noop": true
@@ -11331,6 +12146,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 74,
           "reject": "",
           "noop": true
@@ -11339,6 +12155,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 74,
           "reject": "",
           "noop": true
@@ -11347,6 +12164,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 74,
           "reject": "",
           "noop": true
@@ -11355,6 +12173,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": false
@@ -11363,6 +12182,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 73,
           "reject": "",
           "noop": false
@@ -11371,6 +12191,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 84,
           "reject": "",
           "noop": false
@@ -11379,6 +12200,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 84,
           "reject": "",
           "noop": false
@@ -11387,6 +12209,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 85,
           "reject": "",
           "noop": false
@@ -11395,6 +12218,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": false
@@ -11403,6 +12227,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": false
@@ -11475,6 +12300,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 75,
           "reject": "",
           "noop": true
@@ -11483,6 +12309,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 75,
           "reject": "",
           "noop": true
@@ -11491,6 +12318,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 75,
           "reject": "",
           "noop": true
@@ -11499,6 +12327,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 75,
           "reject": "",
           "noop": true
@@ -11507,6 +12336,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 75,
           "reject": "",
           "noop": true
@@ -11515,6 +12345,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 75,
           "reject": "NotFound",
           "noop": false
@@ -11523,6 +12354,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 75,
           "reject": "NotFound",
           "noop": false
@@ -11531,6 +12363,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 75,
           "reject": "NotFound",
           "noop": false
@@ -11539,6 +12372,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 75,
           "reject": "NotFound",
           "noop": false
@@ -11547,6 +12381,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 75,
           "reject": "",
           "noop": true
@@ -11555,6 +12390,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 75,
           "reject": "",
           "noop": true
@@ -11627,6 +12463,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": true
@@ -11635,6 +12472,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": true
@@ -11643,6 +12481,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 76,
           "reject": "",
           "noop": true
@@ -11651,6 +12490,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": true
@@ -11659,6 +12499,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": true
@@ -11667,6 +12508,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 76,
           "reject": "NotFound",
           "noop": false
@@ -11675,6 +12517,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 76,
           "reject": "NotFound",
           "noop": false
@@ -11683,6 +12526,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 76,
           "reject": "NotFound",
           "noop": false
@@ -11691,6 +12535,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 76,
           "reject": "NotFound",
           "noop": false
@@ -11699,6 +12544,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": true
@@ -11707,6 +12553,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": true
@@ -11779,6 +12626,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 77,
           "reject": "",
           "noop": true
@@ -11787,6 +12635,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 90,
           "reject": "",
           "noop": false
@@ -11795,6 +12644,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 77,
           "reject": "",
           "noop": true
@@ -11803,6 +12653,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 77,
           "reject": "",
           "noop": true
@@ -11811,6 +12662,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 89,
           "reject": "",
           "noop": false
@@ -11819,6 +12671,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 77,
           "reject": "NotFound",
           "noop": false
@@ -11827,6 +12680,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 77,
           "reject": "NotFound",
           "noop": false
@@ -11835,6 +12689,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 77,
           "reject": "NotFound",
           "noop": false
@@ -11843,6 +12698,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 77,
           "reject": "NotFound",
           "noop": false
@@ -11851,6 +12707,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 77,
           "reject": "",
           "noop": true
@@ -11859,6 +12716,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 77,
           "reject": "",
           "noop": true
@@ -11931,6 +12789,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 78,
           "reject": "",
           "noop": true
@@ -11939,6 +12798,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 78,
           "reject": "",
           "noop": true
@@ -11947,6 +12807,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 78,
           "reject": "",
           "noop": true
@@ -11955,6 +12816,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 78,
           "reject": "",
           "noop": true
@@ -11963,6 +12825,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 44,
           "reject": "",
           "noop": false
@@ -11971,6 +12834,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 40,
           "reject": "",
           "noop": false
@@ -11979,6 +12843,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 88,
           "reject": "",
           "noop": false
@@ -11987,6 +12852,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 58,
           "reject": "",
           "noop": false
@@ -11995,6 +12861,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 78,
           "reject": "FailedPrecondition",
           "noop": false
@@ -12003,6 +12870,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 88,
           "reject": "",
           "noop": false
@@ -12011,6 +12879,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 88,
           "reject": "",
           "noop": false
@@ -12083,6 +12952,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 79,
           "reject": "",
           "noop": true
@@ -12091,6 +12961,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 79,
           "reject": "",
           "noop": true
@@ -12099,6 +12970,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 79,
           "reject": "",
           "noop": true
@@ -12107,6 +12979,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 79,
           "reject": "",
           "noop": true
@@ -12115,6 +12988,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 79,
           "reject": "",
           "noop": true
@@ -12123,6 +12997,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 79,
           "reject": "NotFound",
           "noop": false
@@ -12131,6 +13006,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 79,
           "reject": "NotFound",
           "noop": false
@@ -12139,6 +13015,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 79,
           "reject": "NotFound",
           "noop": false
@@ -12147,6 +13024,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 79,
           "reject": "NotFound",
           "noop": false
@@ -12155,6 +13033,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 79,
           "reject": "",
           "noop": true
@@ -12163,6 +13042,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 79,
           "reject": "",
           "noop": true
@@ -12235,6 +13115,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 80,
           "reject": "",
           "noop": true
@@ -12243,6 +13124,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 80,
           "reject": "",
           "noop": true
@@ -12251,6 +13133,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 80,
           "reject": "",
           "noop": true
@@ -12259,6 +13142,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 80,
           "reject": "",
           "noop": true
@@ -12267,6 +13151,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 80,
           "reject": "",
           "noop": true
@@ -12275,6 +13160,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "NotFound",
           "noop": false
@@ -12283,6 +13169,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "NotFound",
           "noop": false
@@ -12291,6 +13178,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "NotFound",
           "noop": false
@@ -12299,6 +13187,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "NotFound",
           "noop": false
@@ -12307,6 +13196,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 80,
           "reject": "",
           "noop": true
@@ -12315,6 +13205,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 80,
           "reject": "",
           "noop": true
@@ -12387,6 +13278,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 81,
           "reject": "",
           "noop": true
@@ -12395,6 +13287,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 81,
           "reject": "",
           "noop": true
@@ -12403,6 +13296,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 81,
           "reject": "",
           "noop": true
@@ -12411,6 +13305,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 81,
           "reject": "",
           "noop": true
@@ -12419,6 +13314,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -12427,6 +13323,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 79,
           "reject": "",
           "noop": false
@@ -12435,6 +13332,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "",
           "noop": false
@@ -12443,6 +13341,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "",
           "noop": false
@@ -12451,6 +13350,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 70,
           "reject": "",
           "noop": false
@@ -12459,6 +13359,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -12467,6 +13368,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -12539,6 +13441,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 82,
           "reject": "",
           "noop": true
@@ -12547,6 +13450,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 82,
           "reject": "",
           "noop": true
@@ -12555,6 +13459,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 82,
           "reject": "",
           "noop": true
@@ -12563,6 +13468,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 82,
           "reject": "",
           "noop": true
@@ -12571,6 +13477,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -12579,6 +13486,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 79,
           "reject": "",
           "noop": false
@@ -12587,6 +13495,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "",
           "noop": false
@@ -12595,6 +13504,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 80,
           "reject": "",
           "noop": false
@@ -12603,6 +13513,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 82,
           "reject": "FailedPrecondition",
           "noop": false
@@ -12611,6 +13522,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -12619,6 +13531,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -12691,6 +13604,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 83,
           "reject": "",
           "noop": true
@@ -12699,6 +13613,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 83,
           "reject": "",
           "noop": true
@@ -12707,6 +13622,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 83,
           "reject": "",
           "noop": true
@@ -12715,6 +13631,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 83,
           "reject": "",
           "noop": true
@@ -12723,6 +13640,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 72,
           "reject": "",
           "noop": false
@@ -12731,6 +13649,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 79,
           "reject": "",
           "noop": false
@@ -12739,6 +13658,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "",
           "noop": false
@@ -12747,6 +13667,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 28,
           "reject": "",
           "noop": false
@@ -12755,6 +13676,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 83,
           "reject": "FailedPrecondition",
           "noop": false
@@ -12763,6 +13685,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": false
@@ -12771,6 +13694,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 28,
           "reject": "",
           "noop": false
@@ -12843,6 +13767,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 84,
           "reject": "",
           "noop": true
@@ -12851,6 +13776,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 84,
           "reject": "",
           "noop": true
@@ -12859,6 +13785,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 84,
           "reject": "",
           "noop": true
@@ -12867,6 +13794,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 84,
           "reject": "",
           "noop": true
@@ -12875,6 +13803,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 84,
           "reject": "",
           "noop": true
@@ -12883,6 +13812,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 84,
           "reject": "NotFound",
           "noop": false
@@ -12891,6 +13821,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 84,
           "reject": "NotFound",
           "noop": false
@@ -12899,6 +13830,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 84,
           "reject": "NotFound",
           "noop": false
@@ -12907,6 +13839,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 84,
           "reject": "NotFound",
           "noop": false
@@ -12915,6 +13848,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 84,
           "reject": "",
           "noop": true
@@ -12923,6 +13857,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 84,
           "reject": "",
           "noop": true
@@ -12995,6 +13930,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 85,
           "reject": "",
           "noop": true
@@ -13003,6 +13939,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 85,
           "reject": "",
           "noop": true
@@ -13011,6 +13948,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 85,
           "reject": "",
           "noop": true
@@ -13019,6 +13957,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 85,
           "reject": "",
           "noop": true
@@ -13027,6 +13966,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 85,
           "reject": "",
           "noop": true
@@ -13035,6 +13975,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 85,
           "reject": "NotFound",
           "noop": false
@@ -13043,6 +13984,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 85,
           "reject": "NotFound",
           "noop": false
@@ -13051,6 +13993,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 85,
           "reject": "NotFound",
           "noop": false
@@ -13059,6 +14002,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 85,
           "reject": "NotFound",
           "noop": false
@@ -13067,6 +14011,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 85,
           "reject": "",
           "noop": true
@@ -13075,6 +14020,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 85,
           "reject": "",
           "noop": true
@@ -13147,6 +14093,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 86,
           "reject": "",
           "noop": true
@@ -13155,6 +14102,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 86,
           "reject": "",
           "noop": true
@@ -13163,6 +14111,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 86,
           "reject": "",
           "noop": true
@@ -13171,6 +14120,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 86,
           "reject": "",
           "noop": true
@@ -13179,6 +14129,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 86,
           "reject": "",
           "noop": true
@@ -13187,6 +14138,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 86,
           "reject": "NotFound",
           "noop": false
@@ -13195,6 +14147,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 86,
           "reject": "NotFound",
           "noop": false
@@ -13203,6 +14156,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 86,
           "reject": "NotFound",
           "noop": false
@@ -13211,6 +14165,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 86,
           "reject": "NotFound",
           "noop": false
@@ -13219,6 +14174,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 86,
           "reject": "",
           "noop": true
@@ -13227,6 +14183,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 86,
           "reject": "",
           "noop": true
@@ -13299,6 +14256,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 87,
           "reject": "",
           "noop": true
@@ -13307,6 +14265,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 87,
           "reject": "",
           "noop": true
@@ -13315,6 +14274,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 87,
           "reject": "",
           "noop": true
@@ -13323,6 +14283,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 87,
           "reject": "",
           "noop": true
@@ -13331,6 +14292,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 87,
           "reject": "",
           "noop": true
@@ -13339,6 +14301,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 87,
           "reject": "NotFound",
           "noop": false
@@ -13347,6 +14310,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 87,
           "reject": "NotFound",
           "noop": false
@@ -13355,6 +14319,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 87,
           "reject": "NotFound",
           "noop": false
@@ -13363,6 +14328,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 87,
           "reject": "NotFound",
           "noop": false
@@ -13371,6 +14337,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 87,
           "reject": "",
           "noop": true
@@ -13379,6 +14346,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 87,
           "reject": "",
           "noop": true
@@ -13451,6 +14419,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 88,
           "reject": "",
           "noop": true
@@ -13459,6 +14428,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 92,
           "reject": "",
           "noop": false
@@ -13467,6 +14437,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 88,
           "reject": "",
           "noop": true
@@ -13475,6 +14446,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 88,
           "reject": "",
           "noop": true
@@ -13483,6 +14455,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 89,
           "reject": "",
           "noop": false
@@ -13491,6 +14464,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 88,
           "reject": "NotFound",
           "noop": false
@@ -13499,6 +14473,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 88,
           "reject": "NotFound",
           "noop": false
@@ -13507,6 +14482,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 88,
           "reject": "NotFound",
           "noop": false
@@ -13515,6 +14491,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 88,
           "reject": "NotFound",
           "noop": false
@@ -13523,6 +14500,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 88,
           "reject": "",
           "noop": true
@@ -13531,6 +14509,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 88,
           "reject": "",
           "noop": true
@@ -13603,6 +14582,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 89,
           "reject": "",
           "noop": true
@@ -13611,6 +14591,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 89,
           "reject": "",
           "noop": true
@@ -13619,6 +14600,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 89,
           "reject": "",
           "noop": true
@@ -13627,6 +14609,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 89,
           "reject": "",
           "noop": true
@@ -13635,6 +14618,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 89,
           "reject": "",
           "noop": true
@@ -13643,6 +14627,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 89,
           "reject": "NotFound",
           "noop": false
@@ -13651,6 +14636,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 89,
           "reject": "NotFound",
           "noop": false
@@ -13659,6 +14645,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 89,
           "reject": "NotFound",
           "noop": false
@@ -13667,6 +14654,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 89,
           "reject": "NotFound",
           "noop": false
@@ -13675,6 +14663,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 89,
           "reject": "",
           "noop": true
@@ -13683,6 +14672,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 89,
           "reject": "",
           "noop": true
@@ -13755,6 +14745,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 90,
           "reject": "",
           "noop": true
@@ -13763,6 +14754,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 90,
           "reject": "",
           "noop": true
@@ -13771,6 +14763,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 93,
           "reject": "",
           "noop": false
@@ -13779,6 +14772,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": false
@@ -13787,6 +14781,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": false
@@ -13795,6 +14790,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 90,
           "reject": "NotFound",
           "noop": false
@@ -13803,6 +14799,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 90,
           "reject": "NotFound",
           "noop": false
@@ -13811,6 +14808,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 90,
           "reject": "NotFound",
           "noop": false
@@ -13819,6 +14817,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 90,
           "reject": "NotFound",
           "noop": false
@@ -13827,6 +14826,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 90,
           "reject": "",
           "noop": true
@@ -13835,6 +14835,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 90,
           "reject": "",
           "noop": true
@@ -13907,6 +14908,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 91,
           "reject": "",
           "noop": true
@@ -13915,6 +14917,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 91,
           "reject": "",
           "noop": true
@@ -13923,6 +14926,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 91,
           "reject": "",
           "noop": true
@@ -13931,6 +14935,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 91,
           "reject": "",
           "noop": true
@@ -13939,6 +14944,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -13947,6 +14953,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 94,
           "reject": "",
           "noop": false
@@ -13955,6 +14962,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "",
           "noop": false
@@ -13963,6 +14971,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 41,
           "reject": "",
           "noop": false
@@ -13971,6 +14980,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 91,
           "reject": "FailedPrecondition",
           "noop": false
@@ -13979,6 +14989,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": false
@@ -13987,6 +14998,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 41,
           "reject": "",
           "noop": false
@@ -14059,6 +15071,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 92,
           "reject": "",
           "noop": true
@@ -14067,6 +15080,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 92,
           "reject": "",
           "noop": true
@@ -14075,6 +15089,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 92,
           "reject": "",
           "noop": true
@@ -14083,6 +15098,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 92,
           "reject": "",
           "noop": true
@@ -14091,6 +15107,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": false
@@ -14099,6 +15116,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 92,
           "reject": "NotFound",
           "noop": false
@@ -14107,6 +15125,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 92,
           "reject": "NotFound",
           "noop": false
@@ -14115,6 +15134,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 92,
           "reject": "NotFound",
           "noop": false
@@ -14123,6 +15143,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 92,
           "reject": "NotFound",
           "noop": false
@@ -14131,6 +15152,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 92,
           "reject": "",
           "noop": true
@@ -14139,6 +15161,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 92,
           "reject": "",
           "noop": true
@@ -14211,6 +15234,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 93,
           "reject": "",
           "noop": true
@@ -14219,6 +15243,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 93,
           "reject": "",
           "noop": true
@@ -14227,6 +15252,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 93,
           "reject": "",
           "noop": true
@@ -14235,6 +15261,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 93,
           "reject": "",
           "noop": true
@@ -14243,6 +15270,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": false
@@ -14251,6 +15279,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 73,
           "reject": "",
           "noop": false
@@ -14259,6 +15288,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 98,
           "reject": "",
           "noop": false
@@ -14267,6 +15297,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 84,
           "reject": "",
           "noop": false
@@ -14275,6 +15306,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 93,
           "reject": "FailedPrecondition",
           "noop": false
@@ -14283,6 +15315,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 98,
           "reject": "",
           "noop": false
@@ -14291,6 +15324,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 98,
           "reject": "",
           "noop": false
@@ -14363,6 +15397,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 94,
           "reject": "",
           "noop": true
@@ -14371,6 +15406,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 94,
           "reject": "",
           "noop": true
@@ -14379,6 +15415,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 94,
           "reject": "",
           "noop": true
@@ -14387,6 +15424,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 94,
           "reject": "",
           "noop": true
@@ -14395,6 +15433,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 94,
           "reject": "",
           "noop": true
@@ -14403,6 +15442,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 94,
           "reject": "NotFound",
           "noop": false
@@ -14411,6 +15451,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 94,
           "reject": "NotFound",
           "noop": false
@@ -14419,6 +15460,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 94,
           "reject": "NotFound",
           "noop": false
@@ -14427,6 +15469,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 94,
           "reject": "NotFound",
           "noop": false
@@ -14435,6 +15478,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 94,
           "reject": "",
           "noop": true
@@ -14443,6 +15487,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 94,
           "reject": "",
           "noop": true
@@ -14515,6 +15560,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 95,
           "reject": "",
           "noop": true
@@ -14523,6 +15569,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 95,
           "reject": "",
           "noop": true
@@ -14531,6 +15578,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 95,
           "reject": "",
           "noop": true
@@ -14539,6 +15587,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 95,
           "reject": "",
           "noop": true
@@ -14547,6 +15596,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -14555,6 +15605,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 94,
           "reject": "",
           "noop": false
@@ -14563,6 +15614,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "",
           "noop": false
@@ -14571,6 +15623,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "",
           "noop": false
@@ -14579,6 +15632,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 101,
           "reject": "",
           "noop": false
@@ -14587,6 +15641,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -14595,6 +15650,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -14667,6 +15723,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 96,
           "reject": "",
           "noop": true
@@ -14675,6 +15732,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 96,
           "reject": "",
           "noop": true
@@ -14683,6 +15741,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 96,
           "reject": "",
           "noop": true
@@ -14691,6 +15750,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 96,
           "reject": "",
           "noop": true
@@ -14699,6 +15759,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 96,
           "reject": "",
           "noop": true
@@ -14707,6 +15768,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 96,
           "reject": "NotFound",
           "noop": false
@@ -14715,6 +15777,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 96,
           "reject": "NotFound",
           "noop": false
@@ -14723,6 +15786,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 96,
           "reject": "NotFound",
           "noop": false
@@ -14731,6 +15795,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 96,
           "reject": "NotFound",
           "noop": false
@@ -14739,6 +15804,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 96,
           "reject": "",
           "noop": true
@@ -14747,6 +15813,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 96,
           "reject": "",
           "noop": true
@@ -14819,6 +15886,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": true
@@ -14827,6 +15895,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": true
@@ -14835,6 +15904,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 97,
           "reject": "",
           "noop": true
@@ -14843,6 +15913,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": true
@@ -14851,6 +15922,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": true
@@ -14859,6 +15931,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 97,
           "reject": "NotFound",
           "noop": false
@@ -14867,6 +15940,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 97,
           "reject": "NotFound",
           "noop": false
@@ -14875,6 +15949,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 97,
           "reject": "NotFound",
           "noop": false
@@ -14883,6 +15958,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 97,
           "reject": "NotFound",
           "noop": false
@@ -14891,6 +15967,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": true
@@ -14899,6 +15976,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": true
@@ -14971,6 +16049,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 98,
           "reject": "",
           "noop": true
@@ -14979,6 +16058,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 106,
           "reject": "",
           "noop": false
@@ -14987,6 +16067,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 98,
           "reject": "",
           "noop": true
@@ -14995,6 +16076,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 98,
           "reject": "",
           "noop": true
@@ -15003,6 +16085,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 105,
           "reject": "",
           "noop": false
@@ -15011,6 +16094,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 98,
           "reject": "NotFound",
           "noop": false
@@ -15019,6 +16103,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 98,
           "reject": "NotFound",
           "noop": false
@@ -15027,6 +16112,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 98,
           "reject": "NotFound",
           "noop": false
@@ -15035,6 +16121,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 98,
           "reject": "NotFound",
           "noop": false
@@ -15043,6 +16130,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 98,
           "reject": "",
           "noop": true
@@ -15051,6 +16139,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 98,
           "reject": "",
           "noop": true
@@ -15123,6 +16212,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 99,
           "reject": "",
           "noop": true
@@ -15131,6 +16221,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 99,
           "reject": "",
           "noop": true
@@ -15139,6 +16230,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 99,
           "reject": "",
           "noop": true
@@ -15147,6 +16239,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 99,
           "reject": "",
           "noop": true
@@ -15155,6 +16248,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 76,
           "reject": "",
           "noop": false
@@ -15163,6 +16257,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 73,
           "reject": "",
           "noop": false
@@ -15171,6 +16266,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 104,
           "reject": "",
           "noop": false
@@ -15179,6 +16275,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 84,
           "reject": "",
           "noop": false
@@ -15187,6 +16284,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 99,
           "reject": "FailedPrecondition",
           "noop": false
@@ -15195,6 +16293,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 104,
           "reject": "",
           "noop": false
@@ -15203,6 +16302,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 104,
           "reject": "",
           "noop": false
@@ -15275,6 +16375,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 100,
           "reject": "",
           "noop": true
@@ -15283,6 +16384,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 100,
           "reject": "",
           "noop": true
@@ -15291,6 +16393,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 100,
           "reject": "",
           "noop": true
@@ -15299,6 +16402,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 100,
           "reject": "",
           "noop": true
@@ -15307,6 +16411,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 100,
           "reject": "",
           "noop": true
@@ -15315,6 +16420,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "NotFound",
           "noop": false
@@ -15323,6 +16429,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "NotFound",
           "noop": false
@@ -15331,6 +16438,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "NotFound",
           "noop": false
@@ -15339,6 +16447,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "NotFound",
           "noop": false
@@ -15347,6 +16456,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 100,
           "reject": "",
           "noop": true
@@ -15355,6 +16465,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 100,
           "reject": "",
           "noop": true
@@ -15427,6 +16538,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 101,
           "reject": "",
           "noop": true
@@ -15435,6 +16547,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 101,
           "reject": "",
           "noop": true
@@ -15443,6 +16556,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 101,
           "reject": "",
           "noop": true
@@ -15451,6 +16565,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 101,
           "reject": "",
           "noop": true
@@ -15459,6 +16574,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 101,
           "reject": "",
           "noop": true
@@ -15467,6 +16583,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 101,
           "reject": "NotFound",
           "noop": false
@@ -15475,6 +16592,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 101,
           "reject": "NotFound",
           "noop": false
@@ -15483,6 +16601,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 101,
           "reject": "NotFound",
           "noop": false
@@ -15491,6 +16610,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 101,
           "reject": "NotFound",
           "noop": false
@@ -15499,6 +16619,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 101,
           "reject": "",
           "noop": true
@@ -15507,6 +16628,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 101,
           "reject": "",
           "noop": true
@@ -15579,6 +16701,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 102,
           "reject": "",
           "noop": true
@@ -15587,6 +16710,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 102,
           "reject": "",
           "noop": true
@@ -15595,6 +16719,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 102,
           "reject": "",
           "noop": true
@@ -15603,6 +16728,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 102,
           "reject": "",
           "noop": true
@@ -15611,6 +16737,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 102,
           "reject": "",
           "noop": true
@@ -15619,6 +16746,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 102,
           "reject": "NotFound",
           "noop": false
@@ -15627,6 +16755,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 102,
           "reject": "NotFound",
           "noop": false
@@ -15635,6 +16764,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 102,
           "reject": "NotFound",
           "noop": false
@@ -15643,6 +16773,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 102,
           "reject": "NotFound",
           "noop": false
@@ -15651,6 +16782,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 102,
           "reject": "",
           "noop": true
@@ -15659,6 +16791,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 102,
           "reject": "",
           "noop": true
@@ -15731,6 +16864,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 103,
           "reject": "",
           "noop": true
@@ -15739,6 +16873,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 103,
           "reject": "",
           "noop": true
@@ -15747,6 +16882,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 103,
           "reject": "",
           "noop": true
@@ -15755,6 +16891,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 103,
           "reject": "",
           "noop": true
@@ -15763,6 +16900,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 103,
           "reject": "",
           "noop": true
@@ -15771,6 +16909,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 103,
           "reject": "NotFound",
           "noop": false
@@ -15779,6 +16918,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 103,
           "reject": "NotFound",
           "noop": false
@@ -15787,6 +16927,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 103,
           "reject": "NotFound",
           "noop": false
@@ -15795,6 +16936,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 103,
           "reject": "NotFound",
           "noop": false
@@ -15803,6 +16945,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 103,
           "reject": "",
           "noop": true
@@ -15811,6 +16954,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 103,
           "reject": "",
           "noop": true
@@ -15883,6 +17027,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 104,
           "reject": "",
           "noop": true
@@ -15891,6 +17036,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 107,
           "reject": "",
           "noop": false
@@ -15899,6 +17045,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 104,
           "reject": "",
           "noop": true
@@ -15907,6 +17054,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 104,
           "reject": "",
           "noop": true
@@ -15915,6 +17063,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 105,
           "reject": "",
           "noop": false
@@ -15923,6 +17072,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 104,
           "reject": "NotFound",
           "noop": false
@@ -15931,6 +17081,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 104,
           "reject": "NotFound",
           "noop": false
@@ -15939,6 +17090,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 104,
           "reject": "NotFound",
           "noop": false
@@ -15947,6 +17099,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 104,
           "reject": "NotFound",
           "noop": false
@@ -15955,6 +17108,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 104,
           "reject": "",
           "noop": true
@@ -15963,6 +17117,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 104,
           "reject": "",
           "noop": true
@@ -16035,6 +17190,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 105,
           "reject": "",
           "noop": true
@@ -16043,6 +17199,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 105,
           "reject": "",
           "noop": true
@@ -16051,6 +17208,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 105,
           "reject": "",
           "noop": true
@@ -16059,6 +17217,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 105,
           "reject": "",
           "noop": true
@@ -16067,6 +17226,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 105,
           "reject": "",
           "noop": true
@@ -16075,6 +17235,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 105,
           "reject": "NotFound",
           "noop": false
@@ -16083,6 +17244,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 105,
           "reject": "NotFound",
           "noop": false
@@ -16091,6 +17253,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 105,
           "reject": "NotFound",
           "noop": false
@@ -16099,6 +17262,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 105,
           "reject": "NotFound",
           "noop": false
@@ -16107,6 +17271,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 105,
           "reject": "",
           "noop": true
@@ -16115,6 +17280,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 105,
           "reject": "",
           "noop": true
@@ -16187,6 +17353,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 106,
           "reject": "",
           "noop": true
@@ -16195,6 +17362,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 106,
           "reject": "",
           "noop": true
@@ -16203,6 +17371,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 108,
           "reject": "",
           "noop": false
@@ -16211,6 +17380,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -16219,6 +17389,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -16227,6 +17398,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 106,
           "reject": "NotFound",
           "noop": false
@@ -16235,6 +17407,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 106,
           "reject": "NotFound",
           "noop": false
@@ -16243,6 +17416,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 106,
           "reject": "NotFound",
           "noop": false
@@ -16251,6 +17425,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 106,
           "reject": "NotFound",
           "noop": false
@@ -16259,6 +17434,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 106,
           "reject": "",
           "noop": true
@@ -16267,6 +17443,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 106,
           "reject": "",
           "noop": true
@@ -16339,6 +17516,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 107,
           "reject": "",
           "noop": true
@@ -16347,6 +17525,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 107,
           "reject": "",
           "noop": true
@@ -16355,6 +17534,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 107,
           "reject": "",
           "noop": true
@@ -16363,6 +17543,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 107,
           "reject": "",
           "noop": true
@@ -16371,6 +17552,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -16379,6 +17561,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 107,
           "reject": "NotFound",
           "noop": false
@@ -16387,6 +17570,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 107,
           "reject": "NotFound",
           "noop": false
@@ -16395,6 +17579,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 107,
           "reject": "NotFound",
           "noop": false
@@ -16403,6 +17588,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 107,
           "reject": "NotFound",
           "noop": false
@@ -16411,6 +17597,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 107,
           "reject": "",
           "noop": true
@@ -16419,6 +17606,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 107,
           "reject": "",
           "noop": true
@@ -16491,6 +17679,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 108,
           "reject": "",
           "noop": true
@@ -16499,6 +17688,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 108,
           "reject": "",
           "noop": true
@@ -16507,6 +17697,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 108,
           "reject": "",
           "noop": true
@@ -16515,6 +17706,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 108,
           "reject": "",
           "noop": true
@@ -16523,6 +17715,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -16531,6 +17724,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 94,
           "reject": "",
           "noop": false
@@ -16539,6 +17733,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "",
           "noop": false
@@ -16547,6 +17742,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "",
           "noop": false
@@ -16555,6 +17751,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 108,
           "reject": "FailedPrecondition",
           "noop": false
@@ -16563,6 +17760,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -16571,6 +17769,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -16643,6 +17842,7 @@ window.SAA_SPEC = {
           "kind": "start delay elapses",
           "label": "start delay elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 109,
           "reject": "",
           "noop": true
@@ -16651,6 +17851,7 @@ window.SAA_SPEC = {
           "kind": "retry backoff elapses",
           "label": "retry backoff elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 109,
           "reject": "",
           "noop": true
@@ -16659,6 +17860,7 @@ window.SAA_SPEC = {
           "kind": "worker poll (dispatch)",
           "label": "worker poll (dispatch)",
           "group": "dispatch",
+          "lane": "worker",
           "next": 109,
           "reject": "",
           "noop": true
@@ -16667,6 +17869,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-start elapses",
           "label": "schedule-to-start elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 109,
           "reject": "",
           "noop": true
@@ -16675,6 +17878,7 @@ window.SAA_SPEC = {
           "kind": "schedule-to-close elapses",
           "label": "schedule-to-close elapses",
           "group": "dispatch",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -16683,6 +17887,7 @@ window.SAA_SPEC = {
           "kind": "RespondCompleted",
           "label": "RespondCompleted",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 94,
           "reject": "",
           "noop": false
@@ -16691,6 +17896,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (retryable)",
           "label": "RespondFailed (retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "",
           "noop": false
@@ -16699,6 +17905,7 @@ window.SAA_SPEC = {
           "kind": "RespondFailed (non-retryable)",
           "label": "RespondFailed (non-retryable)",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 100,
           "reject": "",
           "noop": false
@@ -16707,6 +17914,7 @@ window.SAA_SPEC = {
           "kind": "RespondCanceled",
           "label": "RespondCanceled",
           "group": "attemptEnd",
+          "lane": "worker",
           "next": 109,
           "reject": "FailedPrecondition",
           "noop": false
@@ -16715,6 +17923,7 @@ window.SAA_SPEC = {
           "kind": "start-to-close elapses",
           "label": "start-to-close elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false
@@ -16723,6 +17932,7 @@ window.SAA_SPEC = {
           "kind": "heartbeat elapses",
           "label": "heartbeat elapses",
           "group": "attemptEnd",
+          "lane": "time",
           "next": 97,
           "reject": "",
           "noop": false

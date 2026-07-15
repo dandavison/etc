@@ -29,8 +29,11 @@
   .card h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 10px; font-weight:650; }
   .state-card .state-head { flex-wrap:wrap; align-items:center; margin-bottom:0; }
   .state-card #stDescribe { margin-left:auto; }
-  .cols { display:grid; grid-template-columns:1fr 1fr; gap:14px; align-items:start; }
-  @media (max-width:900px){ .cols{ grid-template-columns:1fr; } }
+  .top   { display:grid; grid-template-columns:1.7fr 1fr; gap:14px; align-items:start; }
+  .lanes { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; align-items:start; }
+  @media (max-width:980px){ .top,.lanes{ grid-template-columns:1fr; } }
+  .divider { border:none; border-top:1px solid var(--line); margin:12px 0; }
+  .config h3 { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin:0 0 8px; font-weight:650; }
   .btn.ghost { width:auto; display:inline-block; margin:0; padding:5px 11px; }
   svg { width:100%; display:block; }
   .btn { display:block; width:100%; text-align:left; border-radius:8px; padding:8px 11px; margin:6px 0;
@@ -72,34 +75,40 @@
 </header>
 <div class="wrap">
 
-  <div class="card">
-    <div class="card-head">
-      <h2>Timeline (first attempt)</h2>
-      <div class="bar-inline">
-        <label>start_delay</label>
-        <input id="sd" type="range" min="0" max="8" step="1" value="3">
-        <span id="sdVal" class="pill" style="background:#123522;color:#7fe0a6">3 units</span>
-        <span class="sub" id="anchorNote"></span>
+  <div class="top">
+    <div class="card">
+      <div class="card-head">
+        <h2>Timeline (first attempt)</h2>
         <button class="btn ghost" id="restart">↻ restart</button>
       </div>
+      <svg id="tl" viewBox="0 0 1000 190" preserveAspectRatio="none"></svg>
+      <div class="note" id="tlNote"></div>
     </div>
-    <svg id="tl" viewBox="0 0 1000 190" preserveAspectRatio="none"></svg>
-    <div class="note" id="tlNote"></div>
+
+    <div class="card state-card">
+      <h2>Current state</h2>
+      <div class="state-head">
+        <span id="stStatus" class="big"></span>
+        <span id="stPill" class="pill"></span>
+        <span id="stAttempt" class="sub"></span>
+        <span class="sub" id="stDescribe"></span>
+      </div>
+      <hr class="divider">
+      <div class="config">
+        <h3>config</h3>
+        <div class="bar-inline">
+          <label>start_delay</label>
+          <input id="sd" type="range" min="0" max="8" step="1" value="3">
+          <span id="sdVal" class="pill" style="background:#123522;color:#7fe0a6">3 units</span>
+        </div>
+        <div class="sub" id="anchorNote" style="margin-top:8px"></div>
+      </div>
+    </div>
   </div>
 
-  <div class="card state-card">
-    <h2>Current state</h2>
-    <div class="state-head">
-      <span id="stStatus" class="big"></span>
-      <span id="stPill" class="pill"></span>
-      <span id="stAttempt" class="sub"></span>
-      <span class="sub" id="stDescribe"></span>
-    </div>
-  </div>
-
-  <div class="cols">
+  <div class="lanes">
     <div class="card">
-      <h2>Operations — styled up-front by what the spec allows here</h2>
+      <h2>Operations — what the spec allows here</h2>
       <div id="ops"></div>
       <div class="legend">
         <span><span class="swatch" style="background:var(--imm)"></span>immediate</span>
@@ -109,12 +118,21 @@
     </div>
 
     <div class="card">
-      <h2>Advance time / worker events</h2>
-      <div id="events"></div>
+      <h2>Worker events</h2>
+      <div id="workerEvents"></div>
       <div class="legend">
         <span><span class="swatch" style="background:var(--dispatch)"></span>causes a transition</span>
         <span><span class="swatch" style="background:#333"></span>stale no-op here</span>
         <span><span class="swatch" style="background:var(--no)"></span>rejected</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Advance time</h2>
+      <div id="timeEvents"></div>
+      <div class="legend">
+        <span><span class="swatch" style="background:var(--dispatch)"></span>causes a transition</span>
+        <span><span class="swatch" style="background:#333"></span>stale no-op here</span>
       </div>
     </div>
   </div>
@@ -228,8 +246,9 @@ function render(){
     opsEl.appendChild(b);
   }
 
-  // advance events
-  const evEl=$('events'); evEl.innerHTML='';
+  // worker events + advance-time events, split by lane (worker RPC vs timer firing)
+  const workerEl=$('workerEvents'), timeEl=$('timeEvents');
+  workerEl.innerHTML=''; timeEl.innerHTML='';
   for(const e of c.events){
     const b=document.createElement('button'); b.className='btn';
     let target;
@@ -239,7 +258,7 @@ function render(){
     const grp = e.group==='attemptEnd'?'attempt end':'dispatch';
     b.innerHTML = `<span class="k">${e.label}</span><span class="r">${target}</span><small>${grp}</small>`;
     if(!b.disabled) b.onclick=()=>{ cur=e.next; draw(); };
-    evEl.appendChild(b);
+    (e.lane==='worker'?workerEl:timeEl).appendChild(b);
   }
   drawGrid();
 }
@@ -294,7 +313,7 @@ draw();
       const b=[...document.querySelectorAll('#ops .btn')].find(x=>x.querySelector('.k').textContent===step.slice(1));
       if(b&&!b.disabled) b.click();
     } else {
-      const b=[...document.querySelectorAll('#events .btn')].find(x=>x.querySelector('.k').textContent===step);
+      const b=[...document.querySelectorAll('#workerEvents .btn, #timeEvents .btn')].find(x=>x.querySelector('.k').textContent===step);
       if(b&&!b.disabled) b.click();
     }
   }
